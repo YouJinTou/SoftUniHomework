@@ -1,0 +1,6 @@
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DeclareVariables\bin\Debug\DeclareVariables.exe.config
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DeclareVariables\bin\Debug\DeclareVariables.exe
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DeclareVariables\bin\Debug\DeclareVariables.pdb
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DeclareVariables\obj\Debug\DeclareVariables.csprojResolveAssemblyReference.cache
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DeclareVariables\obj\Debug\DeclareVariables.exe
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DeclareVariables\obj\Debug\DeclareVariables.pdb

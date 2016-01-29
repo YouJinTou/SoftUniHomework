@@ -1,0 +1,6 @@
+D:\All of the Time Spent\Programming\Homework\Loops\5. Calculate\bin\Debug\_5.Calculate.exe.config
+D:\All of the Time Spent\Programming\Homework\Loops\5. Calculate\bin\Debug\_5.Calculate.exe
+D:\All of the Time Spent\Programming\Homework\Loops\5. Calculate\bin\Debug\_5.Calculate.pdb
+D:\All of the Time Spent\Programming\Homework\Loops\5. Calculate\obj\Debug\_5.Calculate.exe
+D:\All of the Time Spent\Programming\Homework\Loops\5. Calculate\obj\Debug\_5.Calculate.pdb
+D:\All of the Time Spent\Programming\Homework\Loops\5. Calculate\obj\Debug\5. Calculate.csprojResolveAssemblyReference.cache

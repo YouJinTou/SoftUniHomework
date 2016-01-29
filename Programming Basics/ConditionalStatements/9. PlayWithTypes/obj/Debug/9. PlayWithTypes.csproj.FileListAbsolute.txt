@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\ConditionalStatements\9. PlayWithTypes\bin\Debug\_9.PlayWithTypes.exe.config
+D:\All of the Time Spent\Programming\Homework\ConditionalStatements\9. PlayWithTypes\bin\Debug\_9.PlayWithTypes.exe
+D:\All of the Time Spent\Programming\Homework\ConditionalStatements\9. PlayWithTypes\bin\Debug\_9.PlayWithTypes.pdb
+D:\All of the Time Spent\Programming\Homework\ConditionalStatements\9. PlayWithTypes\obj\Debug\_9.PlayWithTypes.exe
+D:\All of the Time Spent\Programming\Homework\ConditionalStatements\9. PlayWithTypes\obj\Debug\_9.PlayWithTypes.pdb

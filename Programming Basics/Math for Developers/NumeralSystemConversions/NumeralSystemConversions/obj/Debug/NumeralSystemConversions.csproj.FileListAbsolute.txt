@@ -1,0 +1,6 @@
+D:\All of the Time Spent\Programming\Homework\Math for Developers\NumeralSystemConversions\NumeralSystemConversions\bin\Debug\NumeralSystemConversions.exe.config
+D:\All of the Time Spent\Programming\Homework\Math for Developers\NumeralSystemConversions\NumeralSystemConversions\bin\Debug\NumeralSystemConversions.exe
+D:\All of the Time Spent\Programming\Homework\Math for Developers\NumeralSystemConversions\NumeralSystemConversions\bin\Debug\NumeralSystemConversions.pdb
+D:\All of the Time Spent\Programming\Homework\Math for Developers\NumeralSystemConversions\NumeralSystemConversions\obj\Debug\NumeralSystemConversions.csprojResolveAssemblyReference.cache
+D:\All of the Time Spent\Programming\Homework\Math for Developers\NumeralSystemConversions\NumeralSystemConversions\obj\Debug\NumeralSystemConversions.exe
+D:\All of the Time Spent\Programming\Homework\Math for Developers\NumeralSystemConversions\NumeralSystemConversions\obj\Debug\NumeralSystemConversions.pdb

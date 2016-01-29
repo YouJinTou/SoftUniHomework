@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\19. KingOfThieves\bin\Debug\_19.KingOfThieves.exe.config
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\19. KingOfThieves\bin\Debug\_19.KingOfThieves.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\19. KingOfThieves\bin\Debug\_19.KingOfThieves.pdb
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\19. KingOfThieves\obj\Debug\_19.KingOfThieves.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\19. KingOfThieves\obj\Debug\_19.KingOfThieves.pdb

@@ -1,0 +1,15 @@
+D:\All of the Time Spent\Programming\Projects\SomePrimes\SomePrimes\bin\Debug\SomePrimes.exe.config
+D:\All of the Time Spent\Programming\Projects\SomePrimes\SomePrimes\bin\Debug\SomePrimes.exe
+D:\All of the Time Spent\Programming\Projects\SomePrimes\SomePrimes\bin\Debug\SomePrimes.pdb
+D:\All of the Time Spent\Programming\Projects\SomePrimes\SomePrimes\obj\Debug\SomePrimes.csprojResolveAssemblyReference.cache
+D:\All of the Time Spent\Programming\Projects\SomePrimes\SomePrimes\obj\Debug\SomePrimes.exe
+D:\All of the Time Spent\Programming\Projects\SomePrimes\SomePrimes\obj\Debug\SomePrimes.pdb
+D:\All of the Time Spent\Programming\Math for Developers\SomePrimes\SomePrimes\bin\Debug\SomePrimes.exe.config
+D:\All of the Time Spent\Programming\Math for Developers\SomePrimes\SomePrimes\obj\Debug\SomePrimes.exe
+D:\All of the Time Spent\Programming\Math for Developers\SomePrimes\SomePrimes\obj\Debug\SomePrimes.pdb
+D:\All of the Time Spent\Programming\Homework\Math for Developers\SomePrimes\SomePrimes\bin\Debug\SomePrimes.exe.config
+D:\All of the Time Spent\Programming\Homework\Math for Developers\SomePrimes\SomePrimes\obj\Debug\SomePrimes.exe
+D:\All of the Time Spent\Programming\Homework\Math for Developers\SomePrimes\SomePrimes\obj\Debug\SomePrimes.pdb
+D:\All of the Time Spent\Programming\Homework\Math for Developers\SomePrimes\SomePrimes\bin\Debug\SomePrimes.exe
+D:\All of the Time Spent\Programming\Homework\Math for Developers\SomePrimes\SomePrimes\bin\Debug\SomePrimes.pdb
+D:\All of the Time Spent\Programming\Homework\Math for Developers\SomePrimes\SomePrimes\obj\Debug\SomePrimes.csprojResolveAssemblyReference.cache

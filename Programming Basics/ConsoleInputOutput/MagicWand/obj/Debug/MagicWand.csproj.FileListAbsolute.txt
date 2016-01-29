@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\MagicWand\bin\Debug\MagicWand.exe.config
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\MagicWand\bin\Debug\MagicWand.exe
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\MagicWand\bin\Debug\MagicWand.pdb
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\MagicWand\obj\Debug\MagicWand.exe
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\MagicWand\obj\Debug\MagicWand.pdb

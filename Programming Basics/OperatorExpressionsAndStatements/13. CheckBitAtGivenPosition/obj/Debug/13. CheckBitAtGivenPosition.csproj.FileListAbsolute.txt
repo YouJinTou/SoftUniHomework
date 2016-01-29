@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\13. CheckBitAtGivenPosition\bin\Debug\_13.CheckBitAtGivenPosition.exe.config
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\13. CheckBitAtGivenPosition\bin\Debug\_13.CheckBitAtGivenPosition.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\13. CheckBitAtGivenPosition\bin\Debug\_13.CheckBitAtGivenPosition.pdb
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\13. CheckBitAtGivenPosition\obj\Debug\_13.CheckBitAtGivenPosition.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\13. CheckBitAtGivenPosition\obj\Debug\_13.CheckBitAtGivenPosition.pdb

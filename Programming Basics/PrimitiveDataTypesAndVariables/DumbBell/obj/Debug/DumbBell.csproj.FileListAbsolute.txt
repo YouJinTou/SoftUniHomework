@@ -1,0 +1,6 @@
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DumbBell\bin\Debug\DumbBell.exe.config
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DumbBell\bin\Debug\DumbBell.exe
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DumbBell\bin\Debug\DumbBell.pdb
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DumbBell\obj\Debug\DumbBell.exe
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DumbBell\obj\Debug\DumbBell.pdb
+D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\DumbBell\obj\Debug\DumbBell.csprojResolveAssemblyReference.cache

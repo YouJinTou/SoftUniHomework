@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\Math for Developers\Intro-Programming-Homework\HelloCSharp\bin\Debug\HelloCSharp.exe.config
+D:\All of the Time Spent\Programming\Homework\Math for Developers\Intro-Programming-Homework\HelloCSharp\bin\Debug\HelloCSharp.exe
+D:\All of the Time Spent\Programming\Homework\Math for Developers\Intro-Programming-Homework\HelloCSharp\bin\Debug\HelloCSharp.pdb
+D:\All of the Time Spent\Programming\Homework\Math for Developers\Intro-Programming-Homework\HelloCSharp\obj\Debug\HelloCSharp.exe
+D:\All of the Time Spent\Programming\Homework\Math for Developers\Intro-Programming-Homework\HelloCSharp\obj\Debug\HelloCSharp.pdb

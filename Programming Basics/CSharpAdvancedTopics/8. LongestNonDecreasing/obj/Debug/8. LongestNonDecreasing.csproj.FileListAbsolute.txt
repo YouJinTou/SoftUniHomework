@@ -1,0 +1,6 @@
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\8. LongestNonDecreasing\bin\Debug\_8.LongestNonDecreasing.exe.config
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\8. LongestNonDecreasing\bin\Debug\_8.LongestNonDecreasing.exe
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\8. LongestNonDecreasing\bin\Debug\_8.LongestNonDecreasing.pdb
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\8. LongestNonDecreasing\obj\Debug\_8.LongestNonDecreasing.exe
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\8. LongestNonDecreasing\obj\Debug\_8.LongestNonDecreasing.pdb
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\8. LongestNonDecreasing\obj\Debug\8. LongestNonDecreasing.csprojResolveAssemblyReference.cache

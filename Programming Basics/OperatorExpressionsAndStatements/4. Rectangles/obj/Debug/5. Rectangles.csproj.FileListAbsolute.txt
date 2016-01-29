@@ -1,0 +1,5 @@
+C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\5. Rectangles\bin\Debug\_5.Rectangles.exe.config
+C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\5. Rectangles\bin\Debug\_5.Rectangles.exe
+C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\5. Rectangles\bin\Debug\_5.Rectangles.pdb
+C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\5. Rectangles\obj\Debug\_5.Rectangles.exe
+C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\5. Rectangles\obj\Debug\_5.Rectangles.pdb

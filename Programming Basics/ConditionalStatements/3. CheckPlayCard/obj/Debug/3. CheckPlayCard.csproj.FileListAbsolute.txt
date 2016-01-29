@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\ConditionalStatements\3. CheckPlayCard\bin\Debug\_3.CheckPlayCard.exe.config
+D:\All of the Time Spent\Programming\Homework\ConditionalStatements\3. CheckPlayCard\bin\Debug\_3.CheckPlayCard.exe
+D:\All of the Time Spent\Programming\Homework\ConditionalStatements\3. CheckPlayCard\bin\Debug\_3.CheckPlayCard.pdb
+D:\All of the Time Spent\Programming\Homework\ConditionalStatements\3. CheckPlayCard\obj\Debug\_3.CheckPlayCard.exe
+D:\All of the Time Spent\Programming\Homework\ConditionalStatements\3. CheckPlayCard\obj\Debug\_3.CheckPlayCard.pdb

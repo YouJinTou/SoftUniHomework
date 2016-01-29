@@ -1,0 +1,6 @@
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\16. BitExchange\bin\Debug\_16.BitExchange.exe.config
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\16. BitExchange\bin\Debug\_16.BitExchange.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\16. BitExchange\bin\Debug\_16.BitExchange.pdb
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\16. BitExchange\obj\Debug\_16.BitExchange.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\16. BitExchange\obj\Debug\_16.BitExchange.pdb
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\16. BitExchange\obj\Debug\16. BitExchange.csprojResolveAssemblyReference.cache

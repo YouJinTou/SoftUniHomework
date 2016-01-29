@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\16.  CountingWordInText\bin\Debug\_16.CountingWordInText.exe.config
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\16.  CountingWordInText\bin\Debug\_16.CountingWordInText.exe
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\16.  CountingWordInText\bin\Debug\_16.CountingWordInText.pdb
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\16.  CountingWordInText\obj\Debug\_16.CountingWordInText.exe
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\16.  CountingWordInText\obj\Debug\_16.CountingWordInText.pdb

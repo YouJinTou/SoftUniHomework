@@ -1,0 +1,6 @@
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\20. DecryptTheMessages\bin\Debug\_20.DecryptTheMessages.exe.config
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\20. DecryptTheMessages\bin\Debug\_20.DecryptTheMessages.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\20. DecryptTheMessages\bin\Debug\_20.DecryptTheMessages.pdb
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\20. DecryptTheMessages\obj\Debug\_20.DecryptTheMessages.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\20. DecryptTheMessages\obj\Debug\_20.DecryptTheMessages.pdb
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\20. DecryptTheMessages\obj\Debug\20. DecryptTheMessages.csprojResolveAssemblyReference.cache

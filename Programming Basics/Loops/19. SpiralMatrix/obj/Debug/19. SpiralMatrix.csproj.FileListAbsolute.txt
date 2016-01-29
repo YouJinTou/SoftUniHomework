@@ -1,0 +1,6 @@
+D:\All of the Time Spent\Programming\Homework\Loops\19. SpiralMatrix\bin\Debug\_19.SpiralMatrix.exe.config
+D:\All of the Time Spent\Programming\Homework\Loops\19. SpiralMatrix\bin\Debug\_19.SpiralMatrix.exe
+D:\All of the Time Spent\Programming\Homework\Loops\19. SpiralMatrix\bin\Debug\_19.SpiralMatrix.pdb
+D:\All of the Time Spent\Programming\Homework\Loops\19. SpiralMatrix\obj\Debug\_19.SpiralMatrix.exe
+D:\All of the Time Spent\Programming\Homework\Loops\19. SpiralMatrix\obj\Debug\_19.SpiralMatrix.pdb
+D:\All of the Time Spent\Programming\Homework\Loops\19. SpiralMatrix\obj\Debug\19. SpiralMatrix.csprojResolveAssemblyReference.cache

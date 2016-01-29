@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Numbers1ThruN\bin\Debug\Numbers1ThruN.exe.config
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Numbers1ThruN\bin\Debug\Numbers1ThruN.exe
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Numbers1ThruN\bin\Debug\Numbers1ThruN.pdb
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Numbers1ThruN\obj\Debug\Numbers1ThruN.exe
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Numbers1ThruN\obj\Debug\Numbers1ThruN.pdb

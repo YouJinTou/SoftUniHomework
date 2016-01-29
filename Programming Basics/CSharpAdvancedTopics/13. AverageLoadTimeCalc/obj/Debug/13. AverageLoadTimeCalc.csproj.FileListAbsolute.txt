@@ -1,0 +1,6 @@
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\13. AverageLoadTimeCalc\bin\Debug\_13.AverageLoadTimeCalc.exe.config
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\13. AverageLoadTimeCalc\bin\Debug\_13.AverageLoadTimeCalc.exe
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\13. AverageLoadTimeCalc\bin\Debug\_13.AverageLoadTimeCalc.pdb
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\13. AverageLoadTimeCalc\obj\Debug\13. AverageLoadTimeCalc.csprojResolveAssemblyReference.cache
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\13. AverageLoadTimeCalc\obj\Debug\_13.AverageLoadTimeCalc.exe
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\13. AverageLoadTimeCalc\obj\Debug\_13.AverageLoadTimeCalc.pdb

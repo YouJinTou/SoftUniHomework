@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\Math for Developers\Intro-Programming-Homework\PrintNumbers\bin\Debug\PrintNumbers.exe.config
+D:\All of the Time Spent\Programming\Homework\Math for Developers\Intro-Programming-Homework\PrintNumbers\bin\Debug\PrintNumbers.exe
+D:\All of the Time Spent\Programming\Homework\Math for Developers\Intro-Programming-Homework\PrintNumbers\bin\Debug\PrintNumbers.pdb
+D:\All of the Time Spent\Programming\Homework\Math for Developers\Intro-Programming-Homework\PrintNumbers\obj\Debug\PrintNumbers.exe
+D:\All of the Time Spent\Programming\Homework\Math for Developers\Intro-Programming-Homework\PrintNumbers\obj\Debug\PrintNumbers.pdb

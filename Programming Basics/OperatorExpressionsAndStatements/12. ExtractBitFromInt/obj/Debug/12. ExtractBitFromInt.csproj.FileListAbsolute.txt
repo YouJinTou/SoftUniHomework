@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\12. ExtractBitFromInt\bin\Debug\_12.ExtractBitFromInt.exe.config
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\12. ExtractBitFromInt\bin\Debug\_12.ExtractBitFromInt.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\12. ExtractBitFromInt\bin\Debug\_12.ExtractBitFromInt.pdb
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\12. ExtractBitFromInt\obj\Debug\_12.ExtractBitFromInt.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\12. ExtractBitFromInt\obj\Debug\_12.ExtractBitFromInt.pdb

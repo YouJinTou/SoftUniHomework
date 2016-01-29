@@ -1,0 +1,5 @@
+C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\3. GravitationOnTheMoon\bin\Debug\_3.GravitationOnTheMoon.exe.config
+C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\3. GravitationOnTheMoon\bin\Debug\_3.GravitationOnTheMoon.exe
+C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\3. GravitationOnTheMoon\bin\Debug\_3.GravitationOnTheMoon.pdb
+C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\3. GravitationOnTheMoon\obj\Debug\_3.GravitationOnTheMoon.exe
+C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\3. GravitationOnTheMoon\obj\Debug\_3.GravitationOnTheMoon.pdb

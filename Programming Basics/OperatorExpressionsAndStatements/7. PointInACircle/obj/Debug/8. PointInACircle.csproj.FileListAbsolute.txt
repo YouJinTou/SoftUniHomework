@@ -1,0 +1,6 @@
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\PointInACircle\bin\Debug\PointInACircle.exe.config
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\PointInACircle\bin\Debug\PointInACircle.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\PointInACircle\bin\Debug\PointInACircle.pdb
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\PointInACircle\obj\Debug\8. PointInACircle.csprojResolveAssemblyReference.cache
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\PointInACircle\obj\Debug\PointInACircle.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\PointInACircle\obj\Debug\PointInACircle.pdb

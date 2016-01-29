@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\CurrencyCheck\bin\Debug\CurrencyCheck.exe.config
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\CurrencyCheck\bin\Debug\CurrencyCheck.exe
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\CurrencyCheck\bin\Debug\CurrencyCheck.pdb
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\CurrencyCheck\obj\Debug\CurrencyCheck.exe
+D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\CurrencyCheck\obj\Debug\CurrencyCheck.pdb

@@ -1,0 +1,5 @@
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\2. PrimeChecker\bin\Debug\_2.PrimeChecker.exe.config
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\2. PrimeChecker\bin\Debug\_2.PrimeChecker.exe
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\2. PrimeChecker\bin\Debug\_2.PrimeChecker.pdb
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\2. PrimeChecker\obj\Debug\_2.PrimeChecker.exe
+D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\2. PrimeChecker\obj\Debug\_2.PrimeChecker.pdb

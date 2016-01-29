@@ -1,0 +1,6 @@
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\21. BitsAtCrossroads\bin\Debug\_21.BitsAtCrossroads.exe.config
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\21. BitsAtCrossroads\bin\Debug\_21.BitsAtCrossroads.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\21. BitsAtCrossroads\bin\Debug\_21.BitsAtCrossroads.pdb
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\21. BitsAtCrossroads\obj\Debug\_21.BitsAtCrossroads.exe
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\21. BitsAtCrossroads\obj\Debug\_21.BitsAtCrossroads.pdb
+D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\21. BitsAtCrossroads\obj\Debug\21. BitsAtCrossroads.csprojResolveAssemblyReference.cache
