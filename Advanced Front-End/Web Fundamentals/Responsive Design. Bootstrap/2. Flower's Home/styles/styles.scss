@@ -1,0 +1,268 @@
+﻿$border: 3px solid black;
+$background-color: rgba(255,216,216,0.7);
+
+body {
+    position: relative;
+    background-image: url('../images/background-flowers.jpg');
+    background-repeat: repeat-x;
+    box-sizing: border-box;
+    width: 1588px;
+    height: 709px;
+    margin: 0;
+
+    #wrapper {
+        width: 800px;
+        height: 580px;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        header {
+            border: $border;
+            background-color: $background-color;
+            height: 160px;
+            box-sizing: border-box;
+
+            h1 {
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-top: 15px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 40px;
+
+                    img {
+                        width: 250px;
+                        height: 40px;
+                    }
+
+                    span {
+                        float: right;
+                    }
+                }
+            }
+
+            nav {
+
+                ul {
+                    display: flex;
+                    justify-content: flex-end;
+                    list-style-type: none;
+                    padding-right: 10px;
+
+                    li {
+                        display: inline-block;
+                        box-sizing: border-box;
+                        border: $border;
+                        background-color: #f03078;
+                        text-align: center;
+                        width: 120px;
+                        height: 37px;
+                        padding-top: 5px;
+                        margin-left: 10px;
+
+                        a {
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .left {
+            float: left;
+            box-sizing: border-box;
+            width: 150px;
+
+            ul {
+                box-sizing: border-box;
+                width: 150px;
+                height: 350px;
+                background-color: $background-color;
+                border: $border;
+                list-style-type: none;
+                padding: 10px;
+
+                li {
+                    position: relative;
+                    margin-bottom: 15px;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+
+                        span {
+                            position: absolute;
+                            top: 5px;
+                            left: 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            float: right;
+            box-sizing: border-box;
+            width: 150px;
+
+            ul {
+                box-sizing: border-box;
+                width: 150px;
+                height: 350px;
+                background-color: $background-color;
+                border: $border;
+                list-style-type: none;
+                padding: 10px;
+
+                li {
+                    list-style-type: none;
+                }
+            }
+        }
+
+        section {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            margin: 16px auto;
+            border: $border;
+            background-color: $background-color;
+            width: 460px;
+            height: 230px;
+
+            article {
+                box-sizing: border-box;
+                padding: 0 20px 30px;
+
+                header {
+                    border: none;
+                    background-color: rgba(255,255,255,0);
+                    height: 30px;
+
+                    h1 {
+                        font-size: 30px;
+                        margin-bottom: 0;
+                    }
+                }
+
+                div {
+                    box-sizing: border-box;
+
+                    img {
+                        max-width: calc(25% - 5px);
+                    }
+                }
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 94px;
+            width: 800px;
+            text-align: center;
+            box-sizing: border-box;
+            border: $border;
+            background-color: $background-color;
+            float: left;
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        width: 100%;
+
+        #wrapper {
+            width: 100%;
+
+            header {
+                width: 100%;
+            }
+
+            section {
+                width: 50%;
+
+                div {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .right {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    body {
+
+        #wrapper {
+
+            header {
+
+                nav {
+
+                    ul {
+                        text-align: center;
+                    }
+                }
+            }
+
+            section {
+                display: inline-block;
+            }
+
+            .left {
+                width: 100%;
+
+                ul {
+                    width: 100%;
+                }
+            }
+
+            .right {
+                display: block;
+                width: 100%;
+
+                ul {
+                    width: 100%;
+                }
+            }
+
+            footer {
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+
+        #wrapper {
+
+            header {
+                display: block;
+
+                nav {
+
+                    ul {
+                        display: block;                        
+
+                        li {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

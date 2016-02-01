@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="dottedRect" width="170" height="225" style="border:3px dotted red;">
+Your browser does not support the &lt;canvas&gt; tag.
+</canvas>
+
+<script>
+var canvas = document.getElementById("dottedRect");
+var context = canvas.getContext("2d");
+
+context.font = "20px Arial";
+context.fillText("I love JavaScript", 10, 50);
+
+context.fillStyle = "#CCB022";
+context.fillRect(35, 75, 100, 100);
+
+context.font = "55px Arial";
+context.fillStyle = "black";
+context.fillText("JS", 68, 170);
+</script>
+
+</body>
+</html>

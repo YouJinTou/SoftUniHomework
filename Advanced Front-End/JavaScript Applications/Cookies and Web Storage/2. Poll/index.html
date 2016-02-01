@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <div id="timer-holder">
+        Time remaining: <span id="timer"></span>
+    </div>
+    <br />
+    <form id="poll">
+        <span>1. On which planet were you born?</span>
+        <br />
+        <input type="radio" name="planet" value="0" />
+        <span>Earth</span>
+        <br />
+        <input type="radio" name="planet" value="1" />
+        <span>Mars</span>
+        <br />
+        <input type="radio" name="planet" value="2" />
+        <span>Planet X</span>
+        <br />
+        <input type="radio" name="planet" value="3" />
+        <span>Uranus</span>
+        <br />
+        <span>2. Are you a human being?</span>
+        <br />
+        <input type="radio" name="human" value="4" />
+        <span>Yes</span>
+        <br />
+        <input type="radio" name="human" value="5" />
+        <span>No</span>
+        <br />
+        <input type="radio" name="human" value="6" />
+        <span>Maybe</span>
+        <br />
+        <input type="radio" name="human" value="7" />
+        <span>Dunno</span>
+        <br />
+        <span>3. Why is it that ants have antennae?</span>
+        <br />
+        <input type="radio" name="ants" value="8" />
+        <span>Cool question</span>
+        <br />
+        <input type="radio" name="ants" value="9" />
+        <span>What?</span>
+        <br />
+        <input type="radio" name="ants" value="10" />
+        <span>To move about</span>
+        <br />
+        <input type="radio" name="ants" value="11" />
+        <span>To establish contact with extraterrestrials</span>
+        <br />   
+        <input type="submit" id="save" value="How'd I do?" />      
+    </form>    
+
+    <script src="scripts/timer.js"></script>
+    <script src="scripts/localStorage.js"></script> 
+    <script src="scripts/submit.js"></script>
+</body>
+</html>

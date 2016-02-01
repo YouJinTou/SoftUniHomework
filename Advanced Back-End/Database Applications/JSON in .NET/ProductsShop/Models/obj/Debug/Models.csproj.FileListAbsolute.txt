@@ -1,0 +1,5 @@
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\JSON in .NET\ProductsShop\Models\bin\Debug\Models.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\JSON in .NET\ProductsShop\Models\bin\Debug\Models.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\JSON in .NET\ProductsShop\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\JSON in .NET\ProductsShop\Models\obj\Debug\Models.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\JSON in .NET\ProductsShop\Models\obj\Debug\Models.pdb

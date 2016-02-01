@@ -1,0 +1,10 @@
+{
+  "name": "current-time",
+  "version": "0.0.0",
+  "description": "current-time",
+  "main": "app.js",
+  "author": {
+    "name": "luftkastel",
+    "email": ""
+  }
+}

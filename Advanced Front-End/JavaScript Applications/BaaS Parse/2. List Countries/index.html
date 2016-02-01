@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <button id="update-countries-button">Update countries</button>
+        <h4>Countries:</h4>
+        <select multiple id="countries"></select>  
+        <select multiple id="towns"></select>  
+        <br />
+        <br />
+        <input type="text" id="add-country-field" placeholder="Country to add" />
+        <button id="add-country">Add country</button>   
+        <br />  
+        <br />
+        <input type="text" id="new-country-field" placeholder="New country name" />
+        <button id="edit-country">Edit name</button> 
+        <br />
+        <button id="delete-country">Delete selected</button> 
+    </div>
+    <script src="scripts/loadCountries.js"></script>
+    <script src="scripts/countriesOp.js"></script>
+    <script src="scripts/loadTowns.js"></script>
+</body>
+</html>

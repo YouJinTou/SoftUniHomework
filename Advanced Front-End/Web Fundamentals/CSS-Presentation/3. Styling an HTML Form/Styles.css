@@ -1,0 +1,196 @@
+#wrapper{
+	width: 450px;
+	height: 880px;
+	background-image: url("formBackground.jpg");
+	border-radius: 8px;
+	font-family: sans-serif;
+}
+form{
+	margin: 20px;
+}
+#details h3{
+	color: white;
+}
+#name-div{
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.6);	
+}
+label[for=name]{
+	margin-left: 5px;
+}
+#name{
+	width: 160px;
+	margin-left: 70px;
+	border-radius: 3px;
+}
+#email-div{
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.6);	
+}
+label[for=email]{
+	margin-left: 5px;
+}
+#email{
+	width: 160px;
+	margin-left: 73px;
+	border-radius: 3px;
+}
+#phone-div{
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.6);	
+}
+label[for=phone]{
+	margin-left: 5px;
+}
+#phone{
+	width: 160px;
+	margin-left: 67px;
+	border-radius: 3px;
+}
+#delivery-address h3{
+	color: white;
+}
+#address-div{
+	line-height: 100px;
+	height: 100px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+label[for=address]{
+	margin-left: 5px;
+}
+#address{	
+	width: 160px;
+	height: 80px;
+	margin-left: 56px;
+	border-radius: 3px;
+}
+#postcode-div{
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.6);	
+}
+label[for=postcode]{
+	margin-left: 5px;
+}
+#postcode{	
+	width: 160px;
+	margin-left: 48px;
+	border-radius: 3px;
+}
+#country-div{
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.6);	
+}
+label[for=country]{
+	margin-left: 5px;
+}
+#country{	
+	width: 160px;
+	margin-left: 60px;
+	border-radius: 3px;
+}
+#card-details h3{
+	color: white;
+}
+#card-type{
+	line-height: 40px;
+	height: 80px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.6);	
+}
+#visa{
+	margin-left: 30px;
+}
+#card-type-header{
+	margin-left: 5px;
+}
+#visa-logo{
+	width: 27px;
+	height: 17px;
+}
+#amex-logo{
+	width: 27px;
+	height: 17px;
+}
+#mastercard-logo{
+	width: 27px;
+	height: 17px;
+}
+#card-number-div{
+	margin-top: 20px;
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.6);	
+}
+label[for=card-number]{
+	margin-left: 5px;
+}
+#card-number{
+	width: 160px;
+	margin-left: 25px;
+	border-radius: 3px;
+}
+#security-code-div{
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.6);	
+}
+label[for=security-code]{
+	margin-left: 5px;
+}
+#security-code{
+	width: 160px;
+	margin-left: 22px;
+	border-radius: 3px;
+}
+#card-holder-div{
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.6);	
+}
+label[for=card-holder]{
+	margin-left: 5px;
+}
+#card-holder{
+	width: 160px;
+	margin-left: 34px;
+	border-radius: 3px;
+}
+#buy-div{
+	text-align: center;
+}
+#buy{
+	background-color: #000066;
+	color: white;
+	width: 80px;
+	height: 30px;
+	border-radius: 15px;
+	font-weight: bold;
+	border-width: 0;
+}
+#buy:hover{
+	cursor: pointer;
+}

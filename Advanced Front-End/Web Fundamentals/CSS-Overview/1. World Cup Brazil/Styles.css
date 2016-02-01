@@ -1,0 +1,70 @@
+#wrapper{
+	width: 700px;
+	height: 300px;
+	margin: 10px auto;
+	background-color: #009900;
+}
+table{
+	width: 96%;
+	height: 96%;
+	margin: 0 auto;
+	border-radius: 20px;
+	border: 1px solid black;
+	border-spacing: 0px;
+}
+thead{
+	background-color: #ffd633;
+}
+tr:nth-child(even){
+	background-color: #d6d6c2;
+}
+table:nth-child(odd){
+	background-color: white;
+}
+td{
+	border: 1px solid black;
+	text-align: center;	
+}
+thead{
+	font-weight: bold;
+	text-align: center;
+}
+thead td:last-child{
+	text-align: center;
+}
+td:first-child{
+	text-align: right;
+}
+td:nth-child(3){
+	text-align: left;
+}
+td:nth-child(5){
+	text-align: right;
+}
+td:nth-child(7){
+	text-align: left;
+}
+.flag {
+	width: 16px;
+	height: 11px;
+}
+select{
+	color: green;
+}
+.played select{
+	color: red;
+}
+button{
+	border-radius: 50%;
+	width: 35px;
+	height: 30px;
+	color: white;
+	background-color: green;
+}
+button:hover{
+	cursor: hand;
+	cursor: pointer;
+}
+.played button{
+	background-color: red;
+}

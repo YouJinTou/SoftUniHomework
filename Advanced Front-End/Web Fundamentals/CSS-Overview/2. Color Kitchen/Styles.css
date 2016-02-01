@@ -1,0 +1,133 @@
+body > header{
+	text-align: center;
+	background-color: green;
+	color: yellow;
+	font-size: 2em;
+}
+body {
+	width: 900px;
+	background-image: url("colorful_dots_on_black.jpg");
+}
+nav > header{
+	text-decoration: underline;
+	font-weight: bold;
+}
+aside{
+	width: 170px;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 5px;
+	float: left;
+	background-color: white;
+	opacity: 0.7;	
+}
+ul{
+	list-style-type: circle;
+	margin-top: 4px;
+	margin-left: 0px;
+	padding-left: 17px;
+	list-style-image: url("http://2.bp.blogspot.com/-YJdTLtfQ_Jw/TgX2jaD4sTI/AAAAAAAAEi4/mJd7LHduUB8/s1600/bullet-point-image-7.png");
+}
+li a{	
+	display: block;
+	width: 130px;
+}
+a:link{
+	color: black;
+}
+ul a:link{
+	color: black;
+	text-decoration: none;
+}
+ul a:visited{
+	color: gray;
+}
+article a:link{
+	color: gray;
+	font-style: italic;
+}
+li:first-child:hover{
+	border-radius: 3px;
+	background-color: red;
+}
+li:nth-child(2):hover{
+	border-radius: 3px;
+	background-color: orange;
+}
+li:nth-child(3):hover{
+	border-radius: 3px;
+	background-color: yellow;
+}
+li:nth-child(4):hover{
+	border-radius: 3px;
+	background-color: green;
+}
+li:nth-child(5):hover{
+	border-radius: 3px;
+	background-color: blue;
+}
+li:nth-child(6):hover{
+	border-radius: 3px;
+	background-color: purple;
+}
+article{
+	width: 650px;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	float: right;
+	background: rgba(255, 255, 255, 0.7);
+	overflow: auto;
+}
+div::first-letter{
+	font-size: 200%;
+	font-style: italic;
+}
+#webColors{
+	padding: 10px;
+	margin: 5px;
+	border-radius: 10px;
+	font-size: 20px;
+	color: white;
+	background-color: red;
+}
+#webSafeColors{
+	padding: 10px;
+	margin: 5px;
+	border-radius: 10px;
+	font-size: 20px;
+	color: black;
+	background-color: orange;
+}
+#RGB{
+	padding: 10px;
+	margin: 5px;
+	border-radius: 10px;
+	font-size: 20px;
+	color: black;
+	background-color: yellow;
+}
+#RGBA{
+	padding: 10px;
+	margin: 5px;
+	border-radius: 10px;
+	font-size: 20px;
+	color: white;
+	background-color: green;
+}
+#HSLHSV{
+	padding: 10px;
+	margin: 5px;
+	border-radius: 10px;
+	font-size: 20px;
+	color: white;
+	background-color: blue;
+}
+#lorem{
+	padding: 10px;
+	margin: 5px;
+	border-radius: 10px;
+	font-size: 20px;
+	color: white;
+	background-color: purple;
+}

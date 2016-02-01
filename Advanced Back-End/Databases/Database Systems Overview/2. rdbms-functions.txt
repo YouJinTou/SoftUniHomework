@@ -1,0 +1,5 @@
+The RDBMS pefrorms the following operations on
+data:
+- Storage;
+- Organization (relationships);
+- CRUD.

@@ -1,0 +1,31 @@
+A database index is used to dramatically speed up
+search operations in a database at the expense of
+other operations such as deleting and writing.
+
+Indexing methods:
+- Non-clustered - the indexation does not follow
+a natural gradation (e.g. 1, 2, 3, etc.) but instead
+utilizes logical ordering;
+- Clustered - the rows are sorted in order. Only
+one clustered index per table is possible;
+- Cluster - used when multiple databases and
+tables are joined together.
+
+B-tree:
+A B-tree is a data structure that keeps its data
+sorted and allows CRUD operations in O(log(n)).
+
+Columnstore index:
+"A columnstore index is a technology for storing,
+retrieving and managing data by using a
+columnar data format, called a columnstore."
+- Microsoft
+
+Spatial index:
+"Used by spatial databases (databases which store
+information related to objects in space) to
+optimize spatial queries. Conventional index
+types do not efficiently handle spatial queries
+such as how far two points differ, or whether
+points fall within a spatial area of interest."
+- Wikipedia

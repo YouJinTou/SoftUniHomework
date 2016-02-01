@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xslt"?>
+<students xmlns:students="urn:students">
+  <students:student>
+    <students:name>Ivan Ivanov</students:name>
+    <students:gender>Male</students:gender>
+    <students:birthdate>1992-01-21</students:birthdate>
+    <students:phone-number>0888 123 123</students:phone-number>
+    <students:email>ivan.ivanov@gmail.com</students:email>
+    <students:university>Harvard University</students:university>
+    <students:specialty>Political Science</students:specialty>
+    <students:faculty-number>77771</students:faculty-number>
+    <students:exams>
+      <students:exam>
+        <students:exam-name>Law</students:exam-name>
+        <students:date-taken>2011-12-21</students:date-taken>
+        <students:grade>B-</students:grade>
+      </students:exam>
+      <students:exam>
+        <students:exam-name>Constitutional Rights</students:exam-name>
+        <students:date-taken>2011-12-15</students:date-taken>
+        <students:grade>A-</students:grade>
+      </students:exam>
+    </students:exams>
+  </students:student>
+
+  <students:student>
+    <students:name>Peter Petrov</students:name>
+    <students:gender>Male</students:gender>
+    <students:birthdate>1991-06-12</students:birthdate>
+    <students:phone-number>0888 321 321</students:phone-number>
+    <students:email>peter.petrov@gmail.com</students:email>
+    <students:university>Stanford University</students:university>
+    <students:specialty>Criminal Law</students:specialty>
+    <students:faculty-number>11116</students:faculty-number>
+    <students:exams>
+      <students:exam>
+        <students:exam-name>Law</students:exam-name>
+        <students:date-taken>2011-12-21</students:date-taken>
+        <students:grade>B+</students:grade>
+      </students:exam>
+      <students:exam>
+        <students:exam-name>Forensics</students:exam-name>
+        <students:date-taken>2011-12-14</students:date-taken>
+        <students:grade>B-</students:grade>
+      </students:exam>
+    </students:exams>
+  </students:student>
+
+</students>

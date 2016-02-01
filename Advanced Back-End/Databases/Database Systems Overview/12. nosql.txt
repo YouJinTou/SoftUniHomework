@@ -1,0 +1,6 @@
+A NoSQL database does not operate under the
+relational model. The storage of data is 
+schema-free and supports indexing/CRUD/
+concurrency.
+Examples of such databases are MongoDB,
+Cassandra, Redis and more.

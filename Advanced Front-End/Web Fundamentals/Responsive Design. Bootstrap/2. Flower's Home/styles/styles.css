@@ -1,0 +1,159 @@
+﻿body {
+  position: relative;
+  background-image: url("../images/background-flowers.jpg");
+  background-repeat: repeat-x;
+  box-sizing: border-box;
+  width: 100%;
+  height: 709px;
+  margin: 0; }
+  body #wrapper {
+    width: 800px;
+    height: 580px;
+    margin: 0 auto;
+    box-sizing: border-box; }
+    body #wrapper header {
+      border: 3px solid black;
+      background-color: rgba(255, 216, 216, 0.7);
+      height: 160px;
+      box-sizing: border-box; }
+      body #wrapper header h1 {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 15px; }
+        body #wrapper header h1 a {
+          text-decoration: none;
+          color: black;
+          font-size: 40px; }
+          body #wrapper header h1 a img {
+            width: 250px;
+            height: 40px; }
+          body #wrapper header h1 a span {
+            float: right; }
+      body #wrapper header nav ul {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        padding-right: 10px; }
+        body #wrapper header nav ul li {
+          display: inline-block;
+          box-sizing: border-box;
+          border: 3px solid black;
+          background-color: #f03078;
+          text-align: center;
+          width: 120px;
+          height: 37px;
+          padding-top: 5px;
+          margin-left: 10px; }
+          body #wrapper header nav ul li a {
+            text-decoration: none;
+            color: white; }
+    body #wrapper .left {
+      float: left;
+      box-sizing: border-box;
+      width: 150px; }
+      body #wrapper .left ul {
+        box-sizing: border-box;
+        width: 150px;
+        height: 350px;
+        background-color: rgba(255, 216, 216, 0.7);
+        border: 3px solid black;
+        list-style-type: none;
+        padding: 10px; }
+        body #wrapper .left ul li {
+          position: relative;
+          margin-bottom: 15px; }
+          body #wrapper .left ul li a {
+            text-decoration: none;
+            color: black; }
+            body #wrapper .left ul li a span {
+              position: absolute;
+              top: 5px;
+              left: 40px; }
+    body #wrapper .right {
+      float: right;
+      box-sizing: border-box;
+      width: 150px; }
+      body #wrapper .right ul {
+        box-sizing: border-box;
+        width: 150px;
+        height: 350px;
+        background-color: rgba(255, 216, 216, 0.7);
+        border: 3px solid black;
+        list-style-type: none;
+        padding: 10px; }
+        body #wrapper .right ul li {
+          list-style-type: none; }
+    body #wrapper section {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      margin: 16px auto;
+      border: 3px solid black;
+      background-color: rgba(255, 216, 216, 0.7);
+      width: 460px;
+      height: 230px; }
+      body #wrapper section article {
+        box-sizing: border-box;
+        padding: 0 20px 30px; }
+        body #wrapper section article header {
+          border: none;
+          background-color: rgba(255, 255, 255, 0);
+          height: 30px; }
+          body #wrapper section article header h1 {
+            font-size: 30px;
+            margin-bottom: 0; }
+        body #wrapper section article div {
+          box-sizing: border-box; }
+          body #wrapper section article div img {
+            max-width: calc(25% - 5px); }
+    body #wrapper footer {
+      position: absolute;
+      bottom: 94px;
+      width: 800px;
+      text-align: center;
+      box-sizing: border-box;
+      border: 3px solid black;
+      background-color: rgba(255, 216, 216, 0.7);
+      float: left; }
+
+@media only screen and (max-width: 960px) {
+  body {
+    width: 100%; }
+    body #wrapper {
+      width: 100%; }
+      body #wrapper header {
+        width: 100%; }
+      body #wrapper section {
+        width: 50%; }
+        body #wrapper section div {
+          width: 100%; }
+          body #wrapper section div img {
+            width: 100%; }
+      body #wrapper .right {
+        width: 100%; } }
+
+@media only screen and (max-width: 780px) {
+  body #wrapper header nav ul {
+    text-align: center; }
+  body #wrapper section {
+    display: inline-block; }
+  body #wrapper .left {
+    width: 100%; }
+    body #wrapper .left ul {
+      width: 100%; }
+  body #wrapper .right {
+    display: block;
+    width: 100%; }
+    body #wrapper .right ul {
+      width: 100%; }
+  body #wrapper footer {
+    display: block; } }
+
+@media only screen and (max-width: 640px) {
+  body #wrapper header {
+    display: block; }
+    body #wrapper header nav ul {
+      display: block; }
+      body #wrapper header nav ul li {
+        width: 100%; } }
+

@@ -1,0 +1,12 @@
+Models:
+- Relational;
+- Graph;
+- Multivalue;
+- Object.
+
+Object-oriented model:
+The database stores objects instead of separate
+data values. This model is used when the data
+at hand and/or the relationship between the 
+objects is complex. Thus, this model should not 
+be used for simple transactional data.

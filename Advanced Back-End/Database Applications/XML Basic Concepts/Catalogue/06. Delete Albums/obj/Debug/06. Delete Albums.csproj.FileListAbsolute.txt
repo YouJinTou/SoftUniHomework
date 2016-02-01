@@ -1,0 +1,5 @@
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\06. Delete Albums\bin\Debug\_06.Delete_Albums.exe.config
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\06. Delete Albums\bin\Debug\_06.Delete_Albums.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\06. Delete Albums\bin\Debug\_06.Delete_Albums.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\06. Delete Albums\obj\Debug\_06.Delete_Albums.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\06. Delete Albums\obj\Debug\_06.Delete_Albums.pdb

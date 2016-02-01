@@ -1,0 +1,14 @@
+SQL stands for structured query language. It is a
+declarative language and as such is not a
+programming language. Its purpose is to make
+queries to a database. A sample SQL code could
+be:
+
+CREATE DATABASE demo;
+CREATE TABLE adresser (
+  adresse_id INTEGER PRIMARY KEY,
+  gade       VARCHAR(40) NOT NULL,
+  husnr      INTEGER NOT NULL,
+  sted       VARCHAR(20),          
+  postnr     INTEGER NOT NULL REFERENCES postnumre (postnr)
+);

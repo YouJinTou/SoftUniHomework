@@ -1,0 +1,85 @@
+body{
+	font-family: Tahoma, Helvetica, sans-serif;
+}
+
+h1{
+	text-align: center;
+	margin: 0 auto;
+	font-size: 24px;
+}
+
+p{
+	text-align: center;
+}
+
+main{
+	width: 700px;
+	height: 500px;
+	margin: 10px auto;
+	border-top: 1px solid gray;
+}
+
+#wrapper{
+	width: 800px;
+	height: 600px;
+	border-radius: 20px;
+	box-shadow: -5px -5px 5px #ddd;
+}
+
+/* Forms */
+
+h3{
+	margin-bottom: 0px;
+}
+
+.form{
+	float: left;
+	width: 350px;
+}
+
+.form input{
+	border-radius: 5px;
+	margin-top: 10px;
+	height: 30px;
+	padding-left: 5px;
+}
+
+.form input[type=text]{
+	width: 275px;
+}
+.form input[type=password]{
+	width: 275px;
+}
+
+.username{
+	background: url("Icons/ok.png") no-repeat right;
+	padding-right: 25px;
+}
+
+.email{
+	background: url("Icons/ok.png") no-repeat right;
+	padding-right: 25px;
+}
+
+.password{
+	background: url("Icons/no.png") no-repeat right;
+	padding-right: 25px;
+}
+
+#register{
+	display: block;
+	width: 150px;
+	font-weight: bold;
+}
+
+#error-message{
+	display: block;
+	margin-top: 10px;
+	color: red;
+}
+
+#login{
+	width: 100px;
+	height: 35px;
+	font-weight: bold;
+}

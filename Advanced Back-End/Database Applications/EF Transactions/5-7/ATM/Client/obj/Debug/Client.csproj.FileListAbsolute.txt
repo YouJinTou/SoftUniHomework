@@ -1,0 +1,12 @@
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\bin\Debug\Client.exe.config
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\bin\Debug\Client.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\bin\Debug\Client.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\bin\Debug\ATM.Data.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\bin\Debug\EntityFramework.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\bin\Debug\ATM.Data.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\bin\Debug\EntityFramework.xml
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\obj\Debug\Client.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\Client\obj\Debug\Client.pdb

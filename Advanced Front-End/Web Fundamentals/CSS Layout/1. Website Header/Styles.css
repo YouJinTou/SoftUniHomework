@@ -1,0 +1,108 @@
+#wrapper{
+	box-sizing: border-box;
+	width: 960px;
+	height: 80px;
+	background-color: #184860;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+/* Logo header */
+
+#logo-header{
+	display: inline;
+	width: 250px;
+	height: 120px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+/* Menu */
+
+nav{	
+	float: right;
+	display: flex;
+	justify-content: space-around;
+	width: 800px;
+	height: 25px;
+}
+
+#nav{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+	color: white;
+	text-transform: uppercase;
+}
+
+#nav li{
+	display: inline-block;
+	font-size: 16px;
+}
+
+#nav li:hover{
+	background-color: orange;
+}
+
+/* Nav buttons */
+
+#nav-buttons{
+	float: right;
+	width: 270px;
+	height: 45px;
+}
+
+#user-menu{
+	display: inline-block;
+	list-style-type: none;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+#bell{	
+	width: 20px;
+	height: 20px;
+}
+
+#search{
+	background: url("Icons/mag-glass.png") no-repeat right;
+	background-size: 15px 15px;
+	background-color: rgba(255, 255, 255, 0);	
+	border: none;
+	border-radius: 5px;
+	margin-left: -28px;
+}
+
+#search:hover{
+	cursor: pointer;
+}
+
+#search-bar{
+	border-radius: 5px;
+	padding-right: 20px;
+}
+
+/* Dropdown */
+
+.dropdown-list{
+	position: absolute;
+	display: none;
+	list-style-type: none;
+	width: inherit;
+	text-align: center;
+	background-color: orange;	
+}
+
+.dropdown:hover .dropdown-list{	
+	display: block;	
+}
+
+#nav li ul li{
+	display: block;
+}

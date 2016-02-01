@@ -1,0 +1,36 @@
+﻿<div ng-if="authService.isAnonymous()" class="box">
+    <h2>Navigation</h2>
+    <ul class="sidebar-menu">
+        <li><a class="button" href="#/">Home</a></li>
+        <li><a class="button" href="#/login">Login</a></li>
+        <li><a class="button" href="#/register">Register</a></li>
+    </ul>
+</div>
+
+<div class="box" ng-if="authService.isAnonymous()">
+    <p>To publish a new ad, please login.</p>
+    <a href="#/login" class="button">Login</a>
+    <a href="#/register" class="button">Register</a>
+</div>
+
+<div ng-if="authService.isNormalUser()" class="box">
+    <h2>Navigation</h2>
+    <ul class="sidebar-menu">
+        <li><a class="button" href="#/">Home</a></li>
+        <li><a class="button" href="#/user/ads">My Ads</a></li>
+        <li><a class="button" href="#/user/ads/publish">Publish New Ad</a></li>
+        <li><a class="button" href="#/user/profile/edit">Edit Profile</a></li>
+    </ul>
+</div>
+
+<div ng-if="authService.isAdmin()" class="box">
+    <h2>Administrator</h2>
+    <ul class="sidebar-menu">
+        <li><a class="button" href="#/admin/ads">Ads</a></li>
+        <li><a class="button" href="#/admin/users">Users</a></li>
+        <li><a class="button" href="#/admin/categories">Categories</a></li>
+        <li><a class="button" href="#/admin/towns">Towns</a></li>
+    </ul>
+</div>
+
+

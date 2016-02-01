@@ -1,0 +1,12 @@
+SQL is a language developed to manage data in
+a relational database
+
+DML is a set of commands that facilitate CRUD
+operations in database management.
+SQL is a popular DML.
+
+DDL is syntax used for creating/defining elements
+in a database (e.g. tables)
+
+SQL's most used commands: SELECT, INSERT,
+UPDATE, CREATE, DELETE

@@ -1,0 +1,6 @@
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\03. Extract All Artists AZ\bin\Debug\_03.Extract_All_Artists_AZ.exe.config
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\03. Extract All Artists AZ\bin\Debug\_03.Extract_All_Artists_AZ.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\03. Extract All Artists AZ\bin\Debug\_03.Extract_All_Artists_AZ.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\03. Extract All Artists AZ\obj\Debug\_03.Extract_All_Artists_AZ.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\03. Extract All Artists AZ\obj\Debug\_03.Extract_All_Artists_AZ.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\03. Extract All Artists AZ\obj\Debug\03. Extract All Artists AZ.csprojResolveAssemblyReference.cache

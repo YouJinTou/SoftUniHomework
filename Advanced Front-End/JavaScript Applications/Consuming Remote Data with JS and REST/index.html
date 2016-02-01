@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <select multiple="multiple" id="books"></select>
+        <form id="create-form" method="post">
+            <input type="text" id="title" placeholder="Title" />
+            <br />
+            <input type="text" id="author" placeholder="Author" />
+            <br />
+            <input type="text" id="isbn" placeholder="ISBN" />
+            <br />
+            <input type="text" id="tags" placeholder="Tags" />
+            <br />
+            <input type="submit" id="add-button" value="Create book" />
+        </form>
+        <br />
+        <form id="edit-form" method="post">
+            <input type="text" name="title-edit" id="title-edit" placeholder="New title" />
+            <label for="title-edit">Title</label>
+            <br />
+            <input type="text" name="author-edit" id="author-edit" placeholder="New author" />
+            <label for="author-edit">Author</label>
+            <br />
+            <input type="text" name="isbn-edit" id="isbn-edit" placeholder="New ISBN" />
+            <label for="isbn-edit">ISBN</label>
+            <br />
+            <input type="text" name="tags-edit" id="tags-edit" placeholder="New tags" />
+            <label for="tags-edit">Tags</label>
+            <br />
+            <input type="submit" id="edit-button" value="Edit entry" />
+            <button id="delete">Delete book</button>
+        </form>
+    </div>
+
+    <script src="scripts/book-ops.js"></script>
+</body>
+</html>

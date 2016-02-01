@@ -1,0 +1,11 @@
+The main goal of relationships in relational 
+databases is to normalize data, i.e. to avoid 
+repetition.
+
+The types of relationships are:
+One-to-many - a country can have multiple cities;
+Many-to-many - multiple products can appear on 
+multiple orders;
+Many-to-one - multiple cities can point to the
+same country;
+One-to-one - a country only has one president.

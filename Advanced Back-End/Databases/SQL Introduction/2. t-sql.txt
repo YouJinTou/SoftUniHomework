@@ -1,0 +1,3 @@
+T-SQL is Microsoft's form of SQL. It supports 
+everything SQL does, but is also capable of 
+flow control operations (if/else, while, etc.)

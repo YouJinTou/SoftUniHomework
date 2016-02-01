@@ -1,0 +1,107 @@
+body{
+	background-image: url("Images/backgroundImage.jpg");
+	background-repeat: no-repeat;	
+	background-size: cover;
+	font-family: Tahoma, Helvetica, sans-serif;
+}
+
+#wrapper{	
+	width: 530px;
+	height: 350px;
+	margin: auto auto;
+}
+
+header > h1{
+	font-size: 4em;
+	color: white;
+	border-bottom: 2px solid white;
+	text-align: center;
+}
+
+/* Forms */
+
+.form{
+	float: left;
+	width: 257px;
+	background-color: rgba(153, 0, 0, 0.7);	
+	border-radius: 10px;
+}
+
+.form:after{
+	clear: both;
+}
+
+.form header{
+	text-align: center;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.form header > h2{
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+.form input{
+	width: 200px;
+	height: 30px;
+	margin: 0px 10px 5px 0px;
+	border-radius: 0 10px 10px 0;
+}
+
+input[type=submit]{
+	cursor: pointer;
+}
+
+#login-button{
+	background: url("Images/paper-icon.png") no-repeat 85px;
+	margin-left: 5px;
+	width: 242px;
+	border-radius: 10px;
+	border: none;
+	background-color: rgba(36, 143, 36, 0.7);
+	color: white;
+}
+
+#options-button{
+	background: url("Images/cogwheel-icon.png") no-repeat 78px;
+	margin-left: 5px;
+	width: 242px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	border: none;
+	background-color: rgba(36, 143, 36, 0.7);
+	color: white;
+}
+
+#username-image{
+	float: left;
+	margin-left: 5px;
+	background-color: #cca300;
+	height: 36px;
+	border-radius: 10px 0 0 10px;
+}
+
+#password-image{
+	float: left;
+	margin-left: 5px;
+	background-color: #206040;
+	height: 36px;
+	border-radius: 10px 0 0 10px;
+}
+
+/* Register form */
+
+#reg-button{
+	background: url("Images/paper-icon.png") no-repeat 85px;
+	margin-left: 5px;
+	width: 242px;
+	border-radius: 10px;
+	border: none;
+	background-color: rgba(0, 153, 153, 0.7);
+	color: white;
+	margin-bottom: 13px;
+}
+
+.form:nth-child(2){
+	margin-left: 16px;
+}

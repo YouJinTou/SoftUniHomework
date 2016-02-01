@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flight Order</title>
+<link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+	<div id="wrapper">
+		<form>
+			<header><h1>Flight Order</h1></header>
+			<main>
+				<section>
+					<div class="from-to">
+						<label for="from-city">From</label>					
+						<input type="text" name="from-city" placeholder="Enter a city"/>	
+					</div>
+					<div class="from-to">
+						<label for="to-city">To</label>			
+						<input type="text" name="to-city" placeholder="Enter a city"/>
+					</div>
+					</br>
+					</br>
+					<div id="checkbox-div">
+						<input type="checkbox" name="prefer-directs"/>
+						<label for="prefer-directs">Prefer directs</label>
+					</div>
+				</section>
+				<section>
+					<div class="departure">
+						<label for="dep-date">Departure Date</label>
+						<input type="date" name="dep-date"/>
+					</div>
+					<div class="departure">
+						<label for="time-interval">Time interval</label>
+						<input type="text" name="time-interval"/>
+						<input type="text" name="time-interval"/>
+					</div>
+				</section>
+				<section>
+					<div class="return">
+						<label for="return-date">Return Date</label>
+						<input type="date" name="return-date"/>
+					</div>
+					<div class="return">
+						<label for="time-interval">Time interval</label>
+						<input type="text" name="time-interval"/>
+						<input type="text" name="time-interval"/>
+					</div>
+				</section>
+				<section>
+					<div class="age">
+						<label for="12+">12+</label>
+						<input type="number" name="12+" value="0" min="0" max="100"/>
+						<input type="number" name="2-12" value="0" min="0" max="100"/>
+						<input type="number" name="0-2" value="0" min="0" max="100"/>
+					</div>
+					<div class="class">
+						<label for="choose-class">Choose class</label>
+						<select name="choose-class">
+							<option value="economy" selected="selected">Economy</option>
+							<option value="first">First</option>
+							<option value="business">Business</option>
+					</div>
+				</section>
+				<input type="submit" name="search" value="Search"/>
+			</main>
+		</form>
+	</div>
+</body>
+</html>

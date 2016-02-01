@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html ng-app="textBinder">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body ng-controller="textBinderController">
+    <input id="input" type="text" placeholder="Input image url here" ng-model="image" />
+    <div id="image">
+        <img ng-src="{{image}}" />
+    </div>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/text-binder-controller.js"></script>
+</body>
+</html>

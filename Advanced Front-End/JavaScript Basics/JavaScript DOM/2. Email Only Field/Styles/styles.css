@@ -1,0 +1,25 @@
+﻿body #wrapper {
+  position: relative;
+  box-sizing: border-box;
+  width: 200px;
+  height: 80px;
+  border: 1px solid black; }
+  body #wrapper #text-area {
+    width: inherit;
+    box-sizing: border-box;
+    margin: 0px;
+    height: 30px;
+    border: 0;
+    border-bottom: 1px solid black; }
+  body #wrapper #validator {
+    width: inherit;
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0;
+    height: 30px; }
+  body #wrapper button {
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    height: 20px; }
+

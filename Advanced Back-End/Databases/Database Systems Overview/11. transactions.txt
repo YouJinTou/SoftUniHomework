@@ -1,0 +1,20 @@
+Transactions are a set of database operations that
+are executed as a single unit. This means that 
+either all operations within it are executed 
+successfully or nothing happens at all.
+
+ACID:
+- Atomicity - meaning indivisibility (all or
+nothing);
+- Consistency - all operations will be valid;
+- Isolation - the result of the concurrent execution
+of all transactions would be the same if they were
+executed sequentially;
+- Durability - once a transaction has been
+committed, it will be executed regardless of what
+happens afterwards
+
+Transaction log:
+The transaction log contains a record of all
+transactions and the effect they've had on the 
+database.

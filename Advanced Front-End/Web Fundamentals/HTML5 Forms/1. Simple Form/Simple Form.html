@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Form</title>
+<link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h2>Enter the system</h2>
+			<span>It is necessary to log in to your account in order to sign up for a course</span> 		
+		</header>
+		<main>		
+			<form id="register-form">
+				<header>
+					<h3>Are you new? <a href="#">Register</a></h3>
+				</header>
+				<input type="text" name="username-register" placeholder="Username" required pattern="[a-zA-z0-9(-.)?]{4,10}">
+				</br>
+				<input type="text" name="email" placeholder="Email" required pattern="[a-zA-z0-9(-\.)?]{3,10}@[a-z]{2,10}\.([a-z]{2,10})((\.)([a-z]{2,10}))?">
+				</br>
+				<input type="password" name="password-register" placeholder="Password" required pattern=".{6,32}">
+				</br>
+				<input type="password" name="confirm-password-register" placeholder="Confirm password" required pattern=".{6,32}">
+				</br>
+				<input type="submit" name="register" value="Register">
+			</form>
+			<form id="login-form">
+				<header>
+					<h3>Already a student? <a href="#">Login</a></h3>
+				</header>
+				<input type="text" name="username-login" placeholder="Username" required pattern="[a-zA-z0-9(-.)?]{4,10}">
+				</br>
+				<input type="text" name="password-login" placeholder="Password" requird pattern=".{6,32}">
+				</br>		
+				<input type="checkbox" name="remember-me">
+				<label for="checkbox-me">Remember me?</label>
+				<input type="submit" name="login" value="Login">
+				</br></br>
+				<span id="forgot-password"><a href="#">Forgot Password</a>
+			</form>
+		</main>
+	</div>
+</body>
+</html>

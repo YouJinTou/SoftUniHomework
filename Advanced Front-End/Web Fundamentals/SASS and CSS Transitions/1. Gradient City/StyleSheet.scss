@@ -1,0 +1,271 @@
+﻿$border: 3px double #a9a4a4;
+$font-color: #938c8c;
+$h1-color: #808080;
+
+@mixin v-lin-grad($from, $to) {
+    background: linear-gradient($from, $to);
+}
+
+@mixin h-lin-grad($from, $to) {
+    background: linear-gradient(to right, $from, $to);
+}
+
+@mixin d-lin-grad($from, $to) {
+    background: linear-gradient(to bottom right, $from, $to);
+}
+
+@mixin rad-grad($from, $to) {
+    background: radial-gradient($from, $to);
+}
+
+html {
+    background-color: white;
+}
+
+body {
+    width: 960px;
+    margin: 0;
+    color: $font-color;
+    @include v-lin-grad(#585656, #ffffff);
+
+    #wrapper {
+        width: 900px;
+        border: $border;
+        background-color: white;
+        margin: 0 auto;
+
+        header {
+            border: $border;
+            margin: 10px;
+            text-align: center;
+
+            h1 {
+                margin-top: 0px;
+                color: $h1-color;
+                font-size: 2.5em;
+            }
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    display: inline-block;
+                    border: $border;
+                    width: 100px;
+                    height: 30px;
+                    padding-top: 5px;
+                    margin-right: 50px;
+                    font-size: 20px;
+
+                    &:hover {
+                        @include v-lin-grad(#585656, #ffffff);
+
+                        a {
+                            display: block;
+                            color: white;
+                        }
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $font-color;
+                }
+            }
+        }
+
+        section {
+            border: $border;
+            margin: 10px;
+
+            article {
+                border: 2px solid $font-color;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            h1 {
+                text-decoration: underline;
+                font-size: 25px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            header {
+                border: none;
+            }
+
+            .innerContainer {
+                height: 150px;
+
+                div {
+                    width: 138px;
+                    height: 138px;
+                    border-radius: 15px;
+                }
+            }
+        }
+
+        .linear {
+
+            #vertical-article {
+
+                .innerContainer {
+
+                    div {
+                        float: left;
+                    }
+
+                    .purple {
+                        @include v-lin-grad(purple, white);
+                    }
+
+                    .blue {
+                        @include v-lin-grad(blue, white);
+                    }
+
+                    .green {
+                        @include v-lin-grad(green, white);
+                    }
+
+                    .yellow {
+                        @include v-lin-grad(yellow, white);
+                    }
+
+                    .orange {
+                        @include v-lin-grad(orange, white);
+                    }
+
+                    .red {
+                        @include v-lin-grad(red, white);
+                    }
+                }
+            }
+
+            #horizontal-article {
+
+                .innerContainer {
+
+                    div {
+                        float: left;
+                    }
+
+                    .purple {
+                        @include h-lin-grad(purple, white);
+                    }
+
+                    .blue {
+                        @include h-lin-grad(blue, white);
+                    }
+
+                    .green {
+                        @include h-lin-grad(green, white);
+                    }
+
+                    .yellow {
+                        @include h-lin-grad(yellow, white);
+                    }
+
+                    .orange {
+                        @include h-lin-grad(orange, white);
+                    }
+
+                    .red {
+                        @include h-lin-grad(red, white);
+                    }
+                }
+            }
+
+            #diagonal-article {
+
+                .innerContainer {
+
+                    div {
+                        float: left;
+                    }
+
+                    .purple {
+                        @include d-lin-grad(purple, white);
+                    }
+
+                    .blue {
+                        @include d-lin-grad(blue, white);
+                    }
+
+                    .green {
+                        @include d-lin-grad(green, white);
+                    }
+
+                    .yellow {
+                        @include d-lin-grad(yellow, white);
+                    }
+
+                    .orange {
+                        @include d-lin-grad(orange, white);
+                    }
+
+                    .red {
+                        @include d-lin-grad(red, white);
+                    }
+                }
+            }
+        }
+
+        .radial {
+            .innerContainer {
+
+                div {
+                    float: left;
+                }
+
+                .purple {
+                    @include rad-grad(purple, white);
+                }
+
+                .blue {
+                    @include rad-grad(blue, white);
+                }
+
+                .green {
+                    @include rad-grad(green, white);
+                }
+
+                .yellow {
+                    @include rad-grad(yellow, white);
+                }
+
+                .orange {
+                    @include rad-grad(orange, white);
+                }
+
+                .red {
+                    @include rad-grad(red, white);
+                }
+            }
+        }
+
+        footer {
+            border: $border;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+
+            h3 {
+                text-decoration: underline;
+                font-size: 25px;
+            }
+
+            ul {
+                list-style: none;
+
+                a {
+                    color: $font-color;
+                    text-decoration: none;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

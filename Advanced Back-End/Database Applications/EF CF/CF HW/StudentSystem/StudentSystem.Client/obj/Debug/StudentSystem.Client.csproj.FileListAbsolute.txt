@@ -1,0 +1,14 @@
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\bin\Debug\StudentSystem.Client.exe.config
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\bin\Debug\StudentSystem.Client.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\bin\Debug\StudentSystem.Client.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\bin\Debug\EntityFramework.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\bin\Debug\StudentSystem.Data.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\bin\Debug\StudentSystem.Models.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\bin\Debug\StudentSystem.Data.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\bin\Debug\StudentSystem.Models.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\bin\Debug\EntityFramework.xml
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\obj\Debug\StudentSystem.Client.csprojResolveAssemblyReference.cache
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\obj\Debug\StudentSystem.Client.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\CF HW\StudentSystem\StudentSystem.Client\obj\Debug\StudentSystem.Client.pdb

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Form</title>
+<link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+	<div id="wrapper">
+		<form action="#' method="post">
+			<div id="details">
+				<h3>Step 1: Your details</h3>
+				<div id="name-div">
+					<label for="name">
+						<span>Name</span>
+						<input id="name" type="text" placeholder="First and last name">
+					</label>
+				</div>
+				<br>
+				<div id="email-div">
+					<label for="email">
+						<span>Email</span>
+						<input id="email" type="text" placeholder="example@domain.com">
+					</label>
+				</div>
+				<br>
+				<div id="phone-div">
+					<label for="phone">
+						<span>Phone</span>
+						<input id="phone" type="text" placeholder="e.g. +447500000000">
+					</label>
+				</div>
+			</div>
+			<div id="delivery-address">
+				<h3>Step 2: Delivery address</h3>
+				<div id="address-div">
+					<label for="address">
+						<span>Address</span>
+						<textarea id="address"></textarea>
+					</label>
+				</div>
+				<br>
+				<div id="postcode-div">
+					<label for="postcode">
+						<span>Postcode</span>
+						<input id="postcode" type="text">
+					</label>
+				</div>
+				<br>
+				<div id="country-div">
+					<label for="country">
+						<span>Country</span>
+						<input id="country" type="text">
+					</label>
+				</div>
+			</div>
+			<div id="card-details">
+				<h3>Step 3: Card details</h3>
+				<div id="card-type">
+					<span id="card-type-header">Card type</span>
+					<br>
+					<label for="visa">
+						<input id="visa" type="radio" name="VISA">
+						<img src="http://www.credit-card-logos.com/images/visa_credit-card-logos/visa_logo_new1.jpg" id="visa-logo">
+						<span>VISA</span>					
+					</label>
+					<label for="AmEx">
+						<input id="amex" type="radio" name="amex">
+						<img src="http://www.credit-card-logos.com/images/american_express_credit-card-logos/american_express_logo_1.gif" id="amex-logo">
+						<span>AmEx</span>					
+					</label>
+					<label for="visa">
+						<input id="mastercard" type="radio" name="mastercard">
+						<img src="http://www.credit-card-logos.com/images/mastercard_credit-card-logos/mastercard_logo_2.gif" id="mastercard-logo">
+						<span>MasterCard</span>					
+					</label>
+					<br>
+				</div>
+				<div id="card-number-div">
+					<label for="card-number">				
+						<span>Card number</span>
+						<input id="card-number" type="text">				
+					</label>
+				</div>
+				<br>
+				<div id="security-code-div">
+					<label for="security-code">
+						<span>Security code</span>
+						<input id="security-code" type="text">
+					</label>
+				</div>
+				<br>
+				<div id="card-holder-div">
+					<label for="card-holder">
+						<span>Card holder</span>
+						<input id="card-holder" type="text" placeholder="Name as on card">
+					</label>
+				</div>
+				<br>				
+			</div>
+			<div id="buy-div">
+				<input id="buy" type="submit" value="BUY IT!">
+			</div>
+		</form>
+	</div>		
+</body>
+</html>

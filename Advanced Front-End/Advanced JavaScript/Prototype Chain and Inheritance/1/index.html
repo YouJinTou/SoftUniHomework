@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />   
+    <script src="script.js"></script> 
+</head>
+<body>
+    <style>
+        #canvas {
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <canvas id="canvas"></canvas>    
+    <script>
+        var circle = new Shapes.Circle(75, 75, 50, '#4ce600');
+        circle.draw();
+        var rectangle = new Shapes.Rectangle(150, 20, 150, 82, '#ff6699');
+        rectangle.draw();
+        var triangle = new Shapes.Triangle(66, 120, 150, 20, 150, 110, '#aa5318');
+        triangle.draw();
+        var line = new Shapes.Line(200, 50, 100, 150, '#bbfaca');
+        line.draw();
+        var segment = new Shapes.Segment(120, 80, 58, 91, '#2357ba');
+        segment.draw();
+    </script>    
+</body>
+</html>

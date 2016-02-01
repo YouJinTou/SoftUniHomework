@@ -1,0 +1,67 @@
+#wrapper{
+	width: 760px;
+	height: 500px;
+	background-color: #3B5998;
+	color: white;
+}
+
+form{
+	margin: 10px;
+}
+
+h1, h4, h5{
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+h1 > span{
+	font-size: 3em;
+}
+
+h4 > span{
+	font-size: 2em;
+}
+
+h5 > span{
+	font-size: 1.5em;
+}
+
+fieldset{
+	border-radius: 5px;
+}
+
+input{
+	border-radius: 5px;
+	margin-bottom: 3px;
+}
+
+.legend{
+	text-align: center;
+}
+
+/* Non-important information */
+
+#non-important{
+	width: 300px;
+	float: left;
+}
+input[name=birthday]{
+	width: 200px;
+}
+
+/* Important information */
+
+input[name=nr], input[name=floor], input[name=flat-nr]{
+	width: 50px;
+}
+#important{
+	width: 380px;
+	float: left;
+}
+
+/* Buttons */
+#buttons input{
+	background-color: #aaa;
+}
+

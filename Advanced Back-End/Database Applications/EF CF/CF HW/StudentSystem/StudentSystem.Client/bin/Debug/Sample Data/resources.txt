@@ -1,0 +1,5 @@
+Survival Instincts\2\biology.edu/survival\1\license1
+Particle Acceleration\1\physics.edu/particles\2\license2
+Shading\3\drawing.edu/shading\3\license3
+Oil canvases\2\drawing.edu/canvases\3\license4
+Clusters\2\astronomy.edu/clusters\4\license5

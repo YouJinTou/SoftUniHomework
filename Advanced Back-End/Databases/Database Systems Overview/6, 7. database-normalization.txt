@@ -1,0 +1,9 @@
+Wikipedia's description fits the bill nicely:
+"Database normalization is the process of
+organizing the columns and tables of a relational
+database to minimize data redundancy."
+
+Thus:
+- Unnecessary dependencies are avoided;
+- The need for restructuring the relations is
+diminished.

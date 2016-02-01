@@ -1,0 +1,7 @@
+Table (directly from Wikipedia):
+"A table is a collection of related data held in a
+structured format within a database. It consists of
+fields (columns), and rows."
+
+A table allows duplicates, whereas a relation
+does not.

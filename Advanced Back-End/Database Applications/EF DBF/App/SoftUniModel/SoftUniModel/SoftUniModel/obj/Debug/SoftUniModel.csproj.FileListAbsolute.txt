@@ -1,0 +1,10 @@
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\Entity Framework\App\SoftUniModel\SoftUniModel\SoftUniModel\bin\Debug\SoftUniModel.exe.config
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\Entity Framework\App\SoftUniModel\SoftUniModel\SoftUniModel\bin\Debug\SoftUniModel.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\Entity Framework\App\SoftUniModel\SoftUniModel\SoftUniModel\bin\Debug\SoftUniModel.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\Entity Framework\App\SoftUniModel\SoftUniModel\SoftUniModel\bin\Debug\EntityFramework.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\Entity Framework\App\SoftUniModel\SoftUniModel\SoftUniModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\Entity Framework\App\SoftUniModel\SoftUniModel\SoftUniModel\bin\Debug\EntityFramework.xml
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\Entity Framework\App\SoftUniModel\SoftUniModel\SoftUniModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\Entity Framework\App\SoftUniModel\SoftUniModel\SoftUniModel\obj\Debug\SoftUniModel.csprojResolveAssemblyReference.cache
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\Entity Framework\App\SoftUniModel\SoftUniModel\SoftUniModel\obj\Debug\SoftUniModel.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\Entity Framework\App\SoftUniModel\SoftUniModel\SoftUniModel\obj\Debug\SoftUniModel.pdb

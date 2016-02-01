@@ -1,0 +1,4 @@
+Biology 101\Jan 15, 2017\March 12, 2017\100
+Physics 202\Feb 23, 2017\April 1, 2017\200
+Drawing 101\April 14, 2017\May 25, 2017\100
+Astronomy 303\June 1, 2017\Sep 28, 2017\300

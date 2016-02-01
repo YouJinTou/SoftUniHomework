@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html ng-app="videoCatalogue">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div id="wrapper" ng-controller="videoController">
+        <div id="filters">
+            Order by:
+            <select ng-model="sortOrder">
+                <option value="title">Title</option>
+                <option value="length">Length</option>
+                <option value="date">Date</option>
+                <option selected value="-subscribers">Subscribers</option>
+            </select>
+            Filter by: Category
+            <select ng-model="filterBy.category">
+                <option selected value="">All</option>
+                <option value="it">IT</option>
+                <option value="ninja">Ninja</option>
+            </select>
+            Date
+            <!--Can't make this work-->
+            <select ng-model="filterBy.date">
+                <option selected value="">All</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+            </select>
+            Subtitles
+            <select ng-model="filterBy.haveSubtitles">
+                <option selected value="">All</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        <div ng-repeat="video in videos | orderBy:sortOrder | filter:filterBy">
+            Title: {{video.title}}
+            <br />
+            Thumbnail: <img ng-src="{{video.pictureUrl}}" />
+            <br />
+            Length: {{video.length}}
+            <br />
+            Category: {{video.category}}
+            <br />
+            Subscribers: {{video.subscribers}}
+            <br />
+            Date: {{video.date | date:'MMM dd, yyyy'}}
+            <br />
+            Subtitles: {{video.haveSubtitles}}
+            <p>
+                Comments:
+                <br />
+            <p ng-repeat="comment in video.comments">
+                Username: {{comment.username}}
+                <br />
+                Content: {{comment.content}}
+                <br />
+                Date: {{comment.date | date:'MMM dd, yyyy'}}
+                <br />
+                Likes: {{comment.likes}}
+                <br />
+                Website: {{comment.websiteUrl}}
+            </p>
+            </p>
+        </div>
+    </div>
+    <aside ng-controller="validationController">
+        <button ng-click="addVideoButtonClick()">Add video</button>
+        <form name="addVideoForm" ng-show="showFormValue">
+            <span>Title</span><br />
+            <!--Can't make this work-->
+            <input type="text" name="title" ng-pattern="/\w{3,}/" ng-required="true" />
+            <span ng-show="addVideoForm.title.$invalid.pattern">Title must at least 3 characters long.</span>
+            <br />
+            <span>Thumbnail URL</span><br />
+            <input type="text" required /><br />
+            <span>Length</span><br />
+            <input type="text" /><br />
+            <span>Category</span><br />
+            <input type="text" required /><br />
+            <span>Subscribers count</span><br />
+            <input type="text" /><br />
+            <span>Date</span><br />
+            <input type="date" /><br />
+            <span>Has subtitles</span><br />
+            <input type="text" /><br />
+            <input type="submit" value="Add video" />
+        </form>
+    </aside>
+    <script src="lib/angular/angular.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/video-controller.js"></script>
+    <script src="scripts/controllers/validation-controller.js"></script>
+</body>
+</html>

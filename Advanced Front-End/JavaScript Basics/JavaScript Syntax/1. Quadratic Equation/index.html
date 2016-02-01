@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <span id="roots"></span>
+    <script>
+        var a = prompt("a = ");
+        var b = prompt("b = ");
+        var c = prompt("c = ");
+
+        var discriminant = Math.pow(b, 2) - 4 * a * c;
+        if (discriminant >= 0) {
+            var x1 = (-b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+            var x2 = (-b - Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+
+            document.getElementById("roots").innerHTML = "The roots are x1 = " + x1 + " and x2 = " + x2;
+        }
+        else {
+            document.getElementById("roots").innerHTML = "There are no real roots.";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Primary key: a column or multiple columns that
+uniquely define(s) a table row.
+Foreign key: a column or multiple columns that
+provides a link between the data in two tables in
+order to control the data that can be stored in the
+foreign key table.
+
+There is only one primary key per row. This is not
+necessarily the case with foreign keys.

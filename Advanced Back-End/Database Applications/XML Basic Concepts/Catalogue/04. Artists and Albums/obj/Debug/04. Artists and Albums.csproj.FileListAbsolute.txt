@@ -1,0 +1,6 @@
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\04. Artists and Albums\bin\Debug\_04.Artists_and_Albums.exe.config
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\04. Artists and Albums\bin\Debug\_04.Artists_and_Albums.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\04. Artists and Albums\bin\Debug\_04.Artists_and_Albums.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\04. Artists and Albums\obj\Debug\_04.Artists_and_Albums.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\04. Artists and Albums\obj\Debug\_04.Artists_and_Albums.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\04. Artists and Albums\obj\Debug\04. Artists and Albums.csprojResolveAssemblyReference.cache

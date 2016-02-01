@@ -1,0 +1,14 @@
+Integrity constraints enforce rules that cannot be
+violated.
+
+Constraints:
+- Primary key - the key must have a
+unique value;
+- Unique key - all values in a column or multiple
+columns is/are unique;
+- Foreign key - the value in a given column is a
+key from another table;
+- Check - the value meets certain criteria;
+- Not NULL - a column cannot have NULL value;
+- Default - provides a default value;
+- Index - used to retrieve data very quickly.

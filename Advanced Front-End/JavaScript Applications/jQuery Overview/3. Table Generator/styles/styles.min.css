@@ -1,0 +1,1 @@
+﻿body #wrapper table{border-collapse:collapse;}body #wrapper table thead{text-align:center;font-weight:bold;background-color:#48b537;}body #wrapper table thead td{padding-left:0;}body #wrapper table thead td::first-letter {text-transform:uppercase;}body #wrapper table td{border:1px solid #000;padding-left:5px;}

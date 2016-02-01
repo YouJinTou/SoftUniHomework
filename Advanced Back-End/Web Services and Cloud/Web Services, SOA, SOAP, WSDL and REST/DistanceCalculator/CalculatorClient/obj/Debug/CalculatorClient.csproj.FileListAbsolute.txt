@@ -1,0 +1,6 @@
+D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\CalculatorClient\bin\Debug\CalculatorClient.exe.config
+D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\CalculatorClient\bin\Debug\CalculatorClient.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\CalculatorClient\bin\Debug\CalculatorClient.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\CalculatorClient\obj\Debug\CalculatorClient.csprojResolveAssemblyReference.cache
+D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\CalculatorClient\obj\Debug\CalculatorClient.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\CalculatorClient\obj\Debug\CalculatorClient.pdb

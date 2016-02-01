@@ -1,0 +1,10 @@
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Performance\EF Performance\EF Performance\bin\Debug\EF Performance.exe.config
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Performance\EF Performance\EF Performance\bin\Debug\EF Performance.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Performance\EF Performance\EF Performance\bin\Debug\EF Performance.pdb
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Performance\EF Performance\EF Performance\bin\Debug\EntityFramework.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Performance\EF Performance\EF Performance\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Performance\EF Performance\EF Performance\bin\Debug\EntityFramework.xml
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Performance\EF Performance\EF Performance\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Performance\EF Performance\EF Performance\obj\Debug\EF Performance.csprojResolveAssemblyReference.cache
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Performance\EF Performance\EF Performance\obj\Debug\EF Performance.exe
+D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Performance\EF Performance\EF Performance\obj\Debug\EF Performance.pdb

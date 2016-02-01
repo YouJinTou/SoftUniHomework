@@ -1,0 +1,96 @@
+body{
+	font: 14px, Tahoma, Helvetica, sans-serif;
+}
+
+#wrapper{
+	width: 1000px;
+	height: 250px;
+	background-color: #f0f0f0;
+}
+
+/* Menu */
+
+#menu{
+	margin-top: 0px;
+	padding-left: 0px;
+	height: 60px;
+	background-color: #304848;
+	list-style: none;
+}
+
+#menu li, #menu a{
+	display: inline-block;
+	line-height: 60px;
+	height: 60px;
+	color: #d8d8d8;
+	text-align: center;
+	text-decoration: none;	
+}
+
+#menu a{
+	padding-left: 35px;
+	padding-right: 25px;
+}
+
+a:hover{
+	background-color: #30c090;
+	color: white;
+	height: 60px;
+}
+
+/* Sprite
+
+#search-business{	
+	background: url('Sprites.png');
+	width: 10px;
+	height: 15px;	
+}
+
+#business-categories{
+}
+
+#srecent-locations{
+}
+
+#sagents-located{
+}
+
+ */
+
+/* Form */
+
+label{
+	display: block;
+	margin-left: 15px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.form-element{
+	float: left;
+}
+
+.form-element input{
+	width: 200px;
+	height: 30px;
+	margin: 15px;
+	padding-left: 5px;
+}
+
+input[type=submit]{
+	background-color: #304848;
+	color: #d8d8d8;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 5px;
+	border: 0px;
+	margin-top: 30px;
+	height: 40px;
+	width: 210px;
+}
+
+input[type=submit]:hover{
+	background-color: #30c090;
+	color: white;
+	cursor: pointer;
+}

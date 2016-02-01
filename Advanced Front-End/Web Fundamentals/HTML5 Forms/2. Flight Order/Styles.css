@@ -1,0 +1,117 @@
+body{
+	font-family: sans-serif;
+}
+
+div{
+	margin-top: 3px;
+}
+
+#wrapper{
+	width: 330px;
+	height: 300px;
+	background-color: pink;
+}
+
+main{
+	padding-left: 10px;
+}
+
+header{
+	text-align: center;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+label{
+	display: block;
+	font-style: italic;
+	font-size: 12px;
+}
+
+input{
+	display: block;
+	margin-right: 5px;
+}
+
+/* From - to */
+
+.from-to{
+	float: left;	
+}
+
+.from-to input{	
+	width: 137px;
+}
+
+.from-to:after{
+	clear: both;
+}
+
+#checkbox-div{
+	display: inline-block;
+}
+
+/* Departure */
+
+.departure{
+	float: left;
+}
+
+.departure input[type=text]{
+	float: left;
+	width: 64.5px;
+}
+
+.departure:after{
+	clear: both;
+}
+
+/* Return */
+
+.return{
+	float: left;
+}
+
+.return input[type=text]{
+	float: left;
+	width: 64.5px;
+}
+
+.return:after{
+	clear: both;
+}
+
+/* Age and class */
+
+.age{
+	float: left;
+}
+
+.age input{
+	float: left;
+	width: 38.5px;
+}
+
+.class{
+	float: left;
+	width: 148px;
+}
+
+.class select{
+	width: 148px;
+}
+
+/* Search */
+
+input[type=submit]{
+	margin-top: 10px;
+	margin-right: 0px;
+	float: right;
+	width: 148px;
+}
+
+input[type=submit]:hover{
+	cursor: pointer;
+}
+
+

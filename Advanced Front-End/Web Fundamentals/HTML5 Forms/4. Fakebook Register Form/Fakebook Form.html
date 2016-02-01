@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WordPress Theme</title>
+<link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+	<div id="wrapper">
+		<form>
+			<header>
+			<h1><span>fakebook</span></h1>
+			<h4><span>Registration</span></h4>
+			<h5><span>It is safe, and it always will be!</span></h5>
+			</header>
+			<main>
+				<section id="main-form">
+					<div class="info">
+						<fieldset id="non-important">
+							<legend class="legend">Non-important Information</legend>
+							<input type="text" name="first-name" placeholder="First Name" tabindex="0"/>
+							<input type="text" name="last-name" placeholder="Last Name" tabindex="1"/>
+							</br>
+							<input type="text" name="email" placeholder="Email" tabindex="2"/>
+							<input type="text" name="phone" placeholder="Phone Number" tabindex="3"/>
+							</br>
+							<input type="password" name="password" placeholder="Password" tabindex="4"/>
+							<input type="text" name="website" placeholder="Website" tabindex="5"/>
+							</br>
+							<span id="birthday">Birthday</span>
+							</br>
+							<input type="datetime" name="birthday" tabindex="6"/>
+							</br>
+							<input type="radio" name="gender" tabindex="7"/>
+							<label for="gender">Female</label>
+							<input type="radio" name="gender" tabindex="8"/>
+							<label for="gender">Male</label>
+							<input type="radio" name="gender" tabindex="9"/>
+							<label for="gender">Other</label>
+						</fieldset>						
+					</div>
+					<div class="info">
+						<fieldset id="important">
+							<legend class="legend">Important Information *required</legend>
+							<select name="country" tabindex="10">
+								<option value="country">Country</option>
+								<option value="bulgaria">Bulgaria</option>
+							</select>
+							<input type="text" name="village" placeholder="Village" tabindex="11"/>
+							<input type="text" name="district" placeholder="District" tabindex="12"/>
+							</br>
+							<input type="text" name="street" placeholder="Street" tabindex="13"/>
+							<input type="text" name="nr" placeholder="Nr." tabindex="14"/>
+							<input type="text" name="floor" placeholder="Floor" tabindex="15"/>
+							<input type="text" name="flat-nr" placeholder="Flat nr." tabindex="16"/>
+							</br>
+							<span id="door-color">Door Color</span>
+							</br>
+							<input type="color" name="door-color" placeholder="Door color" tabindex="17"/>
+							<input type="text" name="water-meter" placeholder="Water meter" tabindex="18"/>
+							<select name="panties-size" tabindex="19">
+								<option value="Aunt panties' size">Aunt panties' size</option>
+								<option value="1">1</option>
+							</select>
+							</br>
+							<span id="more-personal-information">More Personal Information</span>
+							</br>
+							<textarea name="more-information" placeholder="Give us more information!" tabindex="20"/>
+						</fieldset>
+					</div>
+				</section>
+				<section id="buttons">
+					<input type="reset" value="Clear Form" tabindex="21"/>
+					<input type="submit" value="Register" tabindex="22"/>
+				</section>
+			</main>			
+		</form>
+	</div>
+</body>
+</html>
