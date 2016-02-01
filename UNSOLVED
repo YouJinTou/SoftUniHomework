@@ -1,0 +1,73 @@
+------------------------------------------------DESCRIPTION----------------------------------------------
+These are all exercises I was unable to solve from both the "Fundamentals of Computer Programming with C#"
+(Nakov et al.) and the courses available at Softuni.
+
+
+--------------------------------------------LEGEND-------------------------------------------------------
+(V)WP -- (very) well played, I couldn't solve any exercises
+
+------------------------------------------CSharp Fundamentals Book----------------------------------------
+257 / 7
+348 / 13
+378 / 2 iterative only
+379 / { 3, 4, 5, 7 } iterative only, 8, 9, 13
+677 / 10
+722-723 6, 12, 13, 17, 18
+765 / 4, 7, 11, 13
+803 / 4
+851 / 9
+913 / 6
+933 / 2
+980 / 2, 3, 4
+1118 / 4
+
+Exercises in all: 341
+Total unsolved: 25.5
+
+------------------------------------------Advanced Level Front-end HTML/CSS----------------------------------------
+CSS-Presentation: 5
+CSS-Layout: 5
+SASS: 2 (shake city), 3, 4
+Responsive: 2, 3
+
+------------------------------------------Advanced Level Front-end JavaScript Basics----------------------------------
+Intro: 5
+Loops, arrays, strings: 5, 8+
+Functions: 5+
+DOM: 5+
+
+------------------------------------------Advanced Level Front-end JavaScript Advanced------------------------------
+Functions: 7, 8
+Simulating OOP: 2, 3, 5
+Prototype Chain and Inheritance: 2, 4
+Design patterns: 2
+Best practices: 1
+AMD and RequireJS: 1
+
+------------------------------------------Advanced Level Front-end JavaScript Applications-------------------------
+jQuery Overview: 4, 5
+BaaS and Parse.com: 4, 5
+Routing, Templates and lodash: 2, 3?, 4
+SPA: 1
+Exam: SoftUni Properties
+
+------------------------------------------Advanced Level Front-end JavaScript Frameworks-----------------------------------
+Controllers and Markup: 1
+
+------------------------------------------Advanced Level Back-end Databases-----------------------------------
+Data Modeling and ER Diagrams: 5
+Advanced SQL: 28, 32
+T-SQL: 9, 10
+Database Performance: 3
+MongoDB: WP
+Diablo: 9, 15, 16
+
+------------------------------------------Advanced Level Back-end Database Applications-----------------------------------
+Entity Framework Transactions: 2, 3
+Processing XML: 11, 13
+
+------------------------------------------Advanced Level Back-end Web Services & Cloud-----------------------------------
+Web Services, SOA, SOAP, WSDL and REST: 3, 4
+ASP.NET Web API: 3, 4
+
+
