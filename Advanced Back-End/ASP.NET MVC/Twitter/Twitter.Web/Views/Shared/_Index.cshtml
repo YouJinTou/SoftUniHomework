@@ -1,0 +1,41 @@
+﻿@model PagedList.IPagedList<Twitter.Web.Models.ViewModels.TweetViewModel>
+@using PagedList.Mvc;
+
+@{    
+    ViewBag.Title = "Feed";
+
+    foreach (var tweet in Model)
+    {
+        <div>
+            <header class="row">
+                <div class="col-md-1">
+                    <img class="user-avatar" src="@Url.Content(tweet.User.PictureUrl)" alt="Avatar" />
+                </div>
+                <h3 class="col-md-1">
+                    @tweet.User.Username.Substring(0, @tweet.User.Username.IndexOf('@'))
+                </h3>
+                <span class="col-md-1">
+                    @{
+                        var timeAgo = (DateTime.Now - tweet.CreatedOn);
+                    }
+                    @Math.Floor(timeAgo.TotalDays) d
+                </span>
+            </header>
+
+            <section>
+                <p>@tweet.Content</p>
+            </section>
+
+            <footer>
+                @Html.ActionLink("Favorite", "Index") |
+                @Html.ActionLink("Retweet", "Index") |
+                @Html.ActionLink("Reply", "Index") |
+                @Html.ActionLink("Share", "Index") |
+                @Html.ActionLink("Report", "Index")
+            </footer>
+        </div>
+    }
+
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }));
+}
+        
