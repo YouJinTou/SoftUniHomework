@@ -11,6 +11,7 @@ namespace Twitter.Data.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using UnitOfWork;
+    using System.Data.Entity;
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -61,8 +62,10 @@ namespace Twitter.Data.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            var context = new TwitterDbContext();
+
             kernel.Bind<ITwitterDbContext>().To<TwitterDbContext>();
-            kernel.Bind<ITwitterData>().To<TwitterData>();
+            kernel.Bind<ITwitterData>().To<TwitterData>().WithConstructorArgument("context", context);
         }        
     }
 }

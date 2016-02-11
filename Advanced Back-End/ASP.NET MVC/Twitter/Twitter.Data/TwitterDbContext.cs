@@ -8,7 +8,7 @@ namespace Twitter.Data
     public class TwitterDbContext : IdentityDbContext<User>, ITwitterDbContext
     {
         public TwitterDbContext()
-            : base("Context")
+            : base("Context", throwIfV1Schema: false)
         {
             Database.SetInitializer(
                 new MigrateDatabaseToLatestVersion<TwitterDbContext, Configuration>());
@@ -17,7 +17,6 @@ namespace Twitter.Data
         public virtual IDbSet<Tweet> Tweets { get; set; }
         public virtual IDbSet<Report> Reports { get; set; }
         public virtual IDbSet<Notification> Notifications { get; set; }
-        public virtual IDbSet<Message> Messages { get; set; }
 
         public static TwitterDbContext Create()
         {
@@ -28,7 +27,8 @@ namespace Twitter.Data
         {
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Tweets)
-                .WithRequired(t => t.User);
+                .WithRequired(t => t.User)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Followers)
@@ -59,6 +59,16 @@ namespace Twitter.Data
                    x.MapRightKey("TweetId");
                    x.ToTable("UserFavorites");
                });
+
+            modelBuilder.Entity<Tweet>()
+                .HasMany(t => t.Replies)
+                .WithMany()
+                .Map(x =>
+                {
+                    x.MapLeftKey("TweetId");
+                    x.MapRightKey("ReplyTweetId");
+                    x.ToTable("TweetReplies");
+                });
 
             base.OnModelCreating(modelBuilder);
         }

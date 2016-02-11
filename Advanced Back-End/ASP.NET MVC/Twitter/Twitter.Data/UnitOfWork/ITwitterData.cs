@@ -9,7 +9,6 @@ namespace Twitter.Data.UnitOfWork
         IRepository<Tweet> Tweets { get; }
         IRepository<Report> Reports { get; }
         IRepository<Notification> Notifications { get; }
-        IRepository<Message> Messages { get; }
         int Complete();
     }
 }

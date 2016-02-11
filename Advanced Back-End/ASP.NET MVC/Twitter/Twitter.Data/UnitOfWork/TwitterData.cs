@@ -16,12 +16,7 @@ namespace Twitter.Data.UnitOfWork
         {
             this.context = context;
             this.repositories = new Dictionary<Type, object>();
-        }
-
-        public IRepository<Message> Messages
-        {
-            get { return this.GetRepository<Message>(); }
-        }
+        }        
 
         public IRepository<Notification> Notifications
         {

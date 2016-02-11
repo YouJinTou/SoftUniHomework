@@ -19,7 +19,7 @@ namespace Twitter.Models
         public virtual Tweet Tweet { get; set; }
 
         [Required]
-        public int AuthorId { get; set; }
+        public string AuthorId { get; set; }
 
         public virtual User Author { get; set; }
 

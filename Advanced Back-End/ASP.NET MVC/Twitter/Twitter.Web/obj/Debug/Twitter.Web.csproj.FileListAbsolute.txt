@@ -87,3 +87,7 @@ D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.We
 D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\Glimpse.Core.dll
 D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\Glimpse.EF6.dll
 D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\Glimpse.Mvc5.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\PagedList.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\PagedList.Mvc.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\PagedList.xml
+D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\PagedList.Mvc.xml

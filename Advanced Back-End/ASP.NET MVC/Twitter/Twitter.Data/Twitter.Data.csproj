@@ -85,7 +85,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\Interfaces\IRepository.cs" />
-    <Compile Include="Repositories\MessageRepository.cs" />
     <Compile Include="Repositories\ReportRepository.cs" />
     <Compile Include="Repositories\TweetRepository.cs" />
     <Compile Include="Repositories\NotificationRepository.cs" />

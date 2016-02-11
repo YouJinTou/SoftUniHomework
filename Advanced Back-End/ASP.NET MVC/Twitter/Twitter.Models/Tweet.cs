@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Twitter.Models
 {
@@ -13,8 +14,9 @@ namespace Twitter.Models
 
         public Tweet()
         {
+            this.replies = new HashSet<Tweet>();
             this.favoritedBy = new HashSet<User>();
-            this.favoritedBy = new HashSet<User>();
+            this.retweetedBy = new HashSet<User>();
             this.reports = new HashSet<Report>();
         }
 
@@ -30,11 +32,9 @@ namespace Twitter.Models
         public DateTime CreatedOn { get; set; }
 
         [Required]
-        public string Url { get; set; }
-
-        [Required]
-        public int UserId { get; set; }
-
+        public string UserId { get; set; }
+        
+        [ForeignKey("UserId")]
         public virtual User User { get; set; }
 
         public virtual ICollection<Tweet> Replies { get; set; }

@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace Twitter.Models
 {
@@ -11,7 +14,6 @@ namespace Twitter.Models
         private ICollection<Tweet> tweets;
         private ICollection<Tweet> retweets;
         private ICollection<Tweet> favorites;
-        private ICollection<Message> messages;
         private ICollection<Notification> notifications;
 
         public User()
@@ -21,19 +23,23 @@ namespace Twitter.Models
             this.tweets = new HashSet<Tweet>();
             this.retweets = new HashSet<Tweet>();
             this.favorites = new HashSet<Tweet>();
-            this.messages = new HashSet<Message>();
             this.notifications = new HashSet<Notification>();
         }
 
-        [Required]
-        public string Name { get; set; }
+        public string PictureUrl { get; set; }
 
         public virtual ICollection<User> Followers { get; set; }
         public virtual ICollection<User> Following { get; set; }
         public virtual ICollection<Tweet> Tweets { get; set; }
         public virtual ICollection<Tweet> Retweets { get; set; }
         public virtual ICollection<Tweet> Favorites { get; set; }
-        public virtual ICollection<Message> Messages { get; set; }
         public virtual ICollection<Notification> Notifications { get; set; }
+
+        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
+        {
+            var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
+
+            return userIdentity;
+        }
     }
 }
