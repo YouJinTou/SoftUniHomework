@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Twitter.Web.Models.ViewModels.RepliesViewModel>
+
+<div>
+    <h1>Original</h1>
+    <div>@Html.Partial("_Tweet", Model)</div>
+    <h3>Replies</h3>
+    <div>
+        @Html.Partial("_Tweet", Model.First().RepliesToOriginal)
+    </div>
+</div>

@@ -285,8 +285,15 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Index.cshtml" />
-    <Content Include="Views\Shared\_PostTweet.cshtml" />
+    <Content Include="Views\Tweets\_PostTweet.cshtml" />
     <Content Include="Views\Users\UserProfile.cshtml" />
+    <Content Include="Views\Tweets\_Tweet.cshtml" />
+    <Content Include="Views\Users\_Following.cshtml" />
+    <Content Include="Views\Users\_Followers.cshtml" />
+    <Content Include="Views\Tweets\_FavoriteTweets.cshtml" />
+    <Content Include="Views\Shared\_UserIndex.cshtml" />
+    <Content Include="Views\Tweets\_TweetPage.cshtml" />
+    <Content Include="Views\Tweets\_PostReply.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

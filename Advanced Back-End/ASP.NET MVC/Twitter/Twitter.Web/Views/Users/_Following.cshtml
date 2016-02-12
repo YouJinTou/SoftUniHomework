@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Twitter.Web.Models.ViewModels.UserTweetViewModel>
+
+<div id="profile-following">
+    @{
+        if (Model.Count() != 0)
+        {
+            foreach (var item in Model)
+            {
+                <div class="col-xs-6">
+                    <header class="row">
+                        <div class="col-md-1">
+                            <img class="user-avatar" src="@Url.Content(item.PictureUrl)" alt="Avatar" />
+                        </div>
+                        <h3 class="col-md-1">
+                            @{
+                                var username = item.UserName.Substring(0, item.UserName.IndexOf('@'));
+                            }
+
+                            @Html.ActionLink(
+                        linkText: username,
+                        actionName: "Profile",
+                        controllerName: "Users",
+                        routeValues: new { username = username },
+                        htmlAttributes: null
+                   )
+                        </h3>
+                    </header>
+                </div>
+            }
+        }
+        else
+        {
+            <h2>This user is not following anyone.</h2>
+        }
+    }
+</div>

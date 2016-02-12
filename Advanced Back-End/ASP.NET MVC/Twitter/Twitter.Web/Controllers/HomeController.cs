@@ -20,21 +20,37 @@ namespace Twitter.Web.Controllers
             IQueryable<TweetViewModel> tweets = null;
             var userId = this.User.Identity.GetUserId();
 
-            if (userId == null)
-            {
-                tweets = this.data.Tweets
+            tweets = this.data.Tweets
                 .All()
                 .OrderByDescending(t => t.CreatedOn)
                 .Select(t => new TweetViewModel()
                 {
+                    Id = t.Id,
                     User = new UserTweetViewModel()
                     {
-                        Username = t.User.UserName,
+                        UserName = t.User.UserName,
                         PictureUrl = t.User.PictureUrl
                     },
                     Content = t.Content,
                     CreatedOn = t.CreatedOn
                 });
+
+            
+
+            int pageSize = 7;
+            int pageNumber = (page ?? 1);
+
+            return View(tweets.ToPagedList(pageNumber, pageSize));
+        }
+
+        public ActionResult Feed(int? page)
+        {
+            IQueryable<TweetViewModel> tweets = null;
+            var userId = this.User.Identity.GetUserId();
+
+            if (userId == null)
+            {
+                // Throw error
             }
             else
             {
@@ -50,11 +66,13 @@ namespace Twitter.Web.Controllers
                 foreach (var tweetCollection in userFollowingTweets)
                 {
                     tweetsList.AddRange(tweetCollection
+                        .OrderByDescending(t => t.CreatedOn)
                         .Select(t => new TweetViewModel()
                         {
+                            Id = t.Id,
                             User = new UserTweetViewModel()
                             {
-                                Username = t.User.UserName,
+                                UserName = t.User.UserName,
                                 PictureUrl = t.User.PictureUrl
                             },
                             Content = t.Content,
@@ -62,13 +80,13 @@ namespace Twitter.Web.Controllers
                         }));
                 }
 
-                tweets = tweetsList.AsQueryable();
+                tweets = tweetsList.AsQueryable();               
             }
 
-            int pageSize = 10;
+            int pageSize = 7;
             int pageNumber = (page ?? 1);
 
-            return View(tweets.ToPagedList(pageNumber, pageSize));
+            return View("_UserIndex", tweets.ToPagedList(pageNumber, pageSize));
         }
     }
 }

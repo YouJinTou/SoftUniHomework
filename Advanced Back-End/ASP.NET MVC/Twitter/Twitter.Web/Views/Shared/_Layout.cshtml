@@ -23,7 +23,26 @@
                     @{
                         if (this.Request.IsAuthenticated)
                         {
-                            <li>@Html.ActionLink("Profile", "UserProfile", "Users")</li>
+                            var username = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+
+                            <li>
+                                @Html.ActionLink(
+                               linkText: "Feed",
+                               actionName: "Feed",
+                               controllerName: "Home",
+                               routeValues: null,
+                               htmlAttributes: null
+                               )
+                            </li>
+                            <li>
+                                @Html.ActionLink(
+                               linkText: "Profile",
+                               actionName: "Profile",
+                               controllerName: "Users",
+                               routeValues: new {username = username},
+                               htmlAttributes: null
+                               )
+                            </li>
                         }
                     }
                 </ul>

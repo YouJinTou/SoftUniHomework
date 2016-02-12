@@ -1,0 +1,10 @@
+﻿<div id="create-tweet-box">
+    @using (Html.BeginForm(
+                actionName: "Reply", controllerName: "Tweets", method: FormMethod.Post,
+                routeValues: new { id = Model }, htmlAttributes: new { @class = "form-horizontal" }))
+    {
+        <textarea class="form-control" rows="3" name="content" placeholder="Tweet your reply here"></textarea>
+        @Html.AntiForgeryToken()
+        <input type="submit" class="btn btn-info" value="Send Reply" />
+    }
+</div>

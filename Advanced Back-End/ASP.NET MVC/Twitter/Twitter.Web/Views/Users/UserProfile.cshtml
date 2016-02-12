@@ -1,57 +1,46 @@
 ﻿@model Twitter.Web.Models.ViewModels.UserProfileViewModel
 
-@{
-    ViewBag.Title = "Profile";
-}
-
-
 <div class="row">
     <div class="col-xs-9">
-        @Html.ActionLink("Tweets", "Index") |
-        @Html.ActionLink("Following", "Index") |
-        @Html.ActionLink("Followers", "Index") |    
-        @Html.ActionLink("Favorites", "Index")
+        @{
+            var username = Model.UserName.Substring(0, Model.UserName.IndexOf('@'));
+        }
+
+        @Ajax.ActionLink("Tweets", "Tweets", new { username = username },
+        null, new AjaxOptions { UpdateTargetId = "profile-tweets" }) |
+        @Ajax.ActionLink("Retweets", "Retweets", new { username = username },
+        null, new AjaxOptions { UpdateTargetId = "profile-tweets" }) |
+        @Ajax.ActionLink("Following", "Following", new { username = username },
+            null, new AjaxOptions { UpdateTargetId = "profile-following" }) |
+        @Ajax.ActionLink("Followers", "Followers", new { username = username },
+            null, new AjaxOptions { UpdateTargetId = "profile-followers" }) |
+        @Ajax.ActionLink("Favorites", "Favorites", new { username = username },
+            null, new AjaxOptions { UpdateTargetId = "profile-favorites" })
     </div>
     <div class="col-xs-4">
         <div>
             <img class="user-avatar" src="@Url.Content(Model.PictureUrl)" alt="Avatar" />
         </div>
+
+        @if (this.User.Identity.Name != Model.UserName)
+        {
+            if (Model.Followers.FirstOrDefault(u => u.UserName == this.User.Identity.Name) == null)
+            {
+                <div class="controls">
+                    @Html.ActionLink(linkText: "Follow", actionName: "Follow", controllerName: "Users",
+                    routeValues: new { username = username }, htmlAttributes: null)
+                </div>
+            }
+        }
+
         <div>
-            <h2>@Model.Username</h2>
+            <h2>@Model.UserName</h2>
         </div>
     </div>
-    @{
-        foreach (var tweet in Model.Tweets)
-        {
-            <div class="col-xs-6">
-                <header>
-                    <div class="col-md-1">
-                        <img class="user-avatar" src="@Url.Content(tweet.User.PictureUrl)" alt="Avatar" />
-                    </div>                        
-                    <h3 class="col-md-2">
-                        @tweet.User.UserName.Substring(0, @tweet.User.UserName.IndexOf('@'))
-                    </h3>
-                    <span class="col-md-2">
-                        @{
-                            var timeAgo = (DateTime.Now - tweet.CreatedOn);
-                        }
-                        @Math.Floor(timeAgo.TotalDays) d
-                    </span>
-                </header>
-
-                <section>
-                    <p>@tweet.Content</p>   
-                </section>
-
-                <footer>
-                    @Html.ActionLink("Favorite", "Index") |
-                    @Html.ActionLink("Retweet", "Index") |
-                    @Html.ActionLink("Reply", "Index") |
-                    @Html.ActionLink("Share", "Index") |
-                    @Html.ActionLink("Report", "Index")
-                </footer>
-            </div>
+    <div>
+        <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+        @{
+            Html.RenderPartial("~/Views/Tweets/_Tweet.cshtml", Model.Tweets);
         }
-    }
+    </div>
 </div>
-
