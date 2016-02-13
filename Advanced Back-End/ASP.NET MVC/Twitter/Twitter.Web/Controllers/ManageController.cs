@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -7,20 +6,24 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Twitter.Web.Models.ViewModels;
+using Twitter.Data.UnitOfWork;
+using Twitter.Data;
 
 namespace Twitter.Web.Controllers
 {
     [Authorize]
-    public class ManageController : Controller
+    public class ManageController : BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
-        public ManageController()
+        public ManageController(ITwitterData data)
+            : base(data)
         {
         }
 
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
+            : this(new TwitterData(new TwitterDbContext()))
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -271,6 +274,39 @@ namespace Twitter.Web.Controllers
             }
 
             // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
+        //
+        // GET: /Manage/ChangeAvatar
+        public ActionResult ChangeAvatar()
+        {
+            return View();
+        }
+
+        //
+        // POST: /Manage/SetPassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangeAvatar(ChangeAvatarBindingModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var userId = User.Identity.GetUserId();
+
+                var user = this.data.Users.Find(userId);
+
+                if (user != null)
+                {
+                    user.PictureUrl = model.PictureUrl ??
+                        "https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/anonymous-128.png";
+
+                    this.data.Users.SaveChanges();
+
+                    return RedirectToAction("Index");
+                }
+            }
+
             return View(model);
         }
 

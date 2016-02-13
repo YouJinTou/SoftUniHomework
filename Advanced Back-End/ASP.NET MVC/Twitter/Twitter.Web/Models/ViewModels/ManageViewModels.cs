@@ -58,6 +58,12 @@ namespace Twitter.Web.Models.ViewModels
         public string ConfirmPassword { get; set; }
     }
 
+    public class ChangeAvatarBindingModel
+    {
+        [Required]
+        public string PictureUrl { get; set; }
+    }
+
     public class AddPhoneNumberViewModel
     {
         [Required]

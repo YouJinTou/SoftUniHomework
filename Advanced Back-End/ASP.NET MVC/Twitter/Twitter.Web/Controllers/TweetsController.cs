@@ -72,13 +72,27 @@ namespace Twitter.Web.Controllers
             {
                 // Something went wrong; throw error
             }
+                    
+            var user = this.data.Users.Find(userId);
 
-            this.data.Users
-                .All()
-                .FirstOrDefault(u => u.Id == userId)
-                .Favorites
-                .Add(tweetToFavorite);
+            user.Favorites.Add(tweetToFavorite);
+
             this.data.Users.SaveChanges();
+
+            // Send notification
+            var username = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+            var notification = new Notification()
+            {
+                UserId = tweetToFavorite.UserId,
+                CauseUserId = userId,
+                Content = username + " has just favorited your tweet!",
+                Date = DateTime.Now,
+                AuthorTweetId = tweetToFavorite.Id
+            };
+
+            this.data.Notifications.Add(notification);
+
+            this.data.Notifications.SaveChanges();
 
             return RedirectToAction("Index", "Home");
         }
@@ -99,12 +113,25 @@ namespace Twitter.Web.Controllers
                 // Something went wrong; throw error
             }
 
-            var user = this.data.Users
-                .All()
-                .FirstOrDefault(u => u.Id == userId);
+            var user = this.data.Users.Find(userId);
 
             user.Retweets.Add(tweetToRetweet);
             this.data.Users.SaveChanges();
+
+            // Send notification
+            var username = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+            var notification = new Notification()
+            {
+                UserId = tweetToRetweet.UserId,
+                CauseUserId = userId,
+                Content = username + " has just retweeted your tweet!",
+                Date = DateTime.Now,
+                AuthorTweetId = tweetToRetweet.Id
+            };
+
+            this.data.Notifications.Add(notification);
+
+            this.data.Notifications.SaveChanges();
 
             return RedirectToAction("Index", "Home");
         }
@@ -130,7 +157,7 @@ namespace Twitter.Web.Controllers
                 Content = authorTweet.Content,
                 CreatedOn = authorTweet.CreatedOn,
                 Id = authorTweet.Id,
-                RepliesToOriginal = authorTweet.Replies.OrderByDescending(t => t.CreatedOn)
+                RepliesToOriginal = authorTweet.Replies.OrderByDescending(t => t.CreatedOn) ?? null
             });
 
             return View("_TweetPage", result);
@@ -176,9 +203,20 @@ namespace Twitter.Web.Controllers
             tweetToReplyTo.Replies.Add(reply);
             this.data.Tweets.SaveChanges();
 
-            var result = new List<RepliesViewModel>();
-            var user = this.data.Users.Find(userId);
+            // Send notification
+            var username = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+            var notification = new Notification()
+            {
+                UserId = tweetToReplyTo.UserId,
+                CauseUserId = userId,
+                Content = username + " has just replied to your tweet!",
+                Date = DateTime.Now,
+                AuthorTweetId = tweetToReplyTo.Id
+            };
 
+            this.data.Notifications.Add(notification);
+
+            var result = new List<RepliesViewModel>();
             result.Add(new RepliesViewModel()
             {
                 User = new UserTweetViewModel()
@@ -189,7 +227,7 @@ namespace Twitter.Web.Controllers
                 Content = tweetToReplyTo.Content,
                 CreatedOn = tweetToReplyTo.CreatedOn,
                 Id = tweetToReplyTo.Id,
-                RepliesToOriginal = tweetToReplyTo.Replies.OrderByDescending(t => t.CreatedOn)
+                RepliesToOriginal = tweetToReplyTo.Replies.OrderByDescending(t => t.CreatedOn) ?? null
             });
             
             return View("_TweetPage", result.AsEnumerable());

@@ -18,7 +18,6 @@ namespace Twitter.Web.Controllers
         public ActionResult Index(int? page)
         {
             IQueryable<TweetViewModel> tweets = null;
-            var userId = this.User.Identity.GetUserId();
 
             tweets = this.data.Tweets
                 .All()
@@ -34,8 +33,6 @@ namespace Twitter.Web.Controllers
                     Content = t.Content,
                     CreatedOn = t.CreatedOn
                 });
-
-            
 
             int pageSize = 7;
             int pageNumber = (page ?? 1);

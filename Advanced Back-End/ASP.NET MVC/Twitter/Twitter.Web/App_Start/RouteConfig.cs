@@ -20,6 +20,12 @@ namespace Twitter.Web
                 url: "Tweets/{id}",
                 defaults: new { controller = "Home", action = "Index" }
             );
+
+            routes.MapRoute(
+                name: "Notifications",
+                url: "Notifications/{id}",
+                defaults: new { controller = "Home", action = "Index" }
+            );
         }
     }
 }

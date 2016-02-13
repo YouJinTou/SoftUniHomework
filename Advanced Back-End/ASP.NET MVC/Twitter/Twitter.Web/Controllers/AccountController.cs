@@ -152,7 +152,9 @@ namespace Twitter.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new User { UserName = model.Email, Email = model.Email };
+                var user = new User { UserName = model.Email, Email = model.Email,
+                    PictureUrl = model.PictureUrl ??
+                    "https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/anonymous-128.png" };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

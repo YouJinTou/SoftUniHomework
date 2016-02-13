@@ -60,6 +60,11 @@ namespace Twitter.Data
                    x.ToTable("UserFavorites");
                });
 
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Notifications)
+                .WithRequired(n => n.CauseUser)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Tweet>()
                 .HasMany(t => t.Replies)
                 .WithMany()
@@ -68,7 +73,7 @@ namespace Twitter.Data
                     x.MapLeftKey("TweetId");
                     x.MapRightKey("ReplyTweetId");
                     x.ToTable("TweetReplies");
-                });
+                });            
 
             base.OnModelCreating(modelBuilder);
         }

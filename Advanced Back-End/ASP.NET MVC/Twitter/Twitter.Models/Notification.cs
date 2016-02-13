@@ -18,5 +18,12 @@ namespace Twitter.Models
         public string UserId { get; set; }
 
         public virtual User User { get; set; }
+
+        [Required]
+        public string CauseUserId { get; set; }
+
+        public virtual User CauseUser { get; set; }
+
+        public int? AuthorTweetId { get; set; }
     }
 }

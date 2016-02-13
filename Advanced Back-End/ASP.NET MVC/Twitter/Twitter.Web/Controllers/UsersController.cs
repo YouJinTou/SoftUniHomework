@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Linq;
 using System.Web.Mvc;
 using Twitter.Data;
@@ -8,6 +9,7 @@ using Twitter.Web.Models.ViewModels;
 
 namespace Twitter.Web.Controllers
 {
+    [Authorize]
     public class UsersController : BaseController
     {
         public UsersController(ITwitterData data)
@@ -35,7 +37,7 @@ namespace Twitter.Web.Controllers
 
             return View("UserProfile", profileData);
         }
-
+        
         public ActionResult Follow(string username)
         {
             var userId = this.User.Identity.GetUserId();
@@ -50,12 +52,25 @@ namespace Twitter.Web.Controllers
                 .All()
                 .FirstOrDefault(u => u.UserName == fullUsername);
             var userWantingToFollow = this.data.Users.Find(userId);
-
-
+            
             userToBeFollowed.Followers.Add(userWantingToFollow);
             userWantingToFollow.Following.Add(userToBeFollowed);
 
             this.data.Users.SaveChanges();
+
+            // Send notification
+            var currentUsername = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+            var notification = new Notification()
+            {
+                UserId = userToBeFollowed.Id,
+                CauseUserId = userWantingToFollow.Id,
+                Content = currentUsername + " has just followed you!",
+                Date = DateTime.Now
+            };
+
+            this.data.Notifications.Add(notification);
+
+            this.data.Notifications.SaveChanges();
 
             return RedirectToAction("Index", "Home");
         }
