@@ -29,30 +29,33 @@ namespace Twitter.Web.Controllers
         [Authorize]
         public ActionResult PostTweet(PostTweetBindingModel model)
         {
+            if (!this.ModelState.IsValid)
+            {
+                this.TempData["postTweetError"] =
+                    "A tweet's length should be between 1 and 140 characters long";
+
+                return RedirectToAction("Index", "Home");
+            }
+
             var userId = this.User.Identity.GetUserId();
             var tweet = new Tweet();
 
             if (userId == null)
             {
-                // Throw error
+                return new HttpUnauthorizedResult("You need to be logged in.");
             }
 
-            if (!this.ModelState.IsValid)
+            tweet = new Tweet()
             {
-                return View(model);
-            }
-            else
-            {
-                tweet = new Tweet()
-                {
-                    Content = model.Content,
-                    CreatedOn = DateTime.Now,
-                    UserId = userId
-                };
+                Content = model.Content,
+                CreatedOn = DateTime.Now,
+                UserId = userId
+            };
 
-                this.data.Tweets.Add(tweet);
-                this.data.Tweets.SaveChanges();
-            }
+            this.data.Tweets.Add(tweet);
+            this.data.Tweets.SaveChanges();
+
+            this.TempData["postTweetSuccess"] = "Tweet sent successfully";
 
             return RedirectToAction("Index", "Home");
         }
@@ -63,16 +66,16 @@ namespace Twitter.Web.Controllers
 
             if (userId == null)
             {
-                // Throw error
+                return new HttpUnauthorizedResult("You need to be logged in.");
             }
 
             var tweetToFavorite = this.data.Tweets.Find(id);
 
             if (tweetToFavorite == null)
             {
-                // Something went wrong; throw error
+                return new HttpNotFoundResult("The tweet is missing.");
             }
-                    
+
             var user = this.data.Users.Find(userId);
 
             user.Favorites.Add(tweetToFavorite);
@@ -94,6 +97,8 @@ namespace Twitter.Web.Controllers
 
             this.data.Notifications.SaveChanges();
 
+            this.TempData["favoriteTweetSuccess"] = "Tweet favorited successfully";
+
             return RedirectToAction("Index", "Home");
         }
 
@@ -103,14 +108,14 @@ namespace Twitter.Web.Controllers
 
             if (userId == null)
             {
-                // Throw error
+                return new HttpUnauthorizedResult("You need to be logged in.");
             }
 
             var tweetToRetweet = this.data.Tweets.Find(id);
 
             if (tweetToRetweet == null)
             {
-                // Something went wrong; throw error
+                return new HttpNotFoundResult("The tweet is missing.");
             }
 
             var user = this.data.Users.Find(userId);
@@ -133,6 +138,8 @@ namespace Twitter.Web.Controllers
 
             this.data.Notifications.SaveChanges();
 
+            this.TempData["retweetTweetSuccess"] = "Tweet retweeted successfully";
+
             return RedirectToAction("Index", "Home");
         }
 
@@ -142,7 +149,7 @@ namespace Twitter.Web.Controllers
 
             if (authorTweet == null)
             {
-                // Something went wrong; throw error
+                return new HttpNotFoundResult("The tweet is missing.");
             }
 
             var result = new List<RepliesViewModel>();
@@ -176,22 +183,25 @@ namespace Twitter.Web.Controllers
         {
             if (!this.ModelState.IsValid)
             {
-                return View(model);
+                this.TempData["postReplyError"] =
+                    "A tweet's length should be between 1 and 140 characters long";
+
+                return RedirectToAction("PostReply", new { id = model.Id });
             }
 
             var userId = this.User.Identity.GetUserId();
 
             if (userId == null)
             {
-                // Throw error
+                return new HttpUnauthorizedResult("You need to be logged in.");
             }
 
             var tweetToReplyTo = this.data.Tweets.Find(model.Id);
 
             if (tweetToReplyTo == null)
             {
-                // Something went wrong; throw error
-            }
+                return new HttpNotFoundResult("The tweet is missing.");
+            }            
 
             var reply = new Tweet()
             {
@@ -199,7 +209,10 @@ namespace Twitter.Web.Controllers
                 CreatedOn = DateTime.Now,
                 UserId = userId
             };
-            
+
+            // Throws not-an-instance-of-an-object error otherwise
+            tweetToReplyTo.Replies = new HashSet<Tweet>(); 
+
             tweetToReplyTo.Replies.Add(reply);
             this.data.Tweets.SaveChanges();
 
@@ -229,7 +242,9 @@ namespace Twitter.Web.Controllers
                 Id = tweetToReplyTo.Id,
                 RepliesToOriginal = tweetToReplyTo.Replies.OrderByDescending(t => t.CreatedOn) ?? null
             });
-            
+
+            this.TempData["postReplySuccess"] = "Reply sent successfully";
+
             return View("_TweetPage", result.AsEnumerable());
         }
     }

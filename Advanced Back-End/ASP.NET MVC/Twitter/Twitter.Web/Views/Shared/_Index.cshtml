@@ -2,8 +2,6 @@
 @using PagedList.Mvc;
 
 @{
-    ViewBag.Title = "Feed";
-
     Html.RenderPartial("~/Views/Tweets/_Tweet.cshtml");
 
     @Html.PagedListPager(Model, page => Url.Action("Index", new { page }));

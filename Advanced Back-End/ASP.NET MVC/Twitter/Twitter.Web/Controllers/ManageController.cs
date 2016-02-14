@@ -55,6 +55,7 @@ namespace Twitter.Web.Controllers
 
         //
         // GET: /Manage/Index
+        [OutputCache(VaryByParam = "None", Duration = 3600)]
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -216,6 +217,7 @@ namespace Twitter.Web.Controllers
 
         //
         // GET: /Manage/ChangePassword
+        [OutputCache(VaryByParam = "None", Duration = 3600)]
         public ActionResult ChangePassword()
         {
             return View();
@@ -239,6 +241,7 @@ namespace Twitter.Web.Controllers
                 {
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                 }
+
                 return RedirectToAction("Index", new { Message = ManageMessageId.ChangePasswordSuccess });
             }
             AddErrors(result);
@@ -268,6 +271,8 @@ namespace Twitter.Web.Controllers
                     {
                         await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                     }
+
+
                     return RedirectToAction("Index", new { Message = ManageMessageId.SetPasswordSuccess });
                 }
                 AddErrors(result);
@@ -279,8 +284,10 @@ namespace Twitter.Web.Controllers
 
         //
         // GET: /Manage/ChangeAvatar
+        [OutputCache(VaryByParam = "None", Duration = 3600)]
         public ActionResult ChangeAvatar()
         {
+            
             return View();
         }
 
@@ -303,9 +310,13 @@ namespace Twitter.Web.Controllers
 
                     this.data.Users.SaveChanges();
 
+                    this.TempData["changeAvatarSuccess"] = "Avatar changed successfully";
+
                     return RedirectToAction("Index");
                 }
             }
+
+            this.TempData["changeAvatarError"] = "Avatar change failed";
 
             return View(model);
         }

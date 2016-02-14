@@ -41,12 +41,7 @@ namespace Twitter.Web.Controllers
         public ActionResult Follow(string username)
         {
             var userId = this.User.Identity.GetUserId();
-
-            if (userId == null)
-            {
-                // Throw error
-            }
-
+            
             var fullUsername = username + "@twitter.com";
             var userToBeFollowed = this.data.Users
                 .All()
@@ -71,6 +66,42 @@ namespace Twitter.Web.Controllers
             this.data.Notifications.Add(notification);
 
             this.data.Notifications.SaveChanges();
+
+            this.TempData["followUserSuccess"] = "User followed successfully";
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult Unfollow(string username)
+        {
+            var userId = this.User.Identity.GetUserId();
+
+            var fullUsername = username + "@twitter.com";
+            var userToBeUnFollowed = this.data.Users
+                .All()
+                .FirstOrDefault(u => u.UserName == fullUsername);
+            var userWantingToUnfollow = this.data.Users.Find(userId);
+
+            userToBeUnFollowed.Followers.Remove(userWantingToUnfollow);
+            userWantingToUnfollow.Following.Remove(userWantingToUnfollow);
+
+            this.data.Users.SaveChanges();
+
+            // Send notification
+            var currentUsername = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+            var notification = new Notification()
+            {
+                UserId = userToBeUnFollowed.Id,
+                CauseUserId = userWantingToUnfollow.Id,
+                Content = currentUsername + " has just unfollowed you.",
+                Date = DateTime.Now
+            };
+
+            this.data.Notifications.Add(notification);
+
+            this.data.Notifications.SaveChanges();
+
+            this.TempData["unfollowUserSuccess"] = "User unfollowed successfully";
 
             return RedirectToAction("Index", "Home");
         }
@@ -174,12 +205,7 @@ namespace Twitter.Web.Controllers
             var fullUsername = username + "@twitter.com";
             var user = this.data.Users
                 .All()
-                .FirstOrDefault(u => u.UserName == fullUsername);
-
-            if (user == null)
-            {
-                // Throw error
-            }
+                .FirstOrDefault(u => u.UserName == fullUsername);            
 
             return user;
         }

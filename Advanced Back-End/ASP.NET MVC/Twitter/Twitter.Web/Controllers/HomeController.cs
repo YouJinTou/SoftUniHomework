@@ -47,7 +47,7 @@ namespace Twitter.Web.Controllers
 
             if (userId == null)
             {
-                // Throw error
+                return new HttpUnauthorizedResult("You need to be logged in.");
             }
             else
             {

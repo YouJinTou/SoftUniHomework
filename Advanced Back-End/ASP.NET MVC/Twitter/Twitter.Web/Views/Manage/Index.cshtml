@@ -5,6 +5,19 @@
 
 <h2>@ViewBag.Title</h2>
 
+@if (this.TempData["changeAvatarSuccess"] != null)
+{
+    <div class="text-success">
+        <h5>@this.TempData["changeAvatarSuccess"]</h5>
+    </div>
+}
+else if (this.TempData["changeAvatarError"] != null)
+{
+    <div class="text-success">
+        <h5>@this.TempData["changeAvatarError"]</h5>
+    </div>
+}
+
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
     <h4>Change your account settings</h4>

@@ -1,5 +1,12 @@
 ﻿@model IEnumerable<Twitter.Web.Models.ViewModels.RepliesViewModel>
 
+@if (this.TempData["postReplySuccess"] != null)
+{
+    <div class="text-success">
+        <h5>@this.TempData["postReplySuccess"]</h5>
+    </div>
+}
+
 <div>
     <h1>Original</h1>
     <div>@Html.Partial("_Tweet", Model)</div>

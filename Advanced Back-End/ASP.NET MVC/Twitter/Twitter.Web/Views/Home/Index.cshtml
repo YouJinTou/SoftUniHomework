@@ -4,6 +4,44 @@
     ViewBag.Title = "Twitter";
 }
 
+@*Can't place this inside a helper as TempData does not exist there*@
+@if (this.TempData["postTweetError"] != null)
+{
+    <div class="text-danger">
+        <h5>@this.TempData["postTweetError"]</h5>
+    </div>
+}
+else if (this.TempData["postTweetSuccess"] != null)
+{
+    <div class="text-success">
+        <h5>@this.TempData["postTweetSuccess"]</h5>
+    </div>
+}
+else if (this.TempData["favoriteTweetSuccess"] != null)
+{
+    <div class="text-success">
+        <h5>@this.TempData["favoriteTweetSuccess"]</h5>
+    </div>
+}
+else if (this.TempData["retweetTweetSuccess"] != null)
+{
+    <div class="text-success">
+        <h5>@this.TempData["retweetTweetSuccess"]</h5>
+    </div>
+}
+else if (this.TempData["followUserSuccess"] != null)
+{
+    <div class="text-success">
+        <h5>@this.TempData["followUserSuccess"]</h5>
+    </div>
+}
+else if (this.TempData["unfollowUserSuccess"] != null)
+{
+    <div class="text-success">
+        <h5>@this.TempData["unfollowUserSuccess"]</h5>
+    </div>
+}
+
 <section id="tweets-container">
     @{
         if (!this.User.Identity.IsAuthenticated)

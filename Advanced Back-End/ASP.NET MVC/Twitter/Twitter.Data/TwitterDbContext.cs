@@ -15,7 +15,6 @@ namespace Twitter.Data
         }
 
         public virtual IDbSet<Tweet> Tweets { get; set; }
-        public virtual IDbSet<Report> Reports { get; set; }
         public virtual IDbSet<Notification> Notifications { get; set; }
 
         public static TwitterDbContext Create()

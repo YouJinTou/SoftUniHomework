@@ -7,7 +7,6 @@ namespace Twitter.Data.UnitOfWork
     {
         IRepository<User> Users { get; }
         IRepository<Tweet> Tweets { get; }
-        IRepository<Report> Reports { get; }
         IRepository<Notification> Notifications { get; }
         int Complete();
     }

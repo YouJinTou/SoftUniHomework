@@ -54,7 +54,8 @@ namespace Twitter.Web.Controllers
                 return RedirectToAction(
                     "Replies", "Tweets", new { id = notification.AuthorTweetId });
             }
-            else if (activity.Contains("followed"))
+            else if (activity.Contains("followed") ||
+                activity.Contains("unfollowed"))
             {
                 var follower = notification.CauseUser.UserName.Substring(
                     0, notification.CauseUser.UserName.IndexOf('@'));

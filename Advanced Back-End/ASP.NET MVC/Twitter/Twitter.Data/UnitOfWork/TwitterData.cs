@@ -21,12 +21,7 @@ namespace Twitter.Data.UnitOfWork
         public IRepository<Notification> Notifications
         {
             get { return this.GetRepository<Notification>(); }
-        }
-
-        public IRepository<Report> Reports
-        {
-            get { return this.GetRepository<Report>(); }
-        }
+        }        
 
         public IRepository<Tweet> Tweets
         {
