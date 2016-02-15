@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using System.Linq;
 using System.Web.Mvc;
-using Twitter.Data;
 using Twitter.Data.UnitOfWork;
 using Twitter.Web.Models.ViewModels;
 
@@ -13,11 +12,6 @@ namespace Twitter.Web.Controllers
         public NotificationsController(ITwitterData data)
             : base(data)
         {
-        }
-
-        public NotificationsController()
-            : this(new TwitterData(new TwitterDbContext()))
-        {            
         }
 
         public ActionResult All()

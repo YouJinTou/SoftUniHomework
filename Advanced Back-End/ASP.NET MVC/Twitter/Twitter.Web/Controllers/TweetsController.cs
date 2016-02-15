@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using Twitter.Data;
 using Twitter.Data.UnitOfWork;
 using Twitter.Models;
 using Twitter.Web.Models.ViewModels;
@@ -15,11 +14,6 @@ namespace Twitter.Web.Controllers
     {
         public TweetsController(ITwitterData data)
             : base(data)
-        {
-        }
-
-        public TweetsController()
-            : this(new TwitterData(new TwitterDbContext()))
         {
         }
 

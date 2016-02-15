@@ -2,7 +2,6 @@
 using System;
 using System.Linq;
 using System.Web.Mvc;
-using Twitter.Data;
 using Twitter.Data.UnitOfWork;
 using Twitter.Models;
 using Twitter.Web.Models.ViewModels;
@@ -15,11 +14,6 @@ namespace Twitter.Web.Controllers
         public UsersController(ITwitterData data)
             : base(data)
         {
-        }
-
-        public UsersController()
-            : this(new TwitterData(new TwitterDbContext()))
-        {            
         }
 
         [ActionName("Profile")]

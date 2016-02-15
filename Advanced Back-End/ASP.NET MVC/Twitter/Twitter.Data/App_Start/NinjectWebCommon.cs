@@ -11,7 +11,7 @@ namespace Twitter.Data.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using UnitOfWork;
-    using System.Data.Entity;
+
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
