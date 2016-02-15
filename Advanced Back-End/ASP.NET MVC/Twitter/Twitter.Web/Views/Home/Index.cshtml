@@ -23,6 +23,12 @@ else if (this.TempData["favoriteTweetSuccess"] != null)
         <h5>@this.TempData["favoriteTweetSuccess"]</h5>
     </div>
 }
+else if (this.TempData["favoriteTweetError"] != null)
+{
+    <div class="text-danger">
+        <h5>@this.TempData["favoriteTweetError"]</h5>
+    </div>
+}
 else if (this.TempData["retweetTweetSuccess"] != null)
 {
     <div class="text-success">

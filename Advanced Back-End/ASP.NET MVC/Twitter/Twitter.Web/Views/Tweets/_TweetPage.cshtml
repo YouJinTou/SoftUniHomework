@@ -12,6 +12,9 @@
     <div>@Html.Partial("_Tweet", Model)</div>
     <h3>Replies</h3>
     <div>
-        @Html.Partial("_Tweet", Model.First().RepliesToOriginal)
+        @if (Model.FirstOrDefault() != null)
+        {
+            Html.Partial("_Tweet", Model.FirstOrDefault().RepliesToOriginal);
+        }
     </div>
 </div>

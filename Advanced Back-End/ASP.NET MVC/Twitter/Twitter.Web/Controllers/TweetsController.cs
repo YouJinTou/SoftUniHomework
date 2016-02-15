@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web.Mvc;
 using Twitter.Data.UnitOfWork;
 using Twitter.Models;
@@ -72,6 +71,13 @@ namespace Twitter.Web.Controllers
 
             var user = this.data.Users.Find(userId);
 
+            if (user.Favorites.Contains(tweetToFavorite))
+            {
+                this.TempData["favoriteTweetError"] = "You cannot favorite a tweet more than once";
+
+                return RedirectToAction("Index", "Home");
+            }
+
             user.Favorites.Add(tweetToFavorite);
 
             this.data.Users.SaveChanges();
@@ -137,6 +143,7 @@ namespace Twitter.Web.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        // A very problematic, poorly written controller in terms of null reference exceptions thrown
         public ActionResult Replies(int id)
         {
             var authorTweet = this.data.Tweets.Find(id);
@@ -145,27 +152,30 @@ namespace Twitter.Web.Controllers
             {
                 return new HttpNotFoundResult("The tweet is missing.");
             }
-
-            var result = new List<RepliesViewModel>();
-
-            result.Add(new RepliesViewModel()
+            
+            if (authorTweet.Replies == null)
             {
-                User = new UserTweetViewModel()
-                {
-                    UserName = authorTweet.User.UserName,
-                    PictureUrl = authorTweet.User.PictureUrl
-                },
-                Content = authorTweet.Content,
-                CreatedOn = authorTweet.CreatedOn,
-                Id = authorTweet.Id,
-                RepliesToOriginal = authorTweet.Replies.OrderByDescending(t => t.CreatedOn) ?? null
-            });
+                authorTweet.Replies = new HashSet<Tweet>();
+            }
+
+            var result = new HashSet<RepliesViewModel>();
+
+            // Add initial tweet to view
+            AddTweetViewModelToResult(result, authorTweet);
+
+            foreach (var reply in authorTweet.Replies)
+            {
+                AddTweetViewModelToResult(result, reply);
+
+                // Traverse the children recursively
+                var children = GetTweetRepliesTree(result, reply);                              
+            }
 
             return View("_TweetPage", result);
         }
 
         public ActionResult PostReply(int id)
-        {            
+        {
             return View("_PostReply", id);
         }
 
@@ -195,19 +205,29 @@ namespace Twitter.Web.Controllers
             if (tweetToReplyTo == null)
             {
                 return new HttpNotFoundResult("The tweet is missing.");
-            }            
+            }
 
             var reply = new Tweet()
             {
                 Content = model.Content,
                 CreatedOn = DateTime.Now,
-                UserId = userId
+                UserId = userId,
+                User = this.data.Users.Find(userId)
             };
 
-            // Throws not-an-instance-of-an-object error otherwise
-            tweetToReplyTo.Replies = new HashSet<Tweet>(); 
+            // Necessary, otherwise throws null reference exception
+            try
+            {
+                tweetToReplyTo.Replies.Add(reply);
 
-            tweetToReplyTo.Replies.Add(reply);
+            }
+            catch (NullReferenceException)
+            {
+                tweetToReplyTo.Replies = new HashSet<Tweet>();
+
+                tweetToReplyTo.Replies.Add(reply);
+            }
+
             this.data.Tweets.SaveChanges();
 
             // Send notification
@@ -223,23 +243,57 @@ namespace Twitter.Web.Controllers
 
             this.data.Notifications.Add(notification);
 
-            var result = new List<RepliesViewModel>();
-            result.Add(new RepliesViewModel()
-            {
-                User = new UserTweetViewModel()
-                {
-                    UserName = tweetToReplyTo.User.UserName,
-                    PictureUrl = tweetToReplyTo.User.PictureUrl
-                },
-                Content = tweetToReplyTo.Content,
-                CreatedOn = tweetToReplyTo.CreatedOn,
-                Id = tweetToReplyTo.Id,
-                RepliesToOriginal = tweetToReplyTo.Replies.OrderByDescending(t => t.CreatedOn) ?? null
-            });
-
             this.TempData["postReplySuccess"] = "Reply sent successfully";
 
-            return View("_TweetPage", result.AsEnumerable());
+            return RedirectToAction("Replies", "Tweets", new { id = model.Id });
         }
+
+        private ICollection<RepliesViewModel> AddTweetViewModelToResult(
+            HashSet<RepliesViewModel> result, Tweet tweet)
+        {
+            var user = new UserTweetViewModel();
+            user.UserName = tweet.User.UserName;
+            user.PictureUrl = tweet.User.PictureUrl;
+
+            var repliesViewModel = new RepliesViewModel();
+            repliesViewModel.User = user;
+            repliesViewModel.Content = tweet.Content;
+            repliesViewModel.CreatedOn = tweet.CreatedOn;
+            repliesViewModel.Id = tweet.Id;
+
+            if (tweet.Replies == null)
+            {
+                tweet.Replies = new HashSet<Tweet>();
+            }
+
+            repliesViewModel.RepliesToOriginal = tweet.Replies;
+
+            result.Add(repliesViewModel);
+
+            return result;
+        }
+
+        private ICollection<RepliesViewModel> GetTweetRepliesTree(
+            HashSet<RepliesViewModel> result, Tweet reply)
+        {
+            if (reply.Replies.Count == 0 || reply.Replies == null)
+            {
+                return null;
+            }
+
+            foreach (var childReply in reply.Replies)
+            {
+                if (childReply.Replies == null)
+                {
+                    childReply.Replies = new HashSet<Tweet>();
+                }
+
+                AddTweetViewModelToResult(result, childReply);
+
+                GetTweetRepliesTree(result, childReply);
+            }
+
+            return result;
+        }        
     }
 }
