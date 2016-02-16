@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <a href="#" id="johnny" title="" onmouseover="displayPopup('johnny')">Johnny</a>
+    <a href="#" id="danny" title="" onmouseover="displayPopup('danny')">Danny</a>
+    <a href="#" id="eddy" title="" onmouseover="displayPopup('eddy')">Eddy</a>
+    <hr />
+    <div id="countries">
+        <input type="text" id="countries-field" onkeyup="getCountries()" placeholder="Enter a country" />
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="~/Scripts/jquery-ui-1.11.4.js"></script>
+    <link href="~/Content/themes/base/autocomplete.css" rel="stylesheet" />
+
+    <script>
+        function displayPopup(username) {
+            $.ajax({
+                url: "/Home/Info",
+                type: "GET",
+                data: { username: username }
+            }).done(function (data) {
+                var user = "#" + username;
+                var result = "<div class='row'><div class='col-md-3'><img src='" + data.PictureUrl + "' />\
+                        </div><div class='col-md-7'><ul>\
+                            <li>Email: " + data.Email + "</li>\
+                            <li>Username: " + data.UserName + "</li>\
+                            <li>Phone: " + data.PhoneNumber + "</li>\
+                        </ul></div></div>";
+
+                $(user).tooltip()
+                $(user).tooltip("option", "content", result);
+            })
+        }
+
+        function getCountries() {
+            $.ajax({
+                url: "/Home/Countries",
+                type: "GET",
+                data: { query: $('#countries-field').val() }
+            }).done(function (data) {
+                var countries = [];
+
+                data.forEach(function (country) {
+                    countries.push(country.Name);
+                })
+
+                $('#countries-field').autocomplete({
+                    source: countries
+                })
+            })
+        }
+    </script>
+}
