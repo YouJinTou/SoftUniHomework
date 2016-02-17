@@ -12,12 +12,8 @@ namespace Twitter.Web.Models.ViewModels
         public DateTime CreatedOn { get; set; }
     }
 
-    public class RepliesViewModel
+    public class RepliesViewModel : TweetViewModel
     {
-        public int Id { get; set; }
-        public UserTweetViewModel User { get; set; }
-        public string Content { get; set; }
-        public DateTime CreatedOn { get; set; }
         public IEnumerable<Tweet> RepliesToOriginal { get; set; }
     }
 

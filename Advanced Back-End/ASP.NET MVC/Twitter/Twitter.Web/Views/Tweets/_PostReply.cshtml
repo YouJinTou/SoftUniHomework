@@ -1,22 +1,15 @@
-﻿@if (this.TempData["postReplyError"] != null)
-{
-    <div class="text-danger">
-        <h5>@this.TempData["postReplyError"]</h5>
-    </div>
-}
-
-<div id="create-tweet-box">
-    @using (Html.BeginForm(
-            actionName: "Reply", controllerName: "Tweets", method: FormMethod.Post,
-            routeValues: new { id = Model }, htmlAttributes: new { @class = "form-horizontal" }))
+﻿<div id="create-tweet-box-@Model">
+    @using (Ajax.BeginForm(actionName: "Reply", controllerName: "Tweets",
+                routeValues: new { id = Model }, htmlAttributes: new { @class = "form-horizontal" },
+                ajaxOptions: new AjaxOptions {
+                    HttpMethod = "POST",
+                    UpdateTargetId = "replies-" + Model,
+                    InsertionMode = InsertionMode.Replace
+                }))
     {
         @Html.ValidationSummary("", new { @class = "text-danger" })
-        <textarea class="form-control" rows="3" name="content" placeholder="Tweet your reply here"></textarea>
+        <textarea class="form-control" rows="1" name="content" placeholder="Tweet your reply here"></textarea>
         @Html.AntiForgeryToken()
         <input type="submit" class="btn btn-info" value="Send Reply" />
-    }
+    }    
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

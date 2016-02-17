@@ -34,7 +34,7 @@ namespace Twitter.Web.Controllers
                     CreatedOn = t.CreatedOn
                 });
 
-            int pageSize = 7;
+            int pageSize = 10;
             int pageNumber = (page ?? 1);
 
             return View(tweets.ToPagedList(pageNumber, pageSize));
@@ -80,7 +80,7 @@ namespace Twitter.Web.Controllers
                 tweets = tweetsList.AsQueryable();               
             }
 
-            int pageSize = 7;
+            int pageSize = 10;
             int pageNumber = (page ?? 1);
 
             return View("_UserIndex", tweets.ToPagedList(pageNumber, pageSize));

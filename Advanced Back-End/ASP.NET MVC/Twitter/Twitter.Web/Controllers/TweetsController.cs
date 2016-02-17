@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Twitter.Data.UnitOfWork;
 using Twitter.Models;
+using Twitter.Web.Hubs;
 using Twitter.Web.Models.ViewModels;
 using Twitter.Web.Models.ViewModels.BindingModels;
 
@@ -19,7 +21,6 @@ namespace Twitter.Web.Controllers
         [ActionName("Tweet")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
         public ActionResult PostTweet(PostTweetBindingModel model)
         {
             if (!this.ModelState.IsValid)
@@ -49,6 +50,11 @@ namespace Twitter.Web.Controllers
             this.data.Tweets.SaveChanges();
 
             this.TempData["postTweetSuccess"] = "Tweet sent successfully";
+
+            // Broadcast the new tweet to all users
+            //var tweetsHubContext = GlobalHost.ConnectionManager.GetHubContext<TweetsHub>();
+
+            //tweetsHubContext.Clients.All.updateFeed(tweet);
 
             return RedirectToAction("Index", "Home");
         }
@@ -83,7 +89,7 @@ namespace Twitter.Web.Controllers
             this.data.Users.SaveChanges();
 
             // Send notification
-            var username = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+            var username = this.User.Identity.GetUserName();
             var notification = new Notification()
             {
                 UserId = tweetToFavorite.UserId,
@@ -124,7 +130,7 @@ namespace Twitter.Web.Controllers
             this.data.Users.SaveChanges();
 
             // Send notification
-            var username = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+            var username = this.User.Identity.GetUserName();
             var notification = new Notification()
             {
                 UserId = tweetToRetweet.UserId,
@@ -143,7 +149,6 @@ namespace Twitter.Web.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        // A very problematic, poorly written controller in terms of null reference exceptions thrown
         public ActionResult Replies(int id)
         {
             var authorTweet = this.data.Tweets.Find(id);
@@ -159,30 +164,26 @@ namespace Twitter.Web.Controllers
             }
 
             var result = new HashSet<RepliesViewModel>();
-
-            // Add initial tweet to view
-            AddTweetViewModelToResult(result, authorTweet);
-
+            
             foreach (var reply in authorTweet.Replies)
             {
                 AddTweetViewModelToResult(result, reply);
 
-                // Traverse the children recursively
+                // Traverse the reply's children recursively
                 var children = GetTweetRepliesTree(result, reply);                              
             }
 
-            return View("_TweetPage", result);
+            return PartialView("_TweetPage", result);
         }
 
         public ActionResult PostReply(int id)
         {
-            return View("_PostReply", id);
+            return PartialView("_PostReply", id);
         }
 
         // Passing the id from one page to the next probably isn't the best approach
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
         public ActionResult Reply(PostReplyBindingModel model)
         {
             if (!this.ModelState.IsValid)
@@ -231,7 +232,7 @@ namespace Twitter.Web.Controllers
             this.data.Tweets.SaveChanges();
 
             // Send notification
-            var username = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+            var username = this.User.Identity.GetUserName();
             var notification = new Notification()
             {
                 UserId = tweetToReplyTo.UserId,

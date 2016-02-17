@@ -23,7 +23,7 @@
                     @{
                         if (this.Request.IsAuthenticated)
                         {
-                            var username = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+                            var username = this.User.Identity.Name;
 
                             <li>
                                 @Html.ActionLink(
@@ -44,8 +44,6 @@
                                )
                             </li>
                             <li>
-                                @*How can I get this to display the notifications count?*@
-
                                 @Html.ActionLink(
                                linkText: "Notifications",
                                actionName: "All",
@@ -69,5 +67,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script src="~/Scripts/tweets/tweets.js"></script>
 </body>
 </html>

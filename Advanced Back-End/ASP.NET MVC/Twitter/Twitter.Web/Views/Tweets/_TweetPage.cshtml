@@ -1,20 +1,11 @@
 ﻿@model IEnumerable<Twitter.Web.Models.ViewModels.RepliesViewModel>
 
-@if (this.TempData["postReplySuccess"] != null)
-{
-    <div class="text-success">
-        <h5>@this.TempData["postReplySuccess"]</h5>
-    </div>
-}
-
 <div>
-    <h1>Original</h1>
-    <div>@Html.Partial("_Tweet", Model)</div>
-    <h3>Replies</h3>
-    <div>
-        @if (Model.FirstOrDefault() != null)
+    @if (Model != null)
+    {
+        foreach (var reply in Model)
         {
-            Html.Partial("_Tweet", Model.FirstOrDefault().RepliesToOriginal);
+            @Html.Partial("~/Views/Shared/DisplayTemplates/TweetViewModel.cshtml", reply);
         }
-    </div>
+    }
 </div>

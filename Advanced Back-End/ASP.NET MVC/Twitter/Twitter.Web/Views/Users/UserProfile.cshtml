@@ -3,19 +3,39 @@
 <div class="row">
     <div class="col-xs-9">
         @{
-            var username = Model.UserName.Substring(0, Model.UserName.IndexOf('@'));
+            var username = Model.UserName;
         }
 
         @Ajax.ActionLink("Tweets", "Tweets", new { username = username },
-        null, new AjaxOptions { UpdateTargetId = "profile-tweets" }) |
+        new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "profile-fillable-area"
+        }, htmlAttributes: null) |
         @Ajax.ActionLink("Retweets", "Retweets", new { username = username },
-        null, new AjaxOptions { UpdateTargetId = "profile-tweets" }) |
+        new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "profile-fillable-area"
+        }, htmlAttributes: null) |
         @Ajax.ActionLink("Following", "Following", new { username = username },
-            null, new AjaxOptions { UpdateTargetId = "profile-following" }) |
+            new AjaxOptions
+            {
+                InsertionMode = InsertionMode.Replace,
+                UpdateTargetId = "profile-fillable-area"
+            }, htmlAttributes: null) |
         @Ajax.ActionLink("Followers", "Followers", new { username = username },
-            null, new AjaxOptions { UpdateTargetId = "profile-followers" }) |
+            new AjaxOptions
+            {
+                InsertionMode = InsertionMode.Replace,
+                UpdateTargetId = "profile-fillable-area"
+            }, htmlAttributes: null) |
         @Ajax.ActionLink("Favorites", "Favorites", new { username = username },
-            null, new AjaxOptions { UpdateTargetId = "profile-favorites" })
+            new AjaxOptions
+            {
+                InsertionMode = InsertionMode.Replace,
+                UpdateTargetId = "profile-fillable-area"
+            }, htmlAttributes: null)
     </div>
     <div class="col-xs-4">
         <div>
@@ -47,22 +67,24 @@
             {
                 <h4>
                     @Html.ActionLink(
-                               linkText: "Edit Profile",
-                               actionName: "Index",
-                               controllerName: "Manage",
-                               routeValues: new { username = username },
-                               htmlAttributes: null
-                               )
+                        linkText: "Edit Profile",
+                        actionName: "Index",
+                        controllerName: "Manage",
+                        routeValues: new { username = username },
+                        htmlAttributes: null)
                 </h4>
             }
-
         </div>
     </div>
-    <div>
-        @{
-            Html.RenderPartial("~/Views/Tweets/_Tweet.cshtml", Model.Tweets);
-        }
-    </div>
+    <section id="profile-fillable-area">
+        <div class="col-xs-6">
+            @{
+                Html.RenderPartial("~/Views/Tweets/_Tweets.cshtml", Model.Tweets);
+            }
+        </div>
+    </section>
 </div>
 
-@Scripts.Render("~/bundles/jquery")
+@section scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+}

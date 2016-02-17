@@ -49,9 +49,8 @@ namespace Twitter.Web.Models.ViewModels
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Username")]
+        public string Username { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -80,7 +79,13 @@ namespace Twitter.Web.Models.ViewModels
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
+        [Display(Name = "avatar URL")]
         public string PictureUrl { get; set; }
+
+        [Required]
+        [MinLength(4), MaxLength(15)]
+        [Display(Name = "Username")]
+        public string Username { get; set; }
     }
 
     public class ResetPasswordViewModel

@@ -47,6 +47,18 @@ else if (this.TempData["unfollowUserSuccess"] != null)
         <h5>@this.TempData["unfollowUserSuccess"]</h5>
     </div>
 }
+else if (this.TempData["postReplySuccess"] != null)
+{
+    <div class="text-success">
+        <h5>@this.TempData["postReplySuccess"]</h5>
+    </div>
+}
+else if (this.TempData["postReplyError"] != null)
+{
+    <div class="text-danger">
+        <h5>@this.TempData["postReplyError"]</h5>
+    </div>
+}
 
 <section id="tweets-container">
     @{
@@ -61,3 +73,7 @@ else if (this.TempData["unfollowUserSuccess"] != null)
         }
     }
 </section>
+
+@section scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>    
+}

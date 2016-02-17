@@ -36,10 +36,9 @@ namespace Twitter.Web.Controllers
         {
             var userId = this.User.Identity.GetUserId();
             
-            var fullUsername = username + "@twitter.com";
             var userToBeFollowed = this.data.Users
                 .All()
-                .FirstOrDefault(u => u.UserName == fullUsername);
+                .FirstOrDefault(u => u.UserName == username);
             var userWantingToFollow = this.data.Users.Find(userId);
             
             userToBeFollowed.Followers.Add(userWantingToFollow);
@@ -48,7 +47,7 @@ namespace Twitter.Web.Controllers
             this.data.Users.SaveChanges();
 
             // Send notification
-            var currentUsername = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+            var currentUsername = this.User.Identity.GetUserName();
             var notification = new Notification()
             {
                 UserId = userToBeFollowed.Id,
@@ -69,11 +68,10 @@ namespace Twitter.Web.Controllers
         public ActionResult Unfollow(string username)
         {
             var userId = this.User.Identity.GetUserId();
-
-            var fullUsername = username + "@twitter.com";
+            
             var userToBeUnFollowed = this.data.Users
                 .All()
-                .FirstOrDefault(u => u.UserName == fullUsername);
+                .FirstOrDefault(u => u.UserName == username);
             var userWantingToUnfollow = this.data.Users.Find(userId);
 
             userToBeUnFollowed.Followers.Remove(userWantingToUnfollow);
@@ -82,7 +80,7 @@ namespace Twitter.Web.Controllers
             this.data.Users.SaveChanges();
 
             // Send notification
-            var currentUsername = this.User.Identity.Name.Substring(0, this.User.Identity.Name.IndexOf('@'));
+            var currentUsername = this.User.Identity.GetUserName();
             var notification = new Notification()
             {
                 UserId = userToBeUnFollowed.Id,
@@ -116,10 +114,9 @@ namespace Twitter.Web.Controllers
                         UserName = t.User.UserName,
                         PictureUrl = t.User.PictureUrl
                     }                   
-                });
-                        
+                });                        
 
-            return PartialView("~/Views/Tweets/_Tweet.cshtml", tweets);
+            return PartialView("~/Views/Tweets/_Tweets.cshtml", tweets);
         }
 
         public ActionResult Retweets(string username)
@@ -140,7 +137,7 @@ namespace Twitter.Web.Controllers
                     }
                 });
 
-            return View("~/Views/Tweets/_Tweet.cshtml", retweets);
+            return View("~/Views/Tweets/_Tweets.cshtml", retweets);
         }
 
         public ActionResult Following(string username)
@@ -191,15 +188,14 @@ namespace Twitter.Web.Controllers
                     CreatedOn = f.CreatedOn
                 });
 
-            return PartialView("~/Views/Tweets/_FavoriteTweets.cshtml", favoriteTweets);
+            return PartialView("~/Views/Users/_FavoriteTweets.cshtml", favoriteTweets);
         }
 
         private User GetCurrentUser(string username)
         {
-            var fullUsername = username + "@twitter.com";
             var user = this.data.Users
                 .All()
-                .FirstOrDefault(u => u.UserName == fullUsername);            
+                .FirstOrDefault(u => u.UserName == username);            
 
             return user;
         }

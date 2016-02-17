@@ -1,4 +1,6 @@
-﻿@{
+﻿@*Overlaps with the dispaly template for TweetViewModel but facing some difficulties otherwise*@
+
+@{
     foreach (var tweet in Model)
     {
         <div class="col-xs-6">
@@ -8,7 +10,7 @@
                 </div>
                 <h3 class="col-md-1">
                     @{
-                        var username = @tweet.User.UserName.Substring(0, @tweet.User.UserName.IndexOf('@'));
+                        var username = @tweet.User.UserName;
                     }
 
                     @Html.ActionLink(

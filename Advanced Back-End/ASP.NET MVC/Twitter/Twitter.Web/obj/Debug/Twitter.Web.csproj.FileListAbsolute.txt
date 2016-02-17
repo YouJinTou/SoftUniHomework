@@ -91,3 +91,7 @@ D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.We
 D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\PagedList.Mvc.dll
 D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\PagedList.xml
 D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\PagedList.Mvc.xml
+D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Programming\SoftUni Homework\Advanced Back-End\ASP.NET MVC\Twitter\Twitter.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml

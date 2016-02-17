@@ -1,5 +1,12 @@
 ﻿<div id="create-tweet-box">
-    @using (Html.BeginForm("Tweet", "Tweets", FormMethod.Post, new { @class = "form-horizontal" }))
+    @using (Ajax.BeginForm(actionName: "Tweet", controllerName: "Tweets", routeValues: null,
+                ajaxOptions: new AjaxOptions
+                {
+                    HttpMethod = "POST",
+                    UpdateTargetId = "tweets-container",
+                    LoadingElementId = "create-tweet-box",
+                    InsertionMode = InsertionMode.InsertBefore,
+                }, htmlAttributes: new { @class = "form-horizontal" }))
     {
         @Html.ValidationSummary("", new { @class = "text-danger" })
         <textarea class="form-control" rows="3" name="content" placeholder="Tweet your mind"></textarea>
@@ -7,3 +14,7 @@
         <input type="submit" class="btn btn-info" value="Tweet" />
     }
 </div>
+
+@section scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+}

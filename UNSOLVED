@@ -64,7 +64,7 @@ MongoDB: WP
 Diablo: 9, 15, 16
 
 ------------------------------------------Advanced Level Back-end Database Applications-----------------------------------
-Entity Framework Transactions: 2, 3
+Entity Framework Transactions: 2, 3	
 Processing XML: 11, 13
 
 ------------------------------------------Advanced Level Back-end Web Services & Cloud-----------------------------------
@@ -77,3 +77,6 @@ Restaurants - Final Exam: 13+
 State Management: 2
 Database Drivers: VWP
 Routing & Dispatching LAB: 3, 4
+
+------------------------------------------Advanced Level Back-end ASP.NET MVC-----------------------------------
+SignalR: 2, 3 WP

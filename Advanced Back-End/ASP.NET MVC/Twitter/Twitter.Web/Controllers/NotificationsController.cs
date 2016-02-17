@@ -51,8 +51,7 @@ namespace Twitter.Web.Controllers
             else if (activity.Contains("followed") ||
                 activity.Contains("unfollowed"))
             {
-                var follower = notification.CauseUser.UserName.Substring(
-                    0, notification.CauseUser.UserName.IndexOf('@'));
+                var follower = notification.CauseUser.UserName;
 
                 return RedirectToAction(
                     actionName: "Profile",

@@ -1,0 +1,52 @@
+﻿@model Twitter.Web.Models.ViewModels.TweetViewModel
+
+<div id="tweet-box-@Model.Id" class="col-xs-6">
+    <header class="row">
+        <div class="col-md-1">
+            <img class="user-avatar" src="@Url.Content(Model.User.PictureUrl)" alt="Avatar" />
+        </div>
+        <h3 class="col-md-1">
+            @{
+                var username = @Model.User.UserName;
+            }
+
+            @Html.ActionLink(
+                linkText: (string)username,
+                actionName: "Profile",
+                controllerName: "Users",
+                routeValues: new { username = username },
+                htmlAttributes: null
+            )            
+        </h3>
+
+        <span class="col-md-1">
+            @{
+                var timeAgo = (DateTime.Now - Model.CreatedOn);
+            }
+            @Math.Floor(timeAgo.TotalDays) d
+        </span>
+    </header>
+
+    <section>
+        <p>
+            @Ajax.ActionLink(Model.Content, "Replies", "Tweets", new { id = Model.Id },
+        new AjaxOptions
+        {            
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "replies-" + Model.Id,
+            OnBegin = "loadReplyBox(" + Model.Id + ")"
+        }, htmlAttributes: null)
+        </p>
+    </section>
+
+    <footer>
+        @if (this.Request.IsAuthenticated)
+        {
+            <span>@Html.ActionLink("Favorite", "Favorite", "Tweets", new { id = Model.Id }, null) |</span>
+            <span>@Html.ActionLink("Retweet", "Retweet", "Tweets", new { id = Model.Id }, null) |</span>
+        }
+
+        <div id="add-reply-@Model.Id"></div>
+        <div id="replies-@Model.Id"></div>
+    </footer>
+</div>
