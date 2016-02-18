@@ -79,12 +79,23 @@
     <section id="profile-fillable-area">
         <div class="col-xs-6">
             @{
-                Html.RenderPartial("~/Views/Tweets/_Tweets.cshtml", Model.Tweets);
-            }
+                foreach (var tweet in Model.Tweets)
+                {
+                    var tweetViewModel = new Twitter.Web.Models.ViewModels.TweetViewModel()
+                    {
+                        Id = tweet.Id,
+                        User = new Twitter.Web.Models.ViewModels.UserTweetViewModel()
+                        {
+                            PictureUrl = tweet.User.PictureUrl,
+                            UserName = tweet.User.UserName
+                        },
+                        CreatedOn = tweet.CreatedOn,
+                        Content = tweet.Content
+                    };
+
+                    @Html.Partial("~/Views/Shared/DisplayTemplates/TweetViewModel.cshtml", tweetViewModel);
+                }
+            }          
         </div>
     </section>
 </div>
-
-@section scripts{
-    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
-}

@@ -22,11 +22,3 @@ select,
 textarea {
     max-width: 280px;
 }
-
-.user-avatar {
-    max-width: 100%;
-}
-
-#create-tweet-box {
-    margin-bottom: 15px;
-}

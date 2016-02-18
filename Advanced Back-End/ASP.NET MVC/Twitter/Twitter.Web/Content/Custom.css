@@ -1,0 +1,65 @@
+﻿#bootstrap-overrides .user-avatar {
+  max-width: 100%; }
+
+#bootstrap-overrides #create-tweet-box {
+  margin-bottom: 15px; }
+
+#bootstrap-overrides #tweets-container {
+  width: 50%; }
+  #bootstrap-overrides #tweets-container .tweet {
+    border: 1px solid #E1E8ED;
+    height: 110px; }
+    #bootstrap-overrides #tweets-container .tweet :hover {
+      background-color: #F5F8FA; }
+    #bootstrap-overrides #tweets-container .tweet .tweet-wrapper {
+      height: 100%; }
+      #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-avatar {
+        float: left;
+        display: inline-block;
+        width: 20%;
+        margin-top: 5px;
+        margin-left: 5px; }
+        #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-avatar img {
+          border-radius: 5px;
+          width: 80%;
+          height: 80%; }
+      #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper {
+        display: inline-block; }
+        #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-header {
+          display: inline-block;
+          vertical-align: top; }
+          #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-header .tweet-username {
+            position: relative;
+            top: 5px;
+            font-size: 110%; }
+            #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-header .tweet-username a {
+              color: #413c3c;
+              font-weight: bold; }
+          #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-header .tweet-time-ago {
+            position: relative;
+            top: 5px;
+            left: 5px;
+            font-size: 110%;
+            color: #c1bdbd; }
+        #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-body {
+          margin-top: 15px;
+          display: inline-block;
+          width: 80%; }
+          #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-body .tweet-body-text {
+            width: 100%;
+            display: inline-block;
+            font-size: 130%; }
+            #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-body .tweet-body-text .tweet-body-text-link {
+              width: 100%; }
+        #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer a {
+          margin-right: 40px;
+          color: #868585;
+          font-size: 150%;
+          text-decoration: none; }
+        #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer #tweet-reply-icon :hover {
+          color: #3985ce; }
+        #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer #tweet-favorite-icon :hover {
+          color: #f33d3d; }
+        #bootstrap-overrides #tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer #tweet-retweet-icon :hover {
+          color: #7fe456; }
+

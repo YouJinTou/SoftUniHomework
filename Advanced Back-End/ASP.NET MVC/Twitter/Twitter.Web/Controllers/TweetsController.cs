@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.SignalR;
+//using Microsoft.AspNet.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
@@ -32,14 +32,13 @@ namespace Twitter.Web.Controllers
             }
 
             var userId = this.User.Identity.GetUserId();
-            var tweet = new Tweet();
 
             if (userId == null)
             {
                 return new HttpUnauthorizedResult("You need to be logged in.");
             }
 
-            tweet = new Tweet()
+            var tweet = new Tweet()
             {
                 Content = model.Content,
                 CreatedOn = DateTime.Now,

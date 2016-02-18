@@ -1,0 +1,116 @@
+﻿#bootstrap-overrides {
+
+    .user-avatar {
+        max-width: 100%;
+    }
+
+    #create-tweet-box {
+        margin-bottom: 15px;
+    }
+
+    #tweets-container {
+        width: 50%;
+
+        .tweet {
+            border: 1px solid #E1E8ED;
+            height: 110px;
+
+            :hover {
+                background-color: #F5F8FA;
+            }
+
+            .tweet-wrapper {
+                height: 100%;
+
+                .tweet-avatar {
+                    float: left;
+                    display: inline-block;
+                    width: 20%;
+                    margin-top: 5px;
+                    margin-left: 5px;
+
+                    img {
+                        border-radius: 5px;
+                        width: 80%;
+                        height: 80%;
+                    }
+                }
+
+                .tweet-body-wrapper {
+                    display: inline-block;
+
+                    .tweet-header {
+                        display: inline-block;
+                        vertical-align: top;
+
+                        .tweet-username {
+                            position: relative;
+                            top: 5px;
+                            font-size: 110%;
+
+                            a {
+                                color: #413c3c;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .tweet-time-ago {
+                            position: relative;
+                            top: 5px;
+                            left: 5px;
+                            font-size: 110%;
+                            color: #c1bdbd;
+                        }
+                    }
+
+                    .tweet-body {
+                        margin-top: 15px;
+                        display: inline-block;
+                        width: 80%;
+
+                        .tweet-body-text {
+                            width: 100%;
+                            display: inline-block;
+                            font-size: 130%;
+
+                            .tweet-body-text-link {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .tweet-footer {
+
+                        a {
+                            margin-right: 40px;
+                            color: #868585;
+                            font-size: 150%;
+                            text-decoration: none;
+                        }
+
+                        #tweet-reply-icon {
+
+                            :hover {
+                                color: #3985ce;
+                            }
+                        }
+
+                        #tweet-favorite-icon {
+
+                            :hover {
+                                color: #f33d3d;
+                            }
+                        }
+
+                        #tweet-retweet-icon {
+
+                            :hover {
+                                color: #7fe456;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

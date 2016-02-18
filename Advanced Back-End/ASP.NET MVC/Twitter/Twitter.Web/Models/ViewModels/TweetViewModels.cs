@@ -4,12 +4,9 @@ using Twitter.Models;
 
 namespace Twitter.Web.Models.ViewModels
 {
-    public class TweetViewModel
+    public class TweetViewModel : Tweet
     {
-        public int Id { get; set; }
-        public UserTweetViewModel User { get; set; }
-        public string Content { get; set; }
-        public DateTime CreatedOn { get; set; }
+        public new UserTweetViewModel User { get; set; }
     }
 
     public class RepliesViewModel : TweetViewModel

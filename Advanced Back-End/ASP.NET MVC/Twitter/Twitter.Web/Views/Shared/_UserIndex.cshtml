@@ -6,5 +6,5 @@
 
     @Html.DisplayForModel()
 
-    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }));
+    @Html.PagedListPager(Model, page => Url.Action("_UserIndex", new { page }));
 }

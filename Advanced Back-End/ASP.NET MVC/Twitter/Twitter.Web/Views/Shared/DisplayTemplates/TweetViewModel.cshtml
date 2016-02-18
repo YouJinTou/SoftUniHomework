@@ -1,52 +1,97 @@
 ﻿@model Twitter.Web.Models.ViewModels.TweetViewModel
 
-<div id="tweet-box-@Model.Id" class="col-xs-6">
-    <header class="row">
-        <div class="col-md-1">
-            <img class="user-avatar" src="@Url.Content(Model.User.PictureUrl)" alt="Avatar" />
+<div class="tweet" id="tweet-box-@Model.Id">
+    <div class="tweet-wrapper">
+
+        <div class="tweet-avatar">
+            <img src="@Url.Content(Model.User.PictureUrl)" alt="Avatar" />
         </div>
-        <h3 class="col-md-1">
-            @{
-                var username = @Model.User.UserName;
-            }
 
-            @Html.ActionLink(
-                linkText: (string)username,
-                actionName: "Profile",
-                controllerName: "Users",
-                routeValues: new { username = username },
-                htmlAttributes: null
-            )            
-        </h3>
+        <div class="tweet-body-wrapper">
+            <header class="tweet-header">
+                @{
+                    var username = @Model.User.UserName;
+                }
 
-        <span class="col-md-1">
-            @{
-                var timeAgo = (DateTime.Now - Model.CreatedOn);
-            }
-            @Math.Floor(timeAgo.TotalDays) d
-        </span>
-    </header>
+                <span class="tweet-username">
+                    @Html.ActionLink(
+                        linkText: "@" + username,
+                        actionName: "Profile",
+                        controllerName: "Users",
+                        routeValues: new { username = username },
+                        htmlAttributes: null)
+                </span>
 
-    <section>
-        <p>
-            @Ajax.ActionLink(Model.Content, "Replies", "Tweets", new { id = Model.Id },
-        new AjaxOptions
-        {            
-            InsertionMode = InsertionMode.Replace,
-            UpdateTargetId = "replies-" + Model.Id,
-            OnBegin = "loadReplyBox(" + Model.Id + ")"
-        }, htmlAttributes: null)
-        </p>
-    </section>
+                <span class="tweet-time-ago">
+                    @{
+                        var timeAgo = (DateTime.Now - Model.CreatedOn);
+                    }
+                    @if (timeAgo.TotalMinutes < 1)
+                    {
+                        @: @Math.Floor(timeAgo.TotalSeconds) s
+                    }
+                    else if (timeAgo.TotalHours < 1)
+                    {
+                        @: @Math.Floor(timeAgo.TotalMinutes) m
+                    }
+                    else if (timeAgo.TotalHours < 24)
+                    {
+                        @: @Math.Floor((double)timeAgo.Hours) h
+                    }
+                    else if (timeAgo.Days < 3)
+                    {
+                        @: @Math.Floor(timeAgo.TotalDays) d
+                    }
+                    else
+                    {
+                        @: @Model.CreatedOn.ToShortDateString()
+                    }
+                </span>
 
-    <footer>
-        @if (this.Request.IsAuthenticated)
-        {
-            <span>@Html.ActionLink("Favorite", "Favorite", "Tweets", new { id = Model.Id }, null) |</span>
-            <span>@Html.ActionLink("Retweet", "Retweet", "Tweets", new { id = Model.Id }, null) |</span>
-        }
+            </header>
 
-        <div id="add-reply-@Model.Id"></div>
-        <div id="replies-@Model.Id"></div>
-    </footer>
+            <div class="tweet-body">
+                <p class="tweet-body-text">
+                    @Ajax.ActionLink(Model.Content, "Replies", "Tweets", new { id = Model.Id },
+                    new AjaxOptions
+                    {
+                        InsertionMode = InsertionMode.Replace,
+                        UpdateTargetId = "replies-" + Model.Id,
+                        OnSuccess = "checkVisibility(" + Model.Id + ")",
+                    }, htmlAttributes: new { @class = "tweet-body-text-link" })
+                </p>
+            </div>
+
+            <div class="tweet-footer">
+                @if (this.Request.IsAuthenticated)
+                {
+                    <span id="tweet-retweet-icon">
+                        @Ajax.ActionLink(" ", "Replies", "Tweets", new { id = Model.Id },
+                        new AjaxOptions
+                        {
+                            InsertionMode = InsertionMode.Replace,
+                            UpdateTargetId = "replies-" + Model.Id,
+                            OnSuccess = "checkVisibility(" + Model.Id + ")",
+                        }, htmlAttributes: new { @class = "glyphicon glyphicon-comment" })
+                    </span>
+                    <span id="tweet-favorite-icon">
+                        @Ajax.ActionLink(" ", "Favorite", "Tweets", new { id = Model.Id },
+                    ajaxOptions: null, htmlAttributes: new { @class = "glyphicon glyphicon-heart" })
+                    </span>
+                    <span id="tweet-retweet-icon">
+                        @Html.ActionLink(" ", "Retweet", "Tweets", new { id = Model.Id },
+                        new { @class = "glyphicon glyphicon-share-alt" })
+                    </span>
+                }
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div id="tweet-replies-controls-@Model.Id" hidden="hidden">
+    <div class="tweet-add-reply-box" id="add-reply-@Model.Id"></div>
+    <div class="tweet-replies-tree" id="replies-@Model.Id"></div>
 </div>

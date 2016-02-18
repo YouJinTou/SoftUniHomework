@@ -1,55 +1,8 @@
-﻿@*Overlaps with the dispaly template for TweetViewModel but facing some difficulties otherwise*@
+﻿@model IEnumerable<Twitter.Web.Models.ViewModels.TweetViewModel>
 
-@{
+@{ 
     foreach (var tweet in Model)
     {
-        <div class="col-xs-6">
-            <header class="row">
-                <div class="col-md-1">
-                    <img class="user-avatar" src="@Url.Content(tweet.User.PictureUrl)" alt="Avatar" />
-                </div>
-                <h3 class="col-md-1">
-                    @{
-                        var username = @tweet.User.UserName;
-                    }
-
-                    @Html.ActionLink(
-                        linkText: (string)username,
-                        actionName: "Profile",
-                        controllerName: "Users",
-                        routeValues: new { username = username },
-                        htmlAttributes: null
-                   )
-                </h3>
-
-                <span class="col-md-1">
-                    @{
-                        var timeAgo = (DateTime.Now - tweet.CreatedOn);
-                    }
-                    @Math.Floor(timeAgo.TotalDays) d
-                </span>
-            </header>
-
-            <section>
-                <p>
-                    @Html.ActionLink(
-                        linkText: (string)tweet.Content,
-                        actionName: "Replies",
-                        controllerName: "Tweets",
-                        routeValues: new { id = tweet.Id },
-                        htmlAttributes: null
-                   )
-            </p>
-        </section>
-
-            <footer>                
-                @if (this.Request.IsAuthenticated)
-                {
-                    <span>@Html.ActionLink("Favorite", "Favorite", "Tweets", new { id = tweet.Id }, null) |</span>
-                    <span>@Html.ActionLink("Retweet", "Retweet", "Tweets", new { id = tweet.Id }, null) |</span>
-                    <span>@Html.ActionLink("Reply", "PostReply", "Tweets", new { id = tweet.Id }, null) |</span>
-                }
-            </footer>
-        </div>
+        @Html.Partial("~/Views/Shared/DisplayTemplates/TweetViewModel.cshtml", tweet);
     }
 }
