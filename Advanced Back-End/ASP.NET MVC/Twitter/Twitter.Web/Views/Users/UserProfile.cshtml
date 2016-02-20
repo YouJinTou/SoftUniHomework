@@ -2,40 +2,42 @@
 
 <div class="row">
     <div class="col-xs-9">
-        @{
-            var username = Model.UserName;
-        }
+        <div class="btn-group-xs" role="group">
+            @{
+                var username = Model.UserName;
+            }
 
-        @Ajax.ActionLink("Tweets", "Tweets", new { username = username },
-        new AjaxOptions
-        {
-            InsertionMode = InsertionMode.Replace,
-            UpdateTargetId = "profile-fillable-area"
-        }, htmlAttributes: null) |
-        @Ajax.ActionLink("Retweets", "Retweets", new { username = username },
-        new AjaxOptions
-        {
-            InsertionMode = InsertionMode.Replace,
-            UpdateTargetId = "profile-fillable-area"
-        }, htmlAttributes: null) |
-        @Ajax.ActionLink("Following", "Following", new { username = username },
+            @Ajax.ActionLink("Tweets", "Tweets", new { username = username },
             new AjaxOptions
             {
                 InsertionMode = InsertionMode.Replace,
                 UpdateTargetId = "profile-fillable-area"
-            }, htmlAttributes: null) |
-        @Ajax.ActionLink("Followers", "Followers", new { username = username },
+            }, htmlAttributes: new { @class = "btn btn-link btn-xs" }) |
+            @Ajax.ActionLink("Retweets", "Retweets", new { username = username },
             new AjaxOptions
             {
                 InsertionMode = InsertionMode.Replace,
                 UpdateTargetId = "profile-fillable-area"
-            }, htmlAttributes: null) |
-        @Ajax.ActionLink("Favorites", "Favorites", new { username = username },
+            }, htmlAttributes: new { @class = "btn btn-link btn-xs" }) |
+            @Ajax.ActionLink("Following", "Following", new { username = username },
             new AjaxOptions
             {
                 InsertionMode = InsertionMode.Replace,
                 UpdateTargetId = "profile-fillable-area"
-            }, htmlAttributes: null)
+            }, htmlAttributes: new { @class = "btn btn-link btn-xs" }) |
+            @Ajax.ActionLink("Followers", "Followers", new { username = username },
+            new AjaxOptions
+            {
+                InsertionMode = InsertionMode.Replace,
+                UpdateTargetId = "profile-fillable-area"
+            }, htmlAttributes: new { @class = "btn btn-link btn-xs" }) |
+            @Ajax.ActionLink("Favorites", "Favorites", new { username = username },
+            new AjaxOptions
+            {
+                InsertionMode = InsertionMode.Replace,
+                UpdateTargetId = "profile-fillable-area"
+            }, htmlAttributes: new { @class = "btn btn-link btn-xs" })
+        </div>
     </div>
     <div class="col-xs-4">
         <div>
@@ -48,14 +50,14 @@
             {
                 <div class="controls">
                     @Html.ActionLink(linkText: "Follow", actionName: "Follow", controllerName: "Users",
-                    routeValues: new { username = username }, htmlAttributes: null)
+                routeValues: new { username = username }, htmlAttributes: null)
                 </div>
             }
             else
             {
                 <div class="controls">
                     @Html.ActionLink(linkText: "Unfollow", actionName: "Unfollow", controllerName: "Users",
-                    routeValues: new { username = username }, htmlAttributes: null)
+                routeValues: new { username = username }, htmlAttributes: null)
                 </div>
             }
         }
@@ -64,20 +66,20 @@
             <h2>@Model.UserName</h2>
 
             @if (this.User.Identity.Name == Model.UserName)
-            {
+        {
                 <h4>
                     @Html.ActionLink(
-                        linkText: "Edit Profile",
-                        actionName: "Index",
-                        controllerName: "Manage",
-                        routeValues: new { username = username },
-                        htmlAttributes: null)
+                    linkText: "Edit Profile",
+                    actionName: "Index",
+                    controllerName: "Manage",
+                    routeValues: new { username = username },
+                    htmlAttributes: null)
                 </h4>
             }
         </div>
     </div>
-    <section id="profile-fillable-area">
-        <div class="col-xs-6">
+    <div id="profile-fillable-area">
+        <div class="tweets-container">
             @{
                 foreach (var tweet in Model.Tweets)
                 {
@@ -95,7 +97,7 @@
 
                     @Html.Partial("~/Views/Shared/DisplayTemplates/TweetViewModel.cshtml", tweetViewModel);
                 }
-            }          
+            }
         </div>
-    </section>
+    </div>
 </div>

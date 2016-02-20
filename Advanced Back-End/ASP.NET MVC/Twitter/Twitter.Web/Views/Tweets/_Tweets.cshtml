@@ -1,8 +1,0 @@
-﻿@model IEnumerable<Twitter.Web.Models.ViewModels.TweetViewModel>
-
-@{ 
-    foreach (var tweet in Model)
-    {
-        @Html.Partial("~/Views/Shared/DisplayTemplates/TweetViewModel.cshtml", tweet);
-    }
-}

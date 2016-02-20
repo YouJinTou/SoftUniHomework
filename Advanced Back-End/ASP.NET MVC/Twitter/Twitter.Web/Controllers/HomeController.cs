@@ -17,6 +17,11 @@ namespace Twitter.Web.Controllers
 
         public ActionResult Index(int? page)
         {
+            if (!Request.IsAuthenticated)
+            {
+                return View();
+            }
+
             IQueryable<TweetViewModel> tweets = null;
 
             tweets = this.data.Tweets
@@ -36,8 +41,8 @@ namespace Twitter.Web.Controllers
 
             int pageSize = 10;
             int pageNumber = (page ?? 1);
-
-            return View(tweets.ToPagedList(pageNumber, pageSize));
+            
+            return View("Index", tweets.ToPagedList(pageNumber, pageSize));
         }
 
         public ActionResult Feed(int? page)
@@ -77,13 +82,13 @@ namespace Twitter.Web.Controllers
                         }));
                 }
 
-                tweets = tweetsList.AsQueryable();               
+                tweets = tweetsList.AsQueryable();
             }
 
             int pageSize = 10;
             int pageNumber = (page ?? 1);
 
-            return View("_UserIndex", tweets.ToPagedList(pageNumber, pageSize));
+            return View(tweets.ToPagedList(pageNumber, pageSize));
         }
     }
 }

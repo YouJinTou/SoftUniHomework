@@ -305,8 +305,7 @@ namespace Twitter.Web.Controllers
 
                 if (user != null)
                 {
-                    user.PictureUrl = model.PictureUrl ??
-                        "https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/anonymous-128.png";
+                    user.PictureUrl = model.PictureUrl ?? "~/Content/Images/default-avatar.png";
 
                     this.data.Users.SaveChanges();
 

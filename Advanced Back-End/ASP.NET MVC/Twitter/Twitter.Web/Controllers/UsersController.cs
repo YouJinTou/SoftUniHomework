@@ -116,7 +116,7 @@ namespace Twitter.Web.Controllers
                     }                   
                 });                        
 
-            return PartialView("~/Views/Tweets/_Tweets.cshtml", tweets);
+            return PartialView("~/Views/Users/_UserRetweets.cshtml", tweets);
         }
 
         public ActionResult Retweets(string username)
@@ -137,7 +137,7 @@ namespace Twitter.Web.Controllers
                     }
                 });
 
-            return View("~/Views/Tweets/_Tweets.cshtml", retweets);
+            return View("~/Views/Users/_UserRetweets.cshtml", retweets);
         }
 
         public ActionResult Following(string username)

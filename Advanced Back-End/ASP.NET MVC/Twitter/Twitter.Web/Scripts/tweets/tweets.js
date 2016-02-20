@@ -18,3 +18,6 @@ function loadReplyBox(id) {
     })
 }
 
+function postTweet(data) {
+    $('.tweets-container').prepend(data.responseText);
+}

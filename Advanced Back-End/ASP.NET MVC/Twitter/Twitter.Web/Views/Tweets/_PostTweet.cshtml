@@ -1,16 +1,16 @@
-﻿<div id="create-tweet-box">
+﻿<div class="create-tweet-box">
     @using (Ajax.BeginForm(actionName: "Tweet", controllerName: "Tweets", routeValues: null,
                 ajaxOptions: new AjaxOptions
                 {
                     HttpMethod = "POST",
-                    UpdateTargetId = "tweets-container",
-                    LoadingElementId = "create-tweet-box",
+                    OnComplete = "postTweet",
                     InsertionMode = InsertionMode.InsertBefore,
                 }, htmlAttributes: new { @class = "form-horizontal" }))
     {
-        @Html.ValidationSummary("", new { @class = "text-danger" })
-        <textarea class="form-control" rows="3" name="content" placeholder="Tweet your mind"></textarea>
         @Html.AntiForgeryToken()
-        <input type="submit" class="btn btn-info" value="Tweet" />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <textarea type="text" class="form-control" name="content" placeholder="Tweet your mind"></textarea>
+        <input class="btn btn-info" type="submit" value="Tweet" />
     }
 </div>
+

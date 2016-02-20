@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using System.Web.UI;
 using Twitter.Data.UnitOfWork;
 using Twitter.Models;
 using Twitter.Web.Hubs;
@@ -55,7 +56,10 @@ namespace Twitter.Web.Controllers
 
             //tweetsHubContext.Clients.All.updateFeed(tweet);
 
-            return RedirectToAction("Index", "Home");
+            var hostname = HttpContext.Request.Url.Host;
+
+            //Rather disgusting as I couldn't find any other solution
+            return Content("<script language='javascript' type='text/javascript'>location.reload(true);</script>");
         }
 
         public ActionResult Favorite(int id)

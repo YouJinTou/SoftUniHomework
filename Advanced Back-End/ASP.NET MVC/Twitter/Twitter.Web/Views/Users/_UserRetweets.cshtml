@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Twitter.Web.Models.ViewModels.TweetViewModel>
+
+<div class="tweets-container">
+    @{
+        foreach (var tweet in Model)
+        {
+            @Html.Partial("~/Views/Shared/DisplayTemplates/TweetViewModel.cshtml", tweet);
+        }
+    }
+</div>

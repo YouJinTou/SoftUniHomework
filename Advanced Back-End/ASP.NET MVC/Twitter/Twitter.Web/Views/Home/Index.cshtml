@@ -1,75 +1,80 @@
-﻿<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
-
-@{
-    ViewBag.Title = "Twitter";
-}
-
-@*Can't place this inside a helper as TempData does not exist there*@
-@if (this.TempData["postTweetError"] != null)
-{
-    <div class="text-danger">
-        <h5>@this.TempData["postTweetError"]</h5>
-    </div>
-}
-else if (this.TempData["postTweetSuccess"] != null)
-{
-    <div class="text-success">
-        <h5>@this.TempData["postTweetSuccess"]</h5>
-    </div>
-}
-else if (this.TempData["favoriteTweetSuccess"] != null)
-{
-    <div class="text-success">
-        <h5>@this.TempData["favoriteTweetSuccess"]</h5>
-    </div>
-}
-else if (this.TempData["favoriteTweetError"] != null)
-{
-    <div class="text-danger">
-        <h5>@this.TempData["favoriteTweetError"]</h5>
-    </div>
-}
-else if (this.TempData["retweetTweetSuccess"] != null)
-{
-    <div class="text-success">
-        <h5>@this.TempData["retweetTweetSuccess"]</h5>
-    </div>
-}
-else if (this.TempData["followUserSuccess"] != null)
-{
-    <div class="text-success">
-        <h5>@this.TempData["followUserSuccess"]</h5>
-    </div>
-}
-else if (this.TempData["unfollowUserSuccess"] != null)
-{
-    <div class="text-success">
-        <h5>@this.TempData["unfollowUserSuccess"]</h5>
-    </div>
-}
-else if (this.TempData["postReplySuccess"] != null)
-{
-    <div class="text-success">
-        <h5>@this.TempData["postReplySuccess"]</h5>
-    </div>
-}
-else if (this.TempData["postReplyError"] != null)
-{
-    <div class="text-danger">
-        <h5>@this.TempData["postReplyError"]</h5>
-    </div>
-}
-
-<section id="tweets-container">
-    @{
-        if (!this.User.Identity.IsAuthenticated)
+﻿@{
+    if (this.Request.IsAuthenticated)
+    {
+        @*Can't place this inside a helper as TempData does not exist there*@
+        if (this.TempData["postTweetError"] != null)
         {
-            Html.RenderPartial("_Index");
+            <div class="text-danger">
+                <h5>@this.TempData["postTweetError"]</h5>
+            </div>
         }
-        else
+        else if (this.TempData["postTweetSuccess"] != null)
         {
-            Html.RenderPartial("~/Views/Tweets/_PostTweet.cshtml");
-            Html.RenderPartial("_Index");
+            <div class="text-success">
+                <h5>@this.TempData["postTweetSuccess"]</h5>
+            </div>
         }
+        else if (this.TempData["favoriteTweetSuccess"] != null)
+        {
+            <div class="text-success">
+                <h5>@this.TempData["favoriteTweetSuccess"]</h5>
+            </div>
+        }
+        else if (this.TempData["favoriteTweetError"] != null)
+        {
+            <div class="text-danger">
+                <h5>@this.TempData["favoriteTweetError"]</h5>
+            </div>
+        }
+        else if (this.TempData["retweetTweetSuccess"] != null)
+        {
+            <div class="text-success">
+                <h5>@this.TempData["retweetTweetSuccess"]</h5>
+            </div>
+        }
+        else if (this.TempData["followUserSuccess"] != null)
+        {
+            <div class="text-success">
+                <h5>@this.TempData["followUserSuccess"]</h5>
+            </div>
+        }
+        else if (this.TempData["unfollowUserSuccess"] != null)
+        {
+            <div class="text-success">
+                <h5>@this.TempData["unfollowUserSuccess"]</h5>
+            </div>
+        }
+        else if (this.TempData["postReplySuccess"] != null)
+        {
+            <div class="text-success">
+                <h5>@this.TempData["postReplySuccess"]</h5>
+            </div>
+        }
+        else if (this.TempData["postReplyError"] != null)
+        {
+            <div class="text-danger">
+                <h5>@this.TempData["postReplyError"]</h5>
+            </div>
+        }
+
+        <section class="tweets-container">
+        @{
+            if (!this.User.Identity.IsAuthenticated)
+            {
+                Html.RenderPartial("_Index");
+            }
+            else
+            {
+                Html.RenderPartial("~/Views/Tweets/_PostTweet.cshtml");
+                Html.RenderPartial("_Index");
+            }
+        }
+        </section>
     }
-</section>
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutAnon.cshtml";
+        Html.RenderPartial("~/Views/Account/Login.cshtml");
+        Html.RenderPartial("~/Views/Account/Register.cshtml");
+    }
+}

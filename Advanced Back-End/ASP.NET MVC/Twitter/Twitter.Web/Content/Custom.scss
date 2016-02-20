@@ -1,19 +1,78 @@
-﻿#bootstrap-overrides {
+﻿#anonymous-landing-page {
+    background-image: url('Images/Anon_Index.JPG');
+
+    .anon-controls-box {
+        width: 50%;
+        margin: 0 auto;
+
+        .anon-box {
+            display: inline-block;
+        }
+    }
+}
+
+#bootstrap-overrides {
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #F5F8FA;
+
+    textarea {
+        resize: none;
+    }
+
+    .container body-content {
+        width: 900px;
+    }
 
     .user-avatar {
         max-width: 100%;
     }
 
-    #create-tweet-box {
+    .create-tweet-box {
         margin-bottom: 15px;
     }
 
-    #tweets-container {
+    #main-sidebar {
+        background-color: white;
+        margin-top: 10px;
+        margin-right: 10px;
+        float: left;
+        width: 20%;
+        border: 1px solid #E1E8ED;
+        border-radius: 5px;
+
+
+        .sidebar-profile {
+
+            .sidebar-profile-header {
+                margin: 5px;
+
+                .sidebar-profile-header-username {
+                    display: block;
+                    font-weight: bold;
+                    font-size: 1.5em;
+                    margin-bottom: 10px;
+
+                    a {
+                        color: #413c3c;
+                    }
+                }
+
+                .sidebar-stat-title {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .tweets-container {
+        display: inline-block;
         width: 50%;
 
         .tweet {
             border: 1px solid #E1E8ED;
             height: 110px;
+            background-color: white;
 
             :hover {
                 background-color: #F5F8FA;

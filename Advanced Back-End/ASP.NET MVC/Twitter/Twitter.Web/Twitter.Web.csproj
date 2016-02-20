@@ -238,6 +238,8 @@
     <Content Include="Content\Custom.min.css">
       <DependentUpon>Custom.css</DependentUpon>
     </Content>
+    <Content Include="Content\Images\Anon_Index.JPG" />
+    <Content Include="Content\Images\default-avatar.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -255,7 +257,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -305,13 +306,18 @@
     <Content Include="Views\Users\_Following.cshtml" />
     <Content Include="Views\Users\_Followers.cshtml" />
     <Content Include="Views\Users\_FavoriteTweets.cshtml" />
-    <Content Include="Views\Shared\_UserIndex.cshtml" />
+    <Content Include="Views\Home\Feed.cshtml" />
     <Content Include="Views\Tweets\_TweetPage.cshtml" />
     <Content Include="Views\Tweets\_PostReply.cshtml" />
     <Content Include="Views\Notifications\Notifications.cshtml" />
     <Content Include="Views\Manage\ChangeAvatar.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\TweetViewModel.cshtml" />
-    <Content Include="Views\Tweets\_Tweets.cshtml" />
+    <Content Include="Views\Users\_UserRetweets.cshtml" />
+    <Content Include="Views\Users\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_UsersLayout.cshtml" />
+    <Content Include="Views\Shared\_LayoutAnon.cshtml" />
+    <Content Include="Views\Manage\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
