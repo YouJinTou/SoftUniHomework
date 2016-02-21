@@ -23,45 +23,57 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li>@Html.ActionLink(" ", "Index", "Home", htmlAttributes: new { @class = "glyphicon glyphicon-home" })</li>
                             @{
-                                var username = this.User.Identity.Name;
+                                if (this.Request.IsAuthenticated)
+                                {
+                                    <li>
+                                        @Html.ActionLink(
+                                            linkText: " ",
+                                            actionName: "Index",
+                                            controllerName: "Home",
+                                            routeValues: null,
+                                            htmlAttributes: new { @class = "glyphicon glyphicon-home" })
+                                    </li>
 
-                                <li>
-                                    @Html.ActionLink(
-                                        linkText: " ",
-                                        actionName: "Feed",
-                                        controllerName: "Home",
-                                        routeValues: null,
-                                        htmlAttributes: new { @class = "glyphicon glyphicon-random" }
+                                    var username = this.User.Identity.Name;
+
+                                    <li>
+                                        @Html.ActionLink(
+                                            linkText: " ",
+                                            actionName: "Feed",
+                                            controllerName: "Home",
+                                            routeValues: null,
+                                            htmlAttributes: new { @class = "glyphicon glyphicon-random" }
                                         )
-                                </li>
-                                <li>
-                                    @Html.ActionLink(
-                                        linkText: " ",
-                                        actionName: "Profile",
-                                        controllerName: "Users",
-                                        routeValues: new { username = username },
-                                        htmlAttributes: new { @class = "glyphicon glyphicon-user" }
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink(
+                                            linkText: " ",
+                                            actionName: "Profile",
+                                            controllerName: "Users",
+                                            routeValues: new { username = username },
+                                            htmlAttributes: new { @class = "glyphicon glyphicon-user" }
                                         )
-                                </li>
-                                <li>
-                                    @Html.ActionLink(
-                                        linkText: " ",
-                                        actionName: "All",
-                                        controllerName: "Notifications",
-                                        routeValues: null,
-                                        htmlAttributes: new { @class = "glyphicon glyphicon-flag" }
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink(
+                                            linkText: " ",
+                                            actionName: "All",
+                                            controllerName: "Notifications",
+                                            routeValues: null,
+                                            htmlAttributes: new { @class = "glyphicon glyphicon-flag" }
                                         )
-                                </li>
+                                    </li>
+                                }
                             }
                         </ul>
                         @Html.Partial("_LoginPartial")
                     </div>
                 </div>
             </div>
-
+            
             <div class="container body-content">
+                @{ Html.RenderPartial("~/Views/_RedirectMessages.cshtml"); }
 
                 <aside id="main-sidebar">
                     <section class="sidebar-profile">
@@ -74,7 +86,7 @@
                             routeValues: new { username = User.Identity.Name },
                             htmlAttributes: null)
                             </span>
-                            @*<div class="sidebar-profile-stats">
+                            <div class="sidebar-profile-stats">
                                 <div class="sidebar-stat-title">
                                     <div class="sidebar-profile-stat">
                                         @Html.ActionLink(
@@ -110,7 +122,7 @@
                                     </div>
                                 </div>
 
-                            </div>*@
+                            </div>
                         </div>
                     </section>
                 </aside>

@@ -1,6 +1,6 @@
 ﻿@model Twitter.Web.Models.ViewModels.ChangeAvatarBindingModel
 @{
-    ViewBag.Title = "Change Avatar URL";
+    ViewBag.Title = "Change Profile Photo";
 }
 
 <h2>@ViewBag.Title</h2>
@@ -10,7 +10,8 @@
     @Html.AntiForgeryToken()
     <hr />
     <div class="form-group">
-        <label class="col-md-2 control-label">Avatar URL</label>
+        <h4>File upload coming soon</h4>
+        <label class="col-md-2 control-label">Photo URL</label>
         <div class="col-md-10">
             @Html.ValidationSummary("", new { @class = "text-danger" })
             @Html.EditorFor(m => m.PictureUrl, new { @class = "form-control" })

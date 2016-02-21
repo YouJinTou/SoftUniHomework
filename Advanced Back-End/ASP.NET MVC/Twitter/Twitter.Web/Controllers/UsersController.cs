@@ -113,7 +113,8 @@ namespace Twitter.Web.Controllers
                     {
                         UserName = t.User.UserName,
                         PictureUrl = t.User.PictureUrl
-                    }                   
+                    },
+                    FavoritedBy = t.FavoritedBy         
                 });                        
 
             return PartialView("~/Views/Users/_UserRetweets.cshtml", tweets);
@@ -134,7 +135,8 @@ namespace Twitter.Web.Controllers
                     {
                         UserName = t.User.UserName,
                         PictureUrl = t.User.PictureUrl
-                    }
+                    },
+                    FavoritedBy = t.FavoritedBy
                 });
 
             return View("~/Views/Users/_UserRetweets.cshtml", retweets);
@@ -185,7 +187,8 @@ namespace Twitter.Web.Controllers
                         PictureUrl = f.User.PictureUrl
                     },
                     Content = f.Content,
-                    CreatedOn = f.CreatedOn
+                    CreatedOn = f.CreatedOn,
+                    FavoritedBy = f.FavoritedBy
                 });
 
             return PartialView("~/Views/Users/_FavoriteTweets.cshtml", favoriteTweets);

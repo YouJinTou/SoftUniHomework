@@ -57,7 +57,7 @@
                     {
                         InsertionMode = InsertionMode.Replace,
                         UpdateTargetId = "replies-" + Model.Id,
-                        OnSuccess = "checkVisibility(" + Model.Id + ")",
+                        OnSuccess = "checkVisibilityReplyControls(" + Model.Id + ")",
                     }, htmlAttributes: new { @class = "tweet-body-text-link" })
                 </p>
             </div>
@@ -65,22 +65,70 @@
             <div class="tweet-footer">
                 @if (this.Request.IsAuthenticated)
                 {
-                    <span id="tweet-retweet-icon">
-                        @Ajax.ActionLink(" ", "Replies", "Tweets", new { id = Model.Id },
+                    <span class="tweet-reply-icon" id="tweet-reply-icon-@Model.Id">
+                        @Ajax.ActionLink(" ", "PostReply", "Tweets", new { id = Model.Id },
                         new AjaxOptions
                         {
                             InsertionMode = InsertionMode.Replace,
-                            UpdateTargetId = "replies-" + Model.Id,
-                            OnSuccess = "checkVisibility(" + Model.Id + ")",
-                        }, htmlAttributes: new { @class = "glyphicon glyphicon-comment" })
+                            UpdateTargetId = "tweet-reply-box-only-" + Model.Id,
+                            OnSuccess = "checkVisibilityReplyBox(" + Model.Id + ")",
+                        }, htmlAttributes: new
+                        {
+                            @class = "glyphicon glyphicon-comment",
+                            @id = "tweet-reply-icon-link-" + Model.Id
+                        })
                     </span>
-                    <span id="tweet-favorite-icon">
-                        @Ajax.ActionLink(" ", "Favorite", "Tweets", new { id = Model.Id },
-                    ajaxOptions: null, htmlAttributes: new { @class = "glyphicon glyphicon-heart" })
-                    </span>
-                    <span id="tweet-retweet-icon">
-                        @Html.ActionLink(" ", "Retweet", "Tweets", new { id = Model.Id },
-                        new { @class = "glyphicon glyphicon-share-alt" })
+                    if (Model.FavoritedBy != null)
+                    {
+                        var favoritedByUser =
+                        Model.FavoritedBy.Where(u => u.UserName == this.User.Identity.Name).FirstOrDefault();
+
+                        if (favoritedByUser == null)
+                        {
+                            <span class="tweet-favorite-icon" id="tweet-favorite-icon-@Model.Id">
+                                @Ajax.ActionLink(" ", "Favorite", "Tweets", new { id = Model.Id },
+                                ajaxOptions: new AjaxOptions
+                                {
+                                    HttpMethod = "POST",
+                                    OnComplete = "reloadPage"
+                                },
+                                htmlAttributes: new
+                                {
+                                    @class = "glyphicon glyphicon-heart",
+                                    @id = "tweet-favorite-icon-link-" + Model.Id
+                                })
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="tweet-unfavorite-icon" id="tweet-unfavorite-icon-@Model.Id">
+                                @Ajax.ActionLink(" ", "Unfavorite", "Tweets", new { id = Model.Id },
+                                ajaxOptions: new AjaxOptions
+                                {
+                                    HttpMethod = "POST",
+                                    OnComplete = "reloadPage"
+                                },
+                                htmlAttributes: new
+                                {
+                                    @class = "glyphicon glyphicon-remove-circle",
+                                    @id = "tweet-unfavorite-icon-link-" + Model.Id
+                                })
+                            </span>
+                        }
+                    }
+
+                    <span class="tweet-retweet-icon" id="tweet-retweet-icon-@Model.Id">
+                        @Ajax.ActionLink(" ", "Retweet", "Tweets", new { id = Model.Id },
+                                ajaxOptions: new AjaxOptions
+                                {
+                                    HttpMethod = "POST",
+                                    OnComplete = "reloadPage"
+                                },
+                                htmlAttributes: new
+                                {
+                                    @class = "glyphicon glyphicon-share-alt",
+                                    @id = "tweet-retweet-icon-link-" + Model.Id
+                                })
                     </span>
                 }
             </div>
@@ -90,8 +138,11 @@
 
 </div>
 
+<div class="tweet-reply-box-only" id="tweet-reply-box-only-@Model.Id" hidden="hidden">
+    <div class="tweet-add-reply-box-only" id="add-reply-only-@Model.Id"></div>
+</div>
 
-<div id="tweet-replies-controls-@Model.Id" hidden="hidden">
+<div class="tweet-replies-controls" id="tweet-replies-controls-@Model.Id" hidden="hidden">
     <div class="tweet-add-reply-box" id="add-reply-@Model.Id"></div>
     <div class="tweet-replies-tree" id="replies-@Model.Id"></div>
 </div>

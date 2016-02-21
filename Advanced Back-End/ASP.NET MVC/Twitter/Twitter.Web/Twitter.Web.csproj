@@ -317,6 +317,7 @@
     <Content Include="Views\Shared\_UsersLayout.cshtml" />
     <Content Include="Views\Shared\_LayoutAnon.cshtml" />
     <Content Include="Views\Manage\_ViewStart.cshtml" />
+    <Content Include="Views\_RedirectMessages.cshtml" />
     <Content Include="Views\Account\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup />

@@ -36,7 +36,8 @@ namespace Twitter.Web.Controllers
                         PictureUrl = t.User.PictureUrl
                     },
                     Content = t.Content,
-                    CreatedOn = t.CreatedOn
+                    CreatedOn = t.CreatedOn,
+                    FavoritedBy = t.FavoritedBy
                 });
 
             int pageSize = 10;
@@ -78,7 +79,8 @@ namespace Twitter.Web.Controllers
                                 PictureUrl = t.User.PictureUrl
                             },
                             Content = t.Content,
-                            CreatedOn = t.CreatedOn
+                            CreatedOn = t.CreatedOn,
+                            FavoritedBy = t.FavoritedBy
                         }));
                 }
 

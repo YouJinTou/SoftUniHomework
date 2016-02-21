@@ -1,10 +1,15 @@
 ﻿#anonymous-landing-page {
   background-image: url("Images/Anon_Index.JPG"); }
   #anonymous-landing-page .anon-controls-box {
-    width: 50%;
-    margin: 0 auto; }
+    width: 90%;
+    margin: 0 auto;
+    color: black; }
     #anonymous-landing-page .anon-controls-box .anon-box {
-      display: inline-block; }
+      float: left; }
+      #anonymous-landing-page .anon-controls-box .anon-box .anon-box-title {
+        width: 675px; }
+      #anonymous-landing-page .anon-controls-box .anon-box a {
+        color: blue; }
 
 #bootstrap-overrides {
   padding-left: 50px;
@@ -16,14 +21,19 @@
     width: 900px; }
   #bootstrap-overrides .user-avatar {
     max-width: 100%; }
+    #bootstrap-overrides .user-avatar img {
+      width: 100px; }
   #bootstrap-overrides .create-tweet-box {
     margin-bottom: 15px; }
+  #bootstrap-overrides .redirect-message-box {
+    width: 50%;
+    margin: 0 auto; }
   #bootstrap-overrides #main-sidebar {
     background-color: white;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-right: 10px;
     float: left;
-    width: 20%;
+    width: 23%;
     border: 1px solid #E1E8ED;
     border-radius: 5px; }
     #bootstrap-overrides #main-sidebar .sidebar-profile .sidebar-profile-header {
@@ -36,13 +46,15 @@
         #bootstrap-overrides #main-sidebar .sidebar-profile .sidebar-profile-header .sidebar-profile-header-username a {
           color: #413c3c; }
       #bootstrap-overrides #main-sidebar .sidebar-profile .sidebar-profile-header .sidebar-stat-title {
-        display: inline-block; }
+        display: inline-block;
+        margin-right: 23px; }
   #bootstrap-overrides .tweets-container {
+    margin-top: 10px;
     display: inline-block;
-    width: 50%; }
+    width: 600px; }
     #bootstrap-overrides .tweets-container .tweet {
       border: 1px solid #E1E8ED;
-      height: 110px;
+      height: 200px;
       background-color: white; }
       #bootstrap-overrides .tweets-container .tweet :hover {
         background-color: #F5F8FA; }
@@ -59,7 +71,9 @@
             width: 80%;
             height: 80%; }
         #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper {
-          display: inline-block; }
+          display: inline-block;
+          height: 100%;
+          width: 70%; }
           #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-header {
             display: inline-block;
             vertical-align: top; }
@@ -79,22 +93,38 @@
           #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-body {
             margin-top: 15px;
             display: inline-block;
-            width: 80%; }
+            width: 100%;
+            height: 50%; }
             #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-body .tweet-body-text {
               width: 100%;
+              height: 100%;
               display: inline-block;
               font-size: 130%; }
-              #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-body .tweet-body-text .tweet-body-text-link {
-                width: 100%; }
+              #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-body .tweet-body-text a {
+                max-width: 100%;
+                height: 100%;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;
+                white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word; }
           #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer a {
+            margin-top: 5px;
             margin-right: 40px;
             color: #868585;
             font-size: 150%;
             text-decoration: none; }
-          #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer #tweet-reply-icon :hover {
+          #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer .tweet-reply-icon :hover {
             color: #3985ce; }
-          #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer #tweet-favorite-icon :hover {
+          #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer .tweet-favorite-icon :hover {
             color: #f33d3d; }
-          #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer #tweet-retweet-icon :hover {
+          #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer .tweet-unfavorite-icon :hover {
+            color: black; }
+          #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-body-wrapper .tweet-footer .tweet-retweet-icon :hover {
             color: #7fe456; }
+    #bootstrap-overrides .tweets-container .tweet-replies-controls .tweet-replies-tree {
+      margin-left: 35px;
+      margin-bottom: 15px; }
+    #bootstrap-overrides .tweets-container .tweet-reply-box-only {
+      margin-bottom: 15px; }
 

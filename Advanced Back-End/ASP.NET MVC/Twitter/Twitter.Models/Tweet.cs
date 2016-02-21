@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Twitter.Models
 {
-    public class Tweet
+    public class Tweet : IComparable<Tweet>
     {
         private ICollection<Tweet> replies;
         private ICollection<User> favoritedBy;
@@ -36,5 +36,20 @@ namespace Twitter.Models
         public virtual ICollection<Tweet> Replies { get; set; }
         public virtual ICollection<User> FavoritedBy { get; set; }
         public virtual ICollection<User> RetweetedBy { get; set; }
+        
+        public int CompareTo(Tweet other)
+        {
+            if (other == null)
+            {
+                return -1;
+            }
+
+            if (this.CreatedOn.CompareTo(other.CreatedOn) > 0)
+            {
+                return -1;
+            }
+
+            return 1;
+        }
     }
 }

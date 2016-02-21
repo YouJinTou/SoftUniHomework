@@ -1,5 +1,5 @@
-﻿@model IEnumerable<Twitter.Web.Models.ViewModels.ListNotificationsViewModel>
-
+﻿@model PagedList.IPagedList<Twitter.Web.Models.ViewModels.ListNotificationsViewModel>
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Notifications";
 }
@@ -40,3 +40,5 @@
 }
 
 </table>
+
+@Html.PagedListPager(Model, page => Url.Action("All", new { page }));

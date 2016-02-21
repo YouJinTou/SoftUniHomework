@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using PagedList;
 using System.Linq;
 using System.Web.Mvc;
 using Twitter.Data.UnitOfWork;
@@ -14,7 +15,7 @@ namespace Twitter.Web.Controllers
         {
         }
 
-        public ActionResult All()
+        public ActionResult All(int? page)
         {
             var userId = this.User.Identity.GetUserId();
             var notifications = this.data.Notifications
@@ -33,7 +34,10 @@ namespace Twitter.Web.Controllers
                     Date = n.Date
                 });
 
-            return View("Notifications", notifications);
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+
+            return View("Notifications", notifications.ToPagedList(pageNumber, pageSize));
         }
 
         public ActionResult Notification(int id)
@@ -58,8 +62,9 @@ namespace Twitter.Web.Controllers
                     controllerName: "Users",
                     routeValues: new { username = follower });
             }
-            else
+            else 
             {
+                // We shouldn't normally get here
                 return RedirectToAction("Index", "Home");
             }
         }

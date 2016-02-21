@@ -292,7 +292,7 @@ namespace Twitter.Web.Controllers
         }
 
         //
-        // POST: /Manage/SetPassword
+        // POST: /Manage/ChangeAvatar
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult ChangeAvatar(ChangeAvatarBindingModel model)

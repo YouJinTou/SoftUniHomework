@@ -29,7 +29,7 @@ namespace Twitter.Web.Controllers
                 this.TempData["postTweetError"] =
                     "A tweet's length should be between 1 and 140 characters long";
 
-                return RedirectToAction("Index", "Home");
+                return Content(ReloadScript);
             }
 
             var userId = this.User.Identity.GetUserId();
@@ -58,10 +58,10 @@ namespace Twitter.Web.Controllers
 
             var hostname = HttpContext.Request.Url.Host;
 
-            //Rather disgusting as I couldn't find any other solution
-            return Content("<script language='javascript' type='text/javascript'>location.reload(true);</script>");
+            return Content(ReloadScript);
         }
 
+        [HttpPost]
         public ActionResult Favorite(int id)
         {
             var userId = this.User.Identity.GetUserId();
@@ -84,7 +84,7 @@ namespace Twitter.Web.Controllers
             {
                 this.TempData["favoriteTweetError"] = "You cannot favorite a tweet more than once";
 
-                return RedirectToAction("Index", "Home");
+                return Content(ReloadScript);
             }
 
             user.Favorites.Add(tweetToFavorite);
@@ -108,9 +108,60 @@ namespace Twitter.Web.Controllers
 
             this.TempData["favoriteTweetSuccess"] = "Tweet favorited successfully";
 
-            return RedirectToAction("Index", "Home");
+            return Content(ReloadScript);
         }
 
+        [HttpPost]
+        public ActionResult Unfavorite(int id)
+        {
+            var userId = this.User.Identity.GetUserId();
+
+            if (userId == null)
+            {
+                return new HttpUnauthorizedResult("You need to be logged in.");
+            }
+
+            var tweetToUnfavorite = this.data.Tweets.Find(id);
+
+            if (tweetToUnfavorite == null)
+            {
+                return new HttpNotFoundResult("The tweet is missing.");
+            }
+
+            var user = this.data.Users.Find(userId);
+
+            if (!user.Favorites.Contains(tweetToUnfavorite))
+            {
+                this.TempData["unfavoriteTweetError"] = "You have to favorite a tweet first";
+
+                return Content(ReloadScript);
+            }
+
+            user.Favorites.Remove(tweetToUnfavorite);
+
+            this.data.Users.SaveChanges();
+
+            // Send notification
+            var username = this.User.Identity.GetUserName();
+            var notification = new Notification()
+            {
+                UserId = tweetToUnfavorite.UserId,
+                CauseUserId = userId,
+                Content = username + " has just unfavorited your tweet.",
+                Date = DateTime.Now,
+                AuthorTweetId = tweetToUnfavorite.Id
+            };
+
+            this.data.Notifications.Add(notification);
+
+            this.data.Notifications.SaveChanges();
+
+            this.TempData["unfavoriteTweetSuccess"] = "Tweet unfavorited successfully";
+
+            return Content(ReloadScript);
+        }
+
+        [HttpPost]
         public ActionResult Retweet(int id)
         {
             var userId = this.User.Identity.GetUserId();
@@ -130,6 +181,14 @@ namespace Twitter.Web.Controllers
             var user = this.data.Users.Find(userId);
 
             user.Retweets.Add(tweetToRetweet);
+
+            var retweetedTweetAsUnique = tweetToRetweet;
+            retweetedTweetAsUnique.CreatedOn = DateTime.Now;
+
+            this.data.Tweets.Add(retweetedTweetAsUnique);
+
+            this.data.Tweets.SaveChanges();
+
             this.data.Users.SaveChanges();
 
             // Send notification
@@ -149,9 +208,11 @@ namespace Twitter.Web.Controllers
 
             this.TempData["retweetTweetSuccess"] = "Tweet retweeted successfully";
 
-            return RedirectToAction("Index", "Home");
+            return Content(ReloadScript);
         }
 
+        // Tweets appear from newest to oldest, but the hierarchy levels are not observed;
+        // i.e. when someone replies to a reply, it goes to the top, right below the original tweet
         public ActionResult Replies(int id)
         {
             var authorTweet = this.data.Tweets.Find(id);
@@ -166,7 +227,13 @@ namespace Twitter.Web.Controllers
                 authorTweet.Replies = new HashSet<Tweet>();
             }
 
-            var result = new HashSet<RepliesViewModel>();
+            var result = new SortedSet<RepliesViewModel>();
+
+            // For notifications page
+            if (!this.Request.IsAjaxRequest())
+            {
+                AddTweetViewModelToResult(result, authorTweet);
+            }
             
             foreach (var reply in authorTweet.Replies)
             {
@@ -179,6 +246,7 @@ namespace Twitter.Web.Controllers
             return PartialView("_TweetPage", result);
         }
 
+        [HttpGet]
         public ActionResult PostReply(int id)
         {
             return PartialView("_PostReply", id);
@@ -194,7 +262,7 @@ namespace Twitter.Web.Controllers
                 this.TempData["postReplyError"] =
                     "A tweet's length should be between 1 and 140 characters long";
 
-                return RedirectToAction("PostReply", new { id = model.Id });
+                return Content(ReloadScript);
             }
 
             var userId = this.User.Identity.GetUserId();
@@ -253,7 +321,7 @@ namespace Twitter.Web.Controllers
         }
 
         private ICollection<RepliesViewModel> AddTweetViewModelToResult(
-            HashSet<RepliesViewModel> result, Tweet tweet)
+            SortedSet<RepliesViewModel> result, Tweet tweet)
         {
             var user = new UserTweetViewModel();
             user.UserName = tweet.User.UserName;
@@ -264,6 +332,13 @@ namespace Twitter.Web.Controllers
             repliesViewModel.Content = tweet.Content;
             repliesViewModel.CreatedOn = tweet.CreatedOn;
             repliesViewModel.Id = tweet.Id;
+
+            if (tweet.FavoritedBy == null)
+            {
+                tweet.FavoritedBy = new HashSet<User>();
+            }
+
+            repliesViewModel.FavoritedBy = tweet.FavoritedBy;
 
             if (tweet.Replies == null)
             {
@@ -278,7 +353,7 @@ namespace Twitter.Web.Controllers
         }
 
         private ICollection<RepliesViewModel> GetTweetRepliesTree(
-            HashSet<RepliesViewModel> result, Tweet reply)
+            SortedSet<RepliesViewModel> result, Tweet reply)
         {
             if (reply.Replies.Count == 0 || reply.Replies == null)
             {

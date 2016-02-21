@@ -5,6 +5,11 @@ namespace Twitter.Web.Controllers
 {
     public class BaseController : Controller
     {
+        // Not sure if this is a security vulnerability, but this saves a lot of trouble when
+        // a page refresh is required
+        protected const string ReloadScript =
+           @"<script language='javascript' type='text/javascript'>location.reload(true);</script>";
+
         protected ITwitterData data;
 
         public BaseController(ITwitterData data)
