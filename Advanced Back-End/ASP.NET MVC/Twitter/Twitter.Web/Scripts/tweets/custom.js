@@ -87,3 +87,16 @@ function trackTweetCharCountReply(form, id) {
 function reloadPage() {
     return location.reload(true);
 }
+
+// -------Tweet tooltip---------------------------
+$('.tweet-avatar').each(function () {
+    $(this).qtip({
+        content: {
+            text: $(this).next('div'),
+            style: {
+                width: 200,
+                height: 200
+            }
+        }
+    });
+});

@@ -81,7 +81,7 @@
     <div id="profile-fillable-area">
         <div class="tweets-container">
             @{
-                if (Model.Tweets.Count() != null)
+                if (Model.Tweets.Count() != 0)
                 {
                     foreach (var tweet in Model.Tweets)
                     {

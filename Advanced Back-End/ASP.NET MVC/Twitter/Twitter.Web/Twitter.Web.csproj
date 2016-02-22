@@ -262,9 +262,13 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\qTip\jquery.qtip.css" />
+    <Content Include="Scripts\qTip\jquery.qtip.js" />
+    <Content Include="Scripts\qTip\jquery.qtip.min.css" />
+    <Content Include="Scripts\qTip\jquery.qtip.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\tweets\tweets.js" />
+    <Content Include="Scripts\tweets\custom.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -319,6 +323,7 @@
     <Content Include="Views\Manage\_ViewStart.cshtml" />
     <Content Include="Views\_RedirectMessages.cshtml" />
     <Content Include="Views\Account\_ViewStart.cshtml" />
+    <Content Include="Scripts\qTip\jquery.qtip.min.js.map" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

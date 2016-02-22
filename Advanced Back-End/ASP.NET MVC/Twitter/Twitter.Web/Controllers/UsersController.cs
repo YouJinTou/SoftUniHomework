@@ -25,22 +25,26 @@ namespace Twitter.Web.Controllers
             {
                 UserName = user.UserName,
                 PictureUrl = user.PictureUrl,
-                Tweets = user.Tweets.OrderByDescending(t => t.CreatedOn),
-                Followers = user.Followers
+                Tweets = user.Tweets.OrderByDescending(t => t.CreatedOn),                    
+                Followers = user.Followers.Select(f => new UserTweetViewModel()
+                {
+                    UserName = user.UserName,
+                    PictureUrl = user.PictureUrl
+                })
             };
 
             return View("UserProfile", profileData);
         }
-        
+
         public ActionResult Follow(string username)
         {
             var userId = this.User.Identity.GetUserId();
-            
+
             var userToBeFollowed = this.data.Users
                 .All()
                 .FirstOrDefault(u => u.UserName == username);
             var userWantingToFollow = this.data.Users.Find(userId);
-            
+
             userToBeFollowed.Followers.Add(userWantingToFollow);
             userWantingToFollow.Following.Add(userToBeFollowed);
 
@@ -68,7 +72,7 @@ namespace Twitter.Web.Controllers
         public ActionResult Unfollow(string username)
         {
             var userId = this.User.Identity.GetUserId();
-            
+
             var userToBeUnFollowed = this.data.Users
                 .All()
                 .FirstOrDefault(u => u.UserName == username);
@@ -114,8 +118,8 @@ namespace Twitter.Web.Controllers
                         UserName = t.User.UserName,
                         PictureUrl = t.User.PictureUrl
                     },
-                    FavoritedBy = t.FavoritedBy         
-                });                        
+                    FavoritedBy = t.FavoritedBy
+                });
 
             return PartialView("~/Views/Users/_UserRetweets.cshtml", tweets);
         }
@@ -198,7 +202,7 @@ namespace Twitter.Web.Controllers
         {
             var user = this.data.Users
                 .All()
-                .FirstOrDefault(u => u.UserName == username);            
+                .FirstOrDefault(u => u.UserName == username);
 
             return user;
         }

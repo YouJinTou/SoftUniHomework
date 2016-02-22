@@ -183,6 +183,9 @@ namespace Twitter.Web.Controllers
             user.Retweets.Add(tweetToRetweet);
 
             var retweetedTweetAsUnique = tweetToRetweet;
+
+            retweetedTweetAsUnique.User.PictureUrl = tweetToRetweet.User.PictureUrl;
+            retweetedTweetAsUnique.User.UserName = tweetToRetweet.User.UserName;
             retweetedTweetAsUnique.CreatedOn = DateTime.Now;
 
             this.data.Tweets.Add(retweetedTweetAsUnique);

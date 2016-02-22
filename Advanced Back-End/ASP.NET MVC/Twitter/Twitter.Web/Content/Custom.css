@@ -54,12 +54,17 @@
     width: 600px; }
     #bootstrap-overrides .tweets-container .tweet {
       border: 1px solid #E1E8ED;
-      height: 200px;
+      height: 180px;
       background-color: white; }
       #bootstrap-overrides .tweets-container .tweet :hover {
         background-color: #F5F8FA; }
       #bootstrap-overrides .tweets-container .tweet .tweet-wrapper {
         height: 100%; }
+        #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-tooltip {
+          width: 200px;
+          height: 200px;
+          position: absolute;
+          z-index: 2; }
         #bootstrap-overrides .tweets-container .tweet .tweet-wrapper .tweet-avatar {
           float: left;
           display: inline-block;

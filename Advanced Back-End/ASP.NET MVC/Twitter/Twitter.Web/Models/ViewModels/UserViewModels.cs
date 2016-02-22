@@ -14,6 +14,6 @@ namespace Twitter.Web.Models.ViewModels
         public string UserName { get; set; }
         public string PictureUrl { get; set; }
         public IEnumerable<Tweet> Tweets { get; set; }
-        public IEnumerable<User> Followers { get; set; }
+        public IEnumerable<UserTweetViewModel> Followers { get; set; }
     }
 }

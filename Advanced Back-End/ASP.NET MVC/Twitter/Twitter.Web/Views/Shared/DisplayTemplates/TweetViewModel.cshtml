@@ -2,16 +2,68 @@
 
 <div class="tweet" id="tweet-box-@Model.Id">
     <div class="tweet-wrapper">
-
+        @{
+            var username = @Model.User.UserName;
+        }
         <div class="tweet-avatar">
             <img src="@Url.Content(Model.User.PictureUrl)" alt="Avatar" />
+        </div>
+        <div id="tweet-tooltip-@Model.Id" hidden="hidden">
+            <div class="tweet-avatar">
+                <img src="@Url.Content(Model.User.PictureUrl)" alt="Avatar" />
+            </div>
+
+            <span class="tweet-username">
+                @Html.ActionLink(
+                        linkText: "@" + username,
+                        actionName: "Profile",
+                        controllerName: "Users",
+                        routeValues: new { username = username },
+                        htmlAttributes: null)
+            </span>
+
+            <div class="sidebar-profile-stats">
+                <div class="sidebar-stat-title">
+                    <div class="sidebar-profile-stat">
+                        @Html.ActionLink(
+                                    linkText: "Tweets",
+                                    actionName: "Tweets",
+                                    controllerName: "Users",
+                                    routeValues: new { username = User.Identity.Name },
+                                    htmlAttributes: null)
+                    </div>
+                </div>
+
+
+                <div class="sidebar-stat-title">
+                    <div class="sidebar-profile-stat">
+                        @Html.ActionLink(
+                                    linkText: "Following",
+                                    actionName: "Following",
+                                    controllerName: "Users",
+                                    routeValues: new { username = User.Identity.Name },
+                                    htmlAttributes: null)
+                    </div>
+                </div>
+
+
+                <div class="sidebar-stat-title">
+                    <div class="sidebar-profile-stat">
+                        @Html.ActionLink(
+                                    linkText: "Followers",
+                                    actionName: "Followers",
+                                    controllerName: "Users",
+                                    routeValues: new { username = User.Identity.Name },
+                                    htmlAttributes: null)
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
         <div class="tweet-body-wrapper">
             <header class="tweet-header">
-                @{
-                    var username = @Model.User.UserName;
-                }
 
                 <span class="tweet-username">
                     @Html.ActionLink(

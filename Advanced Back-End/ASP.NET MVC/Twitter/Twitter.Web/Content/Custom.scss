@@ -91,7 +91,7 @@
 
         .tweet {
             border: 1px solid #E1E8ED;
-            height: 200px;
+            height: 180px;
             background-color: white;
 
             :hover {
@@ -100,6 +100,13 @@
 
             .tweet-wrapper {
                 height: 100%;
+
+                .tweet-tooltip {
+                    width: 200px;
+                    height: 200px;
+                    position: absolute;
+                    z-index: 2;
+                }
 
                 .tweet-avatar {
                     float: left;
