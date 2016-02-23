@@ -1,6 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\DistanceCalculator\bin\DistanceCalculator.dll.config
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\DistanceCalculator\bin\DistanceCalculator.dll
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\DistanceCalculator\bin\DistanceCalculator.pdb
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\DistanceCalculator\obj\Debug\DistanceCalculator.csprojResolveAssemblyReference.cache
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\DistanceCalculator\obj\Debug\DistanceCalculator.dll
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DistanceCalculator\DistanceCalculator\obj\Debug\DistanceCalculator.pdb

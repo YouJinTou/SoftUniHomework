@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\5. TheBiggestOf3\bin\Debug\_5.TheBiggestOf3.exe.config
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\5. TheBiggestOf3\bin\Debug\_5.TheBiggestOf3.exe
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\5. TheBiggestOf3\bin\Debug\_5.TheBiggestOf3.pdb
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\5. TheBiggestOf3\obj\Debug\_5.TheBiggestOf3.exe
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\5. TheBiggestOf3\obj\Debug\_5.TheBiggestOf3.pdb

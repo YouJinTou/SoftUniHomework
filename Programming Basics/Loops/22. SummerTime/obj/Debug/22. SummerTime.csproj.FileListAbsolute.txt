@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\Loops\22. SummerTime\bin\Debug\_22.SummerTime.exe.config
-D:\All of the Time Spent\Programming\Homework\Loops\22. SummerTime\bin\Debug\_22.SummerTime.exe
-D:\All of the Time Spent\Programming\Homework\Loops\22. SummerTime\bin\Debug\_22.SummerTime.pdb
-D:\All of the Time Spent\Programming\Homework\Loops\22. SummerTime\obj\Debug\_22.SummerTime.exe
-D:\All of the Time Spent\Programming\Homework\Loops\22. SummerTime\obj\Debug\_22.SummerTime.pdb
-D:\All of the Time Spent\Programming\Homework\Loops\22. SummerTime\obj\Debug\22. SummerTime.csprojResolveAssemblyReference.cache

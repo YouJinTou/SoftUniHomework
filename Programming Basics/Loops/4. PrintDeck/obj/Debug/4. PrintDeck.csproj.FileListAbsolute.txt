@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\Loops\4. PrintDeck\bin\Debug\_4.PrintDeck.exe.config
-D:\All of the Time Spent\Programming\Homework\Loops\4. PrintDeck\bin\Debug\_4.PrintDeck.exe
-D:\All of the Time Spent\Programming\Homework\Loops\4. PrintDeck\bin\Debug\_4.PrintDeck.pdb
-D:\All of the Time Spent\Programming\Homework\Loops\4. PrintDeck\obj\Debug\_4.PrintDeck.exe
-D:\All of the Time Spent\Programming\Homework\Loops\4. PrintDeck\obj\Debug\_4.PrintDeck.pdb

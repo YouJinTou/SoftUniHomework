@@ -1,5 +1,0 @@
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\6. ThirdDigitIs7\bin\Debug\_6.ThirdDigitIs7.exe.config
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\6. ThirdDigitIs7\bin\Debug\_6.ThirdDigitIs7.exe
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\6. ThirdDigitIs7\bin\Debug\_6.ThirdDigitIs7.pdb
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\6. ThirdDigitIs7\obj\Debug\_6.ThirdDigitIs7.exe
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\6. ThirdDigitIs7\obj\Debug\_6.ThirdDigitIs7.pdb

@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Sum5Numbers\bin\Debug\Sum5Numbers.exe.config
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Sum5Numbers\bin\Debug\Sum5Numbers.exe
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Sum5Numbers\bin\Debug\Sum5Numbers.pdb
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Sum5Numbers\obj\Debug\Sum5Numbers.exe
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Sum5Numbers\obj\Debug\Sum5Numbers.pdb

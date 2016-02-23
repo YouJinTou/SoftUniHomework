@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\15. ExtractURLs\bin\Debug\_15.ExtractURLs.exe.config
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\15. ExtractURLs\bin\Debug\_15.ExtractURLs.exe
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\15. ExtractURLs\bin\Debug\_15.ExtractURLs.pdb
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\15. ExtractURLs\obj\Debug\_15.ExtractURLs.exe
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\15. ExtractURLs\obj\Debug\_15.ExtractURLs.pdb
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\15. ExtractURLs\obj\Debug\15. ExtractURLs.csprojResolveAssemblyReference.cache

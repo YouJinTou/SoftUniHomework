@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\Loops\9. MatrixOfNumbers\bin\Debug\_9.MatrixOfNumbers.exe.config
-D:\All of the Time Spent\Programming\Homework\Loops\9. MatrixOfNumbers\bin\Debug\_9.MatrixOfNumbers.exe
-D:\All of the Time Spent\Programming\Homework\Loops\9. MatrixOfNumbers\bin\Debug\_9.MatrixOfNumbers.pdb
-D:\All of the Time Spent\Programming\Homework\Loops\9. MatrixOfNumbers\obj\Debug\_9.MatrixOfNumbers.exe
-D:\All of the Time Spent\Programming\Homework\Loops\9. MatrixOfNumbers\obj\Debug\_9.MatrixOfNumbers.pdb

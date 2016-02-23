@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\DreamItem\bin\Debug\DreamItem.exe.config
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\DreamItem\bin\Debug\DreamItem.exe
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\DreamItem\bin\Debug\DreamItem.pdb
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\DreamItem\obj\Debug\DreamItem.exe
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\DreamItem\obj\Debug\DreamItem.pdb
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\DreamItem\obj\Debug\DreamItem.csprojResolveAssemblyReference.cache

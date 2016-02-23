@@ -1,5 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\05. Artists and Albums XPath\bin\Debug\_05.Artists_and_Albums_XPath.exe.config
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\05. Artists and Albums XPath\bin\Debug\_05.Artists_and_Albums_XPath.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\05. Artists and Albums XPath\bin\Debug\_05.Artists_and_Albums_XPath.pdb
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\05. Artists and Albums XPath\obj\Debug\_05.Artists_and_Albums_XPath.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\05. Artists and Albums XPath\obj\Debug\_05.Artists_and_Albums_XPath.pdb

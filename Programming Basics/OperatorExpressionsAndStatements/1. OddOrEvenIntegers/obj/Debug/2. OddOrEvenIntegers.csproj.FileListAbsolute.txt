@@ -1,5 +1,0 @@
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\2. OddOrEvenIntegers\bin\Debug\_2.OddOrEvenIntegers.exe.config
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\2. OddOrEvenIntegers\bin\Debug\_2.OddOrEvenIntegers.exe
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\2. OddOrEvenIntegers\bin\Debug\_2.OddOrEvenIntegers.pdb
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\2. OddOrEvenIntegers\obj\Debug\_2.OddOrEvenIntegers.exe
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\2. OddOrEvenIntegers\obj\Debug\_2.OddOrEvenIntegers.pdb

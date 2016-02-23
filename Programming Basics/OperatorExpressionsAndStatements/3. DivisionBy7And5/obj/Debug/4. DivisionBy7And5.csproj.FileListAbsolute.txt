@@ -1,5 +1,0 @@
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\DivisionBy7And5\bin\Debug\DivisionBy7And5.exe.config
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\DivisionBy7And5\bin\Debug\DivisionBy7And5.exe
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\DivisionBy7And5\bin\Debug\DivisionBy7And5.pdb
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\DivisionBy7And5\obj\Debug\DivisionBy7And5.exe
-C:\Users\Donka\Desktop\OperatorExpressionsAndStatements\DivisionBy7And5\obj\Debug\DivisionBy7And5.pdb

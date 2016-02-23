@@ -1,1 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DCREST_\DCREST_\obj\Debug\DCREST_.csprojResolveAssemblyReference.cache

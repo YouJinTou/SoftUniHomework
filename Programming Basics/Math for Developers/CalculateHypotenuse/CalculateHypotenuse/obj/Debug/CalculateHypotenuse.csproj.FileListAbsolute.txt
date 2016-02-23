@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\Math for Developers\CalculateHypotenuse\CalculateHypotenuse\bin\Debug\CalculateHypotenuse.exe.config
-D:\All of the Time Spent\Programming\Homework\Math for Developers\CalculateHypotenuse\CalculateHypotenuse\bin\Debug\CalculateHypotenuse.exe
-D:\All of the Time Spent\Programming\Homework\Math for Developers\CalculateHypotenuse\CalculateHypotenuse\bin\Debug\CalculateHypotenuse.pdb
-D:\All of the Time Spent\Programming\Homework\Math for Developers\CalculateHypotenuse\CalculateHypotenuse\obj\Debug\CalculateHypotenuse.exe
-D:\All of the Time Spent\Programming\Homework\Math for Developers\CalculateHypotenuse\CalculateHypotenuse\obj\Debug\CalculateHypotenuse.pdb
-D:\All of the Time Spent\Programming\Homework\Math for Developers\CalculateHypotenuse\CalculateHypotenuse\obj\Debug\CalculateHypotenuse.csprojResolveAssemblyReference.cache

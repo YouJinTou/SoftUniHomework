@@ -1,5 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\Catalogue\bin\Debug\Catalogue.exe.config
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\Catalogue\bin\Debug\Catalogue.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\Catalogue\bin\Debug\Catalogue.pdb
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\Catalogue\obj\Debug\Catalogue.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\Catalogue\obj\Debug\Catalogue.pdb

@@ -1,5 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DCREST_\Distance.Client\bin\Debug\Distance.Client.exe.config
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DCREST_\Distance.Client\bin\Debug\Distance.Client.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DCREST_\Distance.Client\bin\Debug\Distance.Client.pdb
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DCREST_\Distance.Client\obj\Debug\Distance.Client.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Web Servicves & Cloud\Web Services, SOA, SOAP, WSDL and REST\DCREST_\Distance.Client\obj\Debug\Distance.Client.pdb

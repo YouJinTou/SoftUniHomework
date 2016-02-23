@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\8. PrimeNumberCheck\bin\Debug\_8.PrimeNumberCheck.exe.config
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\8. PrimeNumberCheck\bin\Debug\_8.PrimeNumberCheck.exe
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\8. PrimeNumberCheck\bin\Debug\_8.PrimeNumberCheck.pdb
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\8. PrimeNumberCheck\obj\Debug\_8.PrimeNumberCheck.exe
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\8. PrimeNumberCheck\obj\Debug\_8.PrimeNumberCheck.pdb

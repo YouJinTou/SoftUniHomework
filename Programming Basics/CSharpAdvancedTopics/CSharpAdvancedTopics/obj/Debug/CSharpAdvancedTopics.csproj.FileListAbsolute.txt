@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\CSharpAdvancedTopics\bin\Debug\CSharpAdvancedTopics.exe.config
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\CSharpAdvancedTopics\bin\Debug\CSharpAdvancedTopics.exe
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\CSharpAdvancedTopics\bin\Debug\CSharpAdvancedTopics.pdb
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\CSharpAdvancedTopics\obj\Debug\CSharpAdvancedTopics.exe
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\CSharpAdvancedTopics\obj\Debug\CSharpAdvancedTopics.pdb
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\CSharpAdvancedTopics\obj\Debug\CSharpAdvancedTopics.csprojResolveAssemblyReference.cache

@@ -1,5 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\10. Directory Contents as XML\bin\Debug\_10.Directory_Contents_as_XML.exe.config
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\10. Directory Contents as XML\bin\Debug\_10.Directory_Contents_as_XML.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\10. Directory Contents as XML\bin\Debug\_10.Directory_Contents_as_XML.pdb
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\10. Directory Contents as XML\obj\Debug\_10.Directory_Contents_as_XML.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\10. Directory Contents as XML\obj\Debug\_10.Directory_Contents_as_XML.pdb

@@ -1,5 +1,0 @@
-.NET is an umbrella term that encompasses C#, VB.NET, C++ . It
-is a framework that holds many libraries. When source-code is 
-compiled, Intermediate Language is output. IL goes into the 
-Common Language Runtime, where the code is converted into
-platform-specific code by the just-in-time compiler.

@@ -1,5 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\08. LINQ to XML Old Albums\bin\Debug\_08.LINQ_to_XML_Old_Albums.exe.config
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\08. LINQ to XML Old Albums\bin\Debug\_08.LINQ_to_XML_Old_Albums.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\08. LINQ to XML Old Albums\bin\Debug\_08.LINQ_to_XML_Old_Albums.pdb
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\08. LINQ to XML Old Albums\obj\Debug\_08.LINQ_to_XML_Old_Albums.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\08. LINQ to XML Old Albums\obj\Debug\_08.LINQ_to_XML_Old_Albums.pdb

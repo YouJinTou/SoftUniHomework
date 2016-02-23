@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\Loops\20. FourFactors\bin\Debug\_20.FourFactors.exe.config
-D:\All of the Time Spent\Programming\Homework\Loops\20. FourFactors\bin\Debug\_20.FourFactors.exe
-D:\All of the Time Spent\Programming\Homework\Loops\20. FourFactors\bin\Debug\_20.FourFactors.pdb
-D:\All of the Time Spent\Programming\Homework\Loops\20. FourFactors\obj\Debug\20. FourFactors.csprojResolveAssemblyReference.cache
-D:\All of the Time Spent\Programming\Homework\Loops\20. FourFactors\obj\Debug\_20.FourFactors.exe
-D:\All of the Time Spent\Programming\Homework\Loops\20. FourFactors\obj\Debug\_20.FourFactors.pdb

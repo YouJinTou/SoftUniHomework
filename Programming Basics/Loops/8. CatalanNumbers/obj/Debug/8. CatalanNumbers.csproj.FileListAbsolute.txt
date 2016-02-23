@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\Loops\8. CatalanNumbers\bin\Debug\_8.CatalanNumbers.exe.config
-D:\All of the Time Spent\Programming\Homework\Loops\8. CatalanNumbers\bin\Debug\_8.CatalanNumbers.exe
-D:\All of the Time Spent\Programming\Homework\Loops\8. CatalanNumbers\bin\Debug\_8.CatalanNumbers.pdb
-D:\All of the Time Spent\Programming\Homework\Loops\8. CatalanNumbers\obj\Debug\_8.CatalanNumbers.exe
-D:\All of the Time Spent\Programming\Homework\Loops\8. CatalanNumbers\obj\Debug\_8.CatalanNumbers.pdb

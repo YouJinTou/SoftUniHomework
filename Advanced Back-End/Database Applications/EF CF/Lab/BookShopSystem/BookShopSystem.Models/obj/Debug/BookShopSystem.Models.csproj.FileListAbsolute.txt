@@ -1,4 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\Lab\BookShopSystem\BookShopSystem.Models\bin\Debug\BookShopSystem.Models.dll
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\Lab\BookShopSystem\BookShopSystem.Models\bin\Debug\BookShopSystem.Models.pdb
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\Lab\BookShopSystem\BookShopSystem.Models\obj\Debug\BookShopSystem.Models.dll
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF CF\Lab\BookShopSystem\BookShopSystem.Models\obj\Debug\BookShopSystem.Models.pdb

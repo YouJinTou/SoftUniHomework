@@ -1,5 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\12. XMLtoHTML\bin\Debug\_12.XMLtoHTML.exe.config
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\12. XMLtoHTML\bin\Debug\_12.XMLtoHTML.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\12. XMLtoHTML\bin\Debug\_12.XMLtoHTML.pdb
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\12. XMLtoHTML\obj\Debug\_12.XMLtoHTML.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\12. XMLtoHTML\obj\Debug\_12.XMLtoHTML.pdb

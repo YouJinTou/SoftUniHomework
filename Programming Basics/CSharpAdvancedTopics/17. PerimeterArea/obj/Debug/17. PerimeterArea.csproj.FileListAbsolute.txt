@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\17. PerimeterArea\bin\Debug\_17.PerimeterArea.exe.config
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\17. PerimeterArea\bin\Debug\_17.PerimeterArea.exe
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\17. PerimeterArea\bin\Debug\_17.PerimeterArea.pdb
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\17. PerimeterArea\obj\Debug\17. PerimeterArea.csprojResolveAssemblyReference.cache
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\17. PerimeterArea\obj\Debug\_17.PerimeterArea.exe
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\17. PerimeterArea\obj\Debug\_17.PerimeterArea.pdb

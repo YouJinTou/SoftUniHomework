@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\ConditionalStatements\bin\Debug\ConditionalStatements.exe.config
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\ConditionalStatements\bin\Debug\ConditionalStatements.exe
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\ConditionalStatements\bin\Debug\ConditionalStatements.pdb
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\ConditionalStatements\obj\Debug\ConditionalStatements.csprojResolveAssemblyReference.cache
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\ConditionalStatements\obj\Debug\ConditionalStatements.exe
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\ConditionalStatements\obj\Debug\ConditionalStatements.pdb

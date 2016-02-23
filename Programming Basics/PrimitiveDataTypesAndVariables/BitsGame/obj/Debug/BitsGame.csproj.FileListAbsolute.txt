@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BitsGame\bin\Debug\BitsGame.exe.config
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BitsGame\bin\Debug\BitsGame.exe
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BitsGame\bin\Debug\BitsGame.pdb
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BitsGame\obj\Debug\BitsGame.exe
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BitsGame\obj\Debug\BitsGame.pdb
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BitsGame\obj\Debug\BitsGame.csprojResolveAssemblyReference.cache

@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\CompanyInformation\bin\Debug\CompanyInformation.exe.config
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\CompanyInformation\bin\Debug\CompanyInformation.exe
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\CompanyInformation\bin\Debug\CompanyInformation.pdb
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\CompanyInformation\obj\Debug\CompanyInformation.csprojResolveAssemblyReference.cache
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\CompanyInformation\obj\Debug\CompanyInformation.exe
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\CompanyInformation\obj\Debug\CompanyInformation.pdb

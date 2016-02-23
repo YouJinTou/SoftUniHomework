@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\13. CompoundInterest\bin\Debug\_13.CompoundInterest.exe.config
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\13. CompoundInterest\bin\Debug\_13.CompoundInterest.exe
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\13. CompoundInterest\bin\Debug\_13.CompoundInterest.pdb
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\13. CompoundInterest\obj\Debug\_13.CompoundInterest.exe
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\13. CompoundInterest\obj\Debug\_13.CompoundInterest.pdb

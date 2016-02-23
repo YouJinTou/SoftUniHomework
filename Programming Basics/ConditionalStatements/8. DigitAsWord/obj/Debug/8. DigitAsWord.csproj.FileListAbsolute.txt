@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\8. DigitAsWord\bin\Debug\_8.DigitAsWord.exe.config
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\8. DigitAsWord\bin\Debug\_8.DigitAsWord.exe
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\8. DigitAsWord\bin\Debug\_8.DigitAsWord.pdb
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\8. DigitAsWord\obj\Debug\_8.DigitAsWord.exe
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\8. DigitAsWord\obj\Debug\_8.DigitAsWord.pdb

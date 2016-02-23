@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\Math for Developers\SomeFactorials\SomeFactorials\bin\Debug\SomeFactorials.exe.config
-D:\All of the Time Spent\Programming\Homework\Math for Developers\SomeFactorials\SomeFactorials\bin\Debug\SomeFactorials.exe
-D:\All of the Time Spent\Programming\Homework\Math for Developers\SomeFactorials\SomeFactorials\bin\Debug\SomeFactorials.pdb
-D:\All of the Time Spent\Programming\Homework\Math for Developers\SomeFactorials\SomeFactorials\obj\Debug\SomeFactorials.csprojResolveAssemblyReference.cache
-D:\All of the Time Spent\Programming\Homework\Math for Developers\SomeFactorials\SomeFactorials\obj\Debug\SomeFactorials.exe
-D:\All of the Time Spent\Programming\Homework\Math for Developers\SomeFactorials\SomeFactorials\obj\Debug\SomeFactorials.pdb

@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\QuotationMarks\bin\Debug\QuotationMarks.exe.config
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\QuotationMarks\bin\Debug\QuotationMarks.exe
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\QuotationMarks\bin\Debug\QuotationMarks.pdb
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\QuotationMarks\obj\Debug\QuotationMarks.exe
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\QuotationMarks\obj\Debug\QuotationMarks.pdb

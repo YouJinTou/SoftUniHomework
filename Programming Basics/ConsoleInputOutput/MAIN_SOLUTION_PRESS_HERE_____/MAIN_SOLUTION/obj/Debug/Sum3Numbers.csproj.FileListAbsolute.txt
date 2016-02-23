@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Sum3Numbers\Sum3Numbers\bin\Debug\Sum3Numbers.exe.config
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Sum3Numbers\Sum3Numbers\bin\Debug\Sum3Numbers.exe
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Sum3Numbers\Sum3Numbers\bin\Debug\Sum3Numbers.pdb
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Sum3Numbers\Sum3Numbers\obj\Debug\Sum3Numbers.csprojResolveAssemblyReference.cache
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Sum3Numbers\Sum3Numbers\obj\Debug\Sum3Numbers.exe
-D:\All of the Time Spent\Programming\Homework\ConsoleInputOutput\Sum3Numbers\Sum3Numbers\obj\Debug\Sum3Numbers.pdb

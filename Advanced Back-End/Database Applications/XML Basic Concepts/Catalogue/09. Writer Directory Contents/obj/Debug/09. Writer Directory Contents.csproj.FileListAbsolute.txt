@@ -1,5 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\09. Writer Directory Contents\bin\Debug\_09.Writer_Directory_Contents.exe.config
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\09. Writer Directory Contents\bin\Debug\_09.Writer_Directory_Contents.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\09. Writer Directory Contents\bin\Debug\_09.Writer_Directory_Contents.pdb
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\09. Writer Directory Contents\obj\Debug\_09.Writer_Directory_Contents.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\09. Writer Directory Contents\obj\Debug\_09.Writer_Directory_Contents.pdb

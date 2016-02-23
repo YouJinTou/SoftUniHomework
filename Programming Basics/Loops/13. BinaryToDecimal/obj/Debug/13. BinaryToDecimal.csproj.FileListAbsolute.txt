@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\Loops\13. BinaryToDecimal\bin\Debug\_13.BinaryToDecimal.exe.config
-D:\All of the Time Spent\Programming\Homework\Loops\13. BinaryToDecimal\bin\Debug\_13.BinaryToDecimal.exe
-D:\All of the Time Spent\Programming\Homework\Loops\13. BinaryToDecimal\bin\Debug\_13.BinaryToDecimal.pdb
-D:\All of the Time Spent\Programming\Homework\Loops\13. BinaryToDecimal\obj\Debug\_13.BinaryToDecimal.exe
-D:\All of the Time Spent\Programming\Homework\Loops\13. BinaryToDecimal\obj\Debug\_13.BinaryToDecimal.pdb

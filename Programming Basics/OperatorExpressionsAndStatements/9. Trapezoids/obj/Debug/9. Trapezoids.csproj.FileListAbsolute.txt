@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\9. Trapezoids\bin\Debug\_9.Trapezoids.exe.config
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\9. Trapezoids\bin\Debug\_9.Trapezoids.exe
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\9. Trapezoids\bin\Debug\_9.Trapezoids.pdb
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\9. Trapezoids\obj\Debug\_9.Trapezoids.exe
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\9. Trapezoids\obj\Debug\_9.Trapezoids.pdb

@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\7. MatrixOfPalindromes\bin\Debug\_7.MatrixOfPalindromes.exe.config
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\7. MatrixOfPalindromes\bin\Debug\_7.MatrixOfPalindromes.exe
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\7. MatrixOfPalindromes\bin\Debug\_7.MatrixOfPalindromes.pdb
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\7. MatrixOfPalindromes\obj\Debug\_7.MatrixOfPalindromes.exe
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\7. MatrixOfPalindromes\obj\Debug\_7.MatrixOfPalindromes.pdb
-D:\All of the Time Spent\Programming\Homework\CSharpAdvancedTopics\7. MatrixOfPalindromes\obj\Debug\7. MatrixOfPalindromes.csprojResolveAssemblyReference.cache

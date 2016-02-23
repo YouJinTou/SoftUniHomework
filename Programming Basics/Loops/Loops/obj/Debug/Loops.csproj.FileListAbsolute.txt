@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\Loops\Loops\bin\Debug\Loops.exe.config
-D:\All of the Time Spent\Programming\Homework\Loops\Loops\bin\Debug\Loops.exe
-D:\All of the Time Spent\Programming\Homework\Loops\Loops\bin\Debug\Loops.pdb
-D:\All of the Time Spent\Programming\Homework\Loops\Loops\obj\Debug\Loops.csprojResolveAssemblyReference.cache
-D:\All of the Time Spent\Programming\Homework\Loops\Loops\obj\Debug\Loops.exe
-D:\All of the Time Spent\Programming\Homework\Loops\Loops\obj\Debug\Loops.pdb

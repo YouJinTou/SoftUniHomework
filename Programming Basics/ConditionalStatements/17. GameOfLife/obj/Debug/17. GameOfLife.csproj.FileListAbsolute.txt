@@ -1,9 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\17. GameOfLife\bin\Debug\_17.GameOfLife.exe.config
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\17. GameOfLife\bin\Debug\_17.GameOfLife.exe
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\17. GameOfLife\bin\Debug\_17.GameOfLife.pdb
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\17. GameOfLife\obj\Debug\17. GameOfLife.csprojResolveAssemblyReference.cache
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\17. GameOfLife\obj\Debug\_17.GameOfLife.exe
-D:\All of the Time Spent\Programming\Homework\ConditionalStatements\17. GameOfLife\obj\Debug\_17.GameOfLife.pdb
-D:\All of the Time Spent\Programming\SoftUni Homework\Programming Basics\ConditionalStatements\17. GameOfLife\bin\Debug\_17.GameOfLife.exe.config
-D:\All of the Time Spent\Programming\SoftUni Homework\Programming Basics\ConditionalStatements\17. GameOfLife\obj\Debug\_17.GameOfLife.exe
-D:\All of the Time Spent\Programming\SoftUni Homework\Programming Basics\ConditionalStatements\17. GameOfLife\obj\Debug\_17.GameOfLife.pdb

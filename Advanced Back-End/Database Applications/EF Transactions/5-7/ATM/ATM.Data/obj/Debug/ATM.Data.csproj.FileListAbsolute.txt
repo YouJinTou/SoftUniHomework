@@ -1,9 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\ATM.Data\bin\Debug\ATM.Data.dll.config
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\ATM.Data\bin\Debug\ATM.Data.dll
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\ATM.Data\bin\Debug\ATM.Data.pdb
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\ATM.Data\bin\Debug\EntityFramework.dll
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\ATM.Data\bin\Debug\EntityFramework.SqlServer.dll
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\ATM.Data\bin\Debug\EntityFramework.xml
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\ATM.Data\bin\Debug\EntityFramework.SqlServer.xml
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\ATM.Data\obj\Debug\ATM.Data.dll
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\EF Transactions\5-7\ATM\ATM.Data\obj\Debug\ATM.Data.pdb

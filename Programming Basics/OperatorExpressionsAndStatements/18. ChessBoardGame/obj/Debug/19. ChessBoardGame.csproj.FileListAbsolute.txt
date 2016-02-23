@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\19. ChessBoardGame\bin\Debug\_19.ChessBoardGame.exe.config
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\19. ChessBoardGame\bin\Debug\_19.ChessBoardGame.exe
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\19. ChessBoardGame\bin\Debug\_19.ChessBoardGame.pdb
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\19. ChessBoardGame\obj\Debug\_19.ChessBoardGame.exe
-D:\All of the Time Spent\Programming\Homework\OperatorExpressionsAndStatements\19. ChessBoardGame\obj\Debug\_19.ChessBoardGame.pdb

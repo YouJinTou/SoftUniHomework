@@ -1,6 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BasketBattle\bin\Debug\BasketBattle.exe.config
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BasketBattle\bin\Debug\BasketBattle.exe
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BasketBattle\bin\Debug\BasketBattle.pdb
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BasketBattle\obj\Debug\BasketBattle.csprojResolveAssemblyReference.cache
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BasketBattle\obj\Debug\BasketBattle.exe
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\BasketBattle\obj\Debug\BasketBattle.pdb

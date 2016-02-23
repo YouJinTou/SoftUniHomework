@@ -1,5 +1,0 @@
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\07. Old Albums\bin\Debug\_07.Old_Albums.exe.config
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\07. Old Albums\bin\Debug\_07.Old_Albums.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\07. Old Albums\bin\Debug\_07.Old_Albums.pdb
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\07. Old Albums\obj\Debug\_07.Old_Albums.exe
-D:\Programming\SoftUni Homework\Advanced Back-End\Database Applications\XML Basic Concepts\Catalogue\07. Old Albums\obj\Debug\_07.Old_Albums.pdb

@@ -1,5 +1,0 @@
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\FloatComparer\bin\Debug\FloatComparer.exe.config
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\FloatComparer\bin\Debug\FloatComparer.exe
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\FloatComparer\bin\Debug\FloatComparer.pdb
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\FloatComparer\obj\Debug\FloatComparer.exe
-D:\All of the Time Spent\Programming\Homework\PrimitiveDataTypesAndVariables\FloatComparer\obj\Debug\FloatComparer.pdb
