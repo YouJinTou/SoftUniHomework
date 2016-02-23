@@ -8,12 +8,12 @@
         <div class="tweet-avatar">
             <img src="@Url.Content(Model.User.PictureUrl)" alt="Avatar" />
         </div>
-        <div id="tweet-tooltip-@Model.Id" hidden="hidden">
-            <div class="tweet-avatar">
+        <div class="tweet-toltip" id="tweet-tooltip-@Model.Id" hidden="hidden">
+            <div class="tweet-tooltip-avatar">
                 <img src="@Url.Content(Model.User.PictureUrl)" alt="Avatar" />
             </div>
 
-            <span class="tweet-username">
+            <span class="tweet-tooltip-username">
                 @Html.ActionLink(
                         linkText: "@" + username,
                         actionName: "Profile",
@@ -29,7 +29,7 @@
                                     linkText: "Tweets",
                                     actionName: "Tweets",
                                     controllerName: "Users",
-                                    routeValues: new { username = User.Identity.Name },
+                                    routeValues: new { username = username },
                                     htmlAttributes: null)
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                                     linkText: "Following",
                                     actionName: "Following",
                                     controllerName: "Users",
-                                    routeValues: new { username = User.Identity.Name },
+                                    routeValues: new { username = username },
                                     htmlAttributes: null)
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                                     linkText: "Followers",
                                     actionName: "Followers",
                                     controllerName: "Users",
-                                    routeValues: new { username = User.Identity.Name },
+                                    routeValues: new { username = username },
                                     htmlAttributes: null)
                     </div>
                 </div>

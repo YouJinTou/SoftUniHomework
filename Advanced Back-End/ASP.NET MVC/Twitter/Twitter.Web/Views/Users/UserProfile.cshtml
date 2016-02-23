@@ -11,31 +11,36 @@
             new AjaxOptions
             {
                 InsertionMode = InsertionMode.Replace,
-                UpdateTargetId = "profile-fillable-area"
+                UpdateTargetId = "profile-fillable-area",
+                OnComplete = "createTooltips"
             }, htmlAttributes: new { @class = "btn btn-link btn-xs" }) |
             @Ajax.ActionLink("Retweets", "Retweets", new { username = username },
             new AjaxOptions
             {
                 InsertionMode = InsertionMode.Replace,
-                UpdateTargetId = "profile-fillable-area"
+                UpdateTargetId = "profile-fillable-area",
+                OnComplete = "createTooltips"
             }, htmlAttributes: new { @class = "btn btn-link btn-xs" }) |
             @Ajax.ActionLink("Following", "Following", new { username = username },
             new AjaxOptions
             {
                 InsertionMode = InsertionMode.Replace,
-                UpdateTargetId = "profile-fillable-area"
+                UpdateTargetId = "profile-fillable-area",
+                OnComplete = "createTooltips"
             }, htmlAttributes: new { @class = "btn btn-link btn-xs" }) |
             @Ajax.ActionLink("Followers", "Followers", new { username = username },
             new AjaxOptions
             {
                 InsertionMode = InsertionMode.Replace,
-                UpdateTargetId = "profile-fillable-area"
+                UpdateTargetId = "profile-fillable-area",
+                OnComplete = "createTooltips"
             }, htmlAttributes: new { @class = "btn btn-link btn-xs" }) |
             @Ajax.ActionLink("Favorites", "Favorites", new { username = username },
             new AjaxOptions
             {
                 InsertionMode = InsertionMode.Replace,
-                UpdateTargetId = "profile-fillable-area"
+                UpdateTargetId = "profile-fillable-area",
+                OnComplete = "createTooltips"
             }, htmlAttributes: new { @class = "btn btn-link btn-xs" })
         </div>
     </div>

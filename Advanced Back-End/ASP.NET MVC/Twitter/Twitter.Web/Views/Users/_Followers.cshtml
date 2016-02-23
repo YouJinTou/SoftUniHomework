@@ -2,9 +2,11 @@
 
 @if (!this.Request.IsAjaxRequest())
 {
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    <div style="margin-top: 20px"></div>
-}
+    Layout = "~/Views/Shared/_UsersLayout.cshtml";
+    <div style="margin-top: 20px">
+        <h2>Followers</h2>
+    </div>
+    }
 
 <div id="profile-followers">
     @{
@@ -30,11 +32,11 @@
                 )
                     </h3>
                 </header>
-            }
-        }
-        else
-        {
-            <h3>This user has no followers.</h3>
-        }
+                                }
+                            }
+                            else
+                            {
+                                <h3>This user has no followers.</h3>
+                            }
     }
 </div>

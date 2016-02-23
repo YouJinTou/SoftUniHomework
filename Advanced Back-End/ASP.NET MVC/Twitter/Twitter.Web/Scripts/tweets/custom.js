@@ -12,6 +12,8 @@ function checkVisibilityReplyControls(id) {
     } else {
         $(repliesControls).show("slow");
         loadReplyBoxForCommentsTree(id);
+
+        createTooltips();
     }
 }
 
@@ -88,15 +90,33 @@ function reloadPage() {
     return location.reload(true);
 }
 
-// -------Tweet tooltip---------------------------
-$('.tweet-avatar').each(function () {
-    $(this).qtip({
-        content: {
-            text: $(this).next('div'),
-            style: {
-                width: 200,
-                height: 200
-            }
-        }
-    });
-});
+// -------Tweet tooltips---------------------------
+$(document).ready(function () {
+    createTooltips();
+})
+
+function createTooltips() {
+    $(document).ready(function () {
+        $('.tweet-avatar').each(function () {
+            $(this).qtip({
+                content: {
+                    text: $(this).next('div')
+                },
+                style: {
+                    classes: 'qtip-light'
+                },
+                position: {
+                    my: 'right center',
+                    at: 'left center'
+                },
+                show: {
+                    delay: 250
+                },
+                hide: {
+                    fixed: true,
+                    delay: 500
+                }
+            })
+        });
+    })
+}
