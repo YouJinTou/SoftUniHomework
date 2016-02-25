@@ -1,0 +1,9 @@
+C -- the level of abstraction is low as compared to C#. It excels at
+kernel-level software/ drivers where stable code is required
+
+C++ -- used for tasks where garbage collection cannot be left to
+generic solutions. Does not interface well with modern languages
+
+Java -- while researching, I couldn't help but notice that most
+differences were highly technical and specific, and no single theme
+would stand out. Thus, it's hard to summarize in two sentences
