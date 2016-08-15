@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{A58B8B7A-360E-F3EB-9C9A-200821759DCD}") = "Collision and Physics", "Assembly-CSharp.csproj", "{2EE54DAB-570C-D643-A435-1B3A2E03EBC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EE54DAB-570C-D643-A435-1B3A2E03EBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EE54DAB-570C-D643-A435-1B3A2E03EBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EE54DAB-570C-D643-A435-1B3A2E03EBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EE54DAB-570C-D643-A435-1B3A2E03EBC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
