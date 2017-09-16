@@ -1,0 +1,23 @@
+<div>
+  <div *ngIf='!article'>
+    <span>Select an article</span>
+  </div>
+
+  <div *ngIf='article'>
+    <h1>{{article.title}}</h1>
+    
+    <button (click)='onToggleImage()'>Toggle Image</button>
+    <div *ngIf='shouldShowImage'>
+      <img src="{{article.image}}" />
+    </div>
+
+    <div>{{article.author}}</div>
+    
+    <p>{{article.description}}</p>
+    <button 
+      *ngIf='ShouldShowReadMoreButton' 
+      (click)='limitDescription()'>
+      Read more
+    </button>
+  </div>
+</div>

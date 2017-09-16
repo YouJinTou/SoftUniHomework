@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ArticleStore } from '../../assets/data'
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Article } from '../../assets/article'
 
 @Component({
   selector: 'app-article-list',
@@ -7,12 +7,11 @@ import { ArticleStore } from '../../assets/data'
   styleUrls: ['./article-list.component.css']
 })
 
-export class ArticleListComponent {  
-  articles = this.loadArticles();
+export class ArticleListComponent {
+  @Input() articles: Article[];
+  @Output() selectedChanged = new EventEmitter<Article>();
 
-  private loadArticles() {
-    let store = new ArticleStore();
-
-    return store.GetArticles();
+  onArticleChanged(article: Article) {
+    this.selectedChanged.emit(article);
   }
 }

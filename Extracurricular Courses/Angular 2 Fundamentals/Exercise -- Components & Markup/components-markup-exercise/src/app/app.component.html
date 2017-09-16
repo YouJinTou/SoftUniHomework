@@ -1,4 +1,4 @@
 <div id="main">
-    <app-article-list class="articles-box"></app-article-list>
-
+    <app-article-list [articles]='articles' (selectedChanged)='onSelectedChanged($event)' class="articles-box"></app-article-list>
+    <app-article-details [article]="selectedArticle"></app-article-details>
 </div>
