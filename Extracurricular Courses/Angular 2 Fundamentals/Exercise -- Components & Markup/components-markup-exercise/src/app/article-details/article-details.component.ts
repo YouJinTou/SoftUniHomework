@@ -10,15 +10,17 @@ import { Article } from '../../assets/article'
 export class ArticleDetailsComponent {
   @Input() article: Article
   shouldShowImage: boolean;
-  
+  descriptionFontSize: number;
+
   private lastTitle: string
   private readMoreCounter: number;
   private lastDescription: string;
   private shouldShowReadMoreButton: boolean;
-  
+
   constructor() {
     this.readMoreCounter = 0;
     this.shouldShowReadMoreButton = this.ShouldShowReadMoreButton;
+    this.descriptionFontSize = 12;
   }
 
   get ShouldShowReadMoreButton(): boolean {
@@ -41,6 +43,25 @@ export class ArticleDetailsComponent {
 
   onToggleImage() {
     this.shouldShowImage = !this.shouldShowImage;
+  }
+
+  changeFont(isIncrease: boolean) {
+    let lowerBound = 8;
+    let upperBound = 20;
+    
+    if (isIncrease) {
+      if (this.descriptionFontSize + 1 > upperBound) {
+        this.descriptionFontSize = upperBound;
+      } else {
+        this.descriptionFontSize++;
+      }
+    } else {
+      if (this.descriptionFontSize - 1 < lowerBound) {
+        this.descriptionFontSize = lowerBound;
+      } else {
+        this.descriptionFontSize--;
+      }
+    }
   }
 
   limitDescription() {

@@ -13,7 +13,9 @@
 
     <div>{{article.author}}</div>
     
-    <p>{{article.description}}</p>
+    <button (click)='changeFont(true)'>Increase Font</button>
+    <button (click)='changeFont(false)'>Decrease Font</button>
+    <p [style.font-size]="descriptionFontSize + 'px'">{{article.description}}</p>
     <button 
       *ngIf='ShouldShowReadMoreButton' 
       (click)='limitDescription()'>
