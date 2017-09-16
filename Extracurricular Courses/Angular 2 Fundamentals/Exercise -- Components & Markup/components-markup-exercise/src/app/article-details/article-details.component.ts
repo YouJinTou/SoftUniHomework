@@ -8,9 +8,11 @@ import { Article } from '../../assets/article'
 })
 
 export class ArticleDetailsComponent {
-  @Input() article: Article
+  @Input() article: Article;
   shouldShowImage: boolean;
-  descriptionFontSize: number;
+  descFontSize: number;
+  descBackgroundColor: string;
+  descColor: string;
 
   private lastTitle: string
   private readMoreCounter: number;
@@ -20,7 +22,7 @@ export class ArticleDetailsComponent {
   constructor() {
     this.readMoreCounter = 0;
     this.shouldShowReadMoreButton = this.ShouldShowReadMoreButton;
-    this.descriptionFontSize = 12;
+    this.descFontSize = 12;
   }
 
   get ShouldShowReadMoreButton(): boolean {
@@ -45,22 +47,22 @@ export class ArticleDetailsComponent {
     this.shouldShowImage = !this.shouldShowImage;
   }
 
+  onBackgroundColorChange(color: string) {
+    this.descBackgroundColor = color;
+  }
+
+  onTextColorChange(color: string) {
+    this.descColor = color;
+  }
+
   changeFont(isIncrease: boolean) {
     let lowerBound = 8;
     let upperBound = 20;
-    
+
     if (isIncrease) {
-      if (this.descriptionFontSize + 1 > upperBound) {
-        this.descriptionFontSize = upperBound;
-      } else {
-        this.descriptionFontSize++;
-      }
+      this.descFontSize = (this.descFontSize + 1 > upperBound) ? upperBound : this.descFontSize + 1;
     } else {
-      if (this.descriptionFontSize - 1 < lowerBound) {
-        this.descriptionFontSize = lowerBound;
-      } else {
-        this.descriptionFontSize--;
-      }
+      this.descFontSize = (this.descFontSize - 1 < lowerBound) ? lowerBound : this.descFontSize - 1;
     }
   }
 

@@ -5,20 +5,42 @@
 
   <div *ngIf='article'>
     <h1>{{article.title}}</h1>
-    
+
     <button (click)='onToggleImage()'>Toggle Image</button>
     <div *ngIf='shouldShowImage'>
       <img src="{{article.image}}" />
     </div>
 
     <div>{{article.author}}</div>
-    
+
     <button (click)='changeFont(true)'>Increase Font</button>
     <button (click)='changeFont(false)'>Decrease Font</button>
-    <p [style.font-size]="descriptionFontSize + 'px'">{{article.description}}</p>
-    <button 
-      *ngIf='ShouldShowReadMoreButton' 
-      (click)='limitDescription()'>
+
+    <hr />
+
+    <label>Background Color</label>
+    <select (change)='onBackgroundColorChange($event.target.value)'>
+      <option value="">Choose a color</option>
+      <option value="gray">Gray</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+
+    <label>Text Color</label>
+    <select (change)='onTextColorChange($event.target.value)'>
+        <option value="">Choose a color</option>
+        <option value="yellow">Yellow</option>
+        <option value="pink">Pink</option>
+        <option value="orange">Orange</option>
+    </select>
+
+    <p 
+      [style.font-size]="descFontSize + 'px'" 
+      [style.background-color]="descBackgroundColor"
+      [style.color]="descColor">
+      {{article.description}}
+    </p>
+    <button *ngIf='ShouldShowReadMoreButton' (click)='limitDescription()'>
       Read more
     </button>
   </div>
