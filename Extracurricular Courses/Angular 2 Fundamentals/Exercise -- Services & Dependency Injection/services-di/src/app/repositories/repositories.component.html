@@ -1,22 +1,53 @@
 <div>
-    <button (click)="onRepositoriesDataRequired()">Get Repos</button>
-  
-    <ul>
-      <li *ngFor="let repoInfo of repositoriesInfo">
+  <button (click)="onRepositoriesDataRequired()">Get Repos</button>
+
+  <ul class="repo-ul">
+    <li *ngFor="let repoInfo of repositoriesInfo">
+      <div>
         <div>
           <label>Name</label>
           <span>{{repoInfo?.name}}</span>
         </div>
-  
+
         <div>
           <label>Avatar</label>
           <span>{{repoInfo?.language}}</span>
         </div>
-  
+
         <div>
           <label>Stars</label>
           <span>{{repoInfo?.stargazers_count}}</span>
         </div>
-      </li>
-    </ul>
-  </div>
+
+        <div>
+          <span><a href="{{repoInfo?.svn_url}}" target="_blank">Repo</a></span>
+        </div>
+      </div>
+
+      <button (click)="onRepoContributorsRequired(repoInfo)">Contributors</button>
+    </li>
+  </ul>
+
+  <ul class="repo-ul">
+    <li *ngFor="let contributor of contributorsInfo">
+      <div>
+        <div>
+          <label>Name</label>
+          <span>{{contributor?.login}}</span>
+        </div>
+
+        <div>
+          <div class="avatar">
+            <label>Avatar</label>
+            <img src="{{contributor?.avatar_url}}" alt="N/A" />
+          </div>
+        </div>
+
+        <div>
+          <label>Contributions</label>
+          <span>{{contributor?.contributions}}</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

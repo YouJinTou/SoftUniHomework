@@ -1,0 +1,9 @@
+.avatar img {
+    width: 100px;
+    height: 100px;
+}
+
+.repo-ul {
+    width: 40%;
+    display: inline-block;
+}
