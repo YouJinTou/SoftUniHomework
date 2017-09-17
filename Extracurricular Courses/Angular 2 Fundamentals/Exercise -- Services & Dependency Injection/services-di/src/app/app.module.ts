@@ -5,12 +5,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FollowersComponent } from './followers/followers.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    FollowersComponent
+    FollowersComponent,
+    RepositoriesComponent
   ],
   imports: [
     BrowserModule,

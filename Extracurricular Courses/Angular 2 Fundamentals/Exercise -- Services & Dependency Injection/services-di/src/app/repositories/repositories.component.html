@@ -1,0 +1,22 @@
+<div>
+    <button (click)="onRepositoriesDataRequired()">Get Repos</button>
+  
+    <ul>
+      <li *ngFor="let repoInfo of repositoriesInfo">
+        <div>
+          <label>Name</label>
+          <span>{{repoInfo?.name}}</span>
+        </div>
+  
+        <div>
+          <label>Avatar</label>
+          <span>{{repoInfo?.language}}</span>
+        </div>
+  
+        <div>
+          <label>Stars</label>
+          <span>{{repoInfo?.stargazers_count}}</span>
+        </div>
+      </li>
+    </ul>
+  </div>

@@ -18,6 +18,6 @@ export class FollowersService {
         console.log(err);
 
         return new Array<FollowerInfo>();
-      })
+      });
   }
 }
