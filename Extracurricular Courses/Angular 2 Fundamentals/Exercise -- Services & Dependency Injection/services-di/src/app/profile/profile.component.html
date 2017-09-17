@@ -1,36 +1,36 @@
-<div>
+<div *ngIf="profileInfo">
   <div>
     <label>Name</label>
-    <span>{{profileInfo.name}}</span>
+    <span>{{profileInfo?.name}}</span>
   </div>
 
   <div>
     <div class="avatar">
       <label>Avatar</label>
-      <img src="{{profileInfo.avatar_url}}" />
+      <img src="{{profileInfo?.avatar_url}}" alt="N/A" />
     </div>
   </div>
 
   <div>
     <label>Company</label>
-    <span>{{profileInfo.company}}</span>
+    <span>{{profileInfo?.company}}</span>
   </div>
 
   <label>Bio</label>
-  <span>{{profileInfo.bio}}</span>
+  <span>{{profileInfo?.bio}}</span>
 
   <div>
     <label>Location</label>
-    <span>{{profileInfo.location}}</span>
+    <span>{{profileInfo?.location}}</span>
   </div>
 
   <div>
     <label>Public Repositories</label>
-    <span>{{profileInfo.public_repos}}</span>
+    <span>{{profileInfo?.public_repos}}</span>
   </div>
 
   <div>
     <label>Followers</label>
-    <span>{{profileInfo.followers}}</span>
+    <span>{{profileInfo?.followers}}</span>
   </div>
 </div>

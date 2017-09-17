@@ -1,0 +1,24 @@
+<div>
+  <button (click)="onFollowersInfoRequired()">Get Followers</button>
+
+  <ul>
+    <li *ngFor="let followerInfo of followersInfo">
+      <div>
+        <label>Username</label>
+        <span>{{followerInfo?.login}}</span>
+      </div>
+
+      <div>
+        <div class="avatar">
+          <label>Avatar</label>
+          <img src="{{followerInfo?.avatar_url}}" alt="N/A" />
+        </div>
+      </div>
+
+      <div>
+        <label>Profile Link</label>
+        <span><a href="{{followerInfo?.html_url}}" target="_blank">Profile Link</a></span>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { ProfileComponent } from './profile/profile.component'
 
 @Component({
@@ -8,5 +8,9 @@ import { ProfileComponent } from './profile/profile.component'
 })
 
 export class AppComponent {
-  title = 'app';
+  profileUrl: string;
+
+  fetchProfileData(url: string) {
+    this.profileUrl = url;
+  }
 }

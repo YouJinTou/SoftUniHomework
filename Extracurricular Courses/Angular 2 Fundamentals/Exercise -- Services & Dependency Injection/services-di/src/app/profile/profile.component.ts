@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { ProfileService } from './profile.service';
 import { ProfileInfo } from './profile.info';
 
@@ -9,14 +9,17 @@ import { ProfileInfo } from './profile.info';
   providers: [ProfileService]
 })
 
-export class ProfileComponent implements OnInit {
-  private apiUrl: string = 'https://api.github.com/users/ivaylokenov';
-
+export class ProfileComponent implements OnChanges {
+  @Input() apiUrl: string;
   profileInfo: ProfileInfo;
 
   constructor(private service: ProfileService) { }
 
-  ngOnInit() {
+  ngOnChanges() {
+    if (!this.apiUrl) {
+      return;
+    }
+    
     this.service
       .getProfileInfo(this.apiUrl)
       .then(info => {
