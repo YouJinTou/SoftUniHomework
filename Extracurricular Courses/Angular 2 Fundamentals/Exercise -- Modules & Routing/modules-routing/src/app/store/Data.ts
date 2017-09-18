@@ -4,7 +4,7 @@ import { Owner } from './Owner';
 import 'rxjs/add/operator/toPromise';
 
 export class Data {
-    getCars(skip?: number, take?: number): Promise<Car[]> {
+    getCars(skip?: number, take?: number, sortBy?: string, sortDir?: string): Promise<Car[]> {
         let cars = new Array<Car>(
             new Car(
                 1,
@@ -120,11 +120,34 @@ export class Data {
 
         return new Promise<Car[]>((resolve, reject) => {
             setTimeout(function () {
-                if (!skip) {
-                    resolve(cars);
+                switch (sortBy) {
+                    case 'make':
+                        cars = cars.sort(
+                            (a, b) => (a.make < b.make) ? -1 : a.make > b.make ? 1 : 0);
+                        break;
+
+                    case 'owner':
+                        cars = cars.sort(
+                            (a, b) => (a.owner.name < b.owner.name) ? -1 :
+                                a.owner.name > b.owner.name ? 1 : 0);
+                        break;
+
+                    case 'date':
+                        cars = cars.sort(
+                            (a, b) => (a.listingDate < b.listingDate) ? -1 : a.listingDate > b.listingDate ? 1 : 0);
+                        break;
+
+                    default:
+                        break;
                 }
 
-                resolve(cars.slice(skip, skip + take));
+                skip = skip ? skip : 0;
+                take = take ? take : cars.length;
+                cars = (sortDir === 'desc') ?
+                    cars.reverse().slice(skip, skip + take) :
+                    cars.slice(skip, skip + take);
+
+                resolve(cars);
             }, 1000);
         });
     }

@@ -6,7 +6,7 @@ import { Car } from './../store/Car';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [Data]
+  providers: []
 })
 
 export class HomeComponent implements OnInit {
@@ -16,12 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.service
-      .getCars()
-      .then(cars => {
-        console.log(cars)
-        this.cars = cars
-          .sort((a, b) => b.listingDate.getTime() - a.listingDate.getTime())
-          .slice(0, 6);
-      });
+      .getCars(0, 6, 'date', 'desc')
+      .then(cars => this.cars = cars);
   }
 }

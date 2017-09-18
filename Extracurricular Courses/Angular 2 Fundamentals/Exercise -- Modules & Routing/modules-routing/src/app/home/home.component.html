@@ -1,26 +1,41 @@
-<div>
-  <ul>
-    <li *ngFor="let car of cars">
-      {{car.listingDate}}
-      <div>
-        <label>Make</label>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-2" (click)="onSortingRequired('date')">
+            <a href="javascript: void(0);">Date</a></div>
+        <div class="col-md-2" (click)="onSortingRequired('owner')">
+            <a href="javascript: void(0);">Owner</a>
+        </div>
+        <div class="col-md-2" (click)="onSortingRequired('make')">
+            <a href="javascript: void(0);">Make</a>
+        </div>
+        <div class="col-md-2">Model</div>
+        <div class="col-md-2">Image</div>
+        <div class="col-md-2">Details</div>
+    </div>
+</div>
+
+<div class="row" *ngFor="let car of cars">
+    <div class="col-md-2">
+        <span>{{car.listingDate}}</span>
+    </div>
+
+    <div class="col-md-2">
+        <span>{{car.owner.name}}</span>
+    </div>
+
+    <div class="col-md-2">
         <span>{{car.make}}</span>
-      </div>
+    </div>
 
-      <div>
-        <label>Model</label>
+    <div class="col-md-2">
         <span>{{car.model}}</span>
-      </div>
+    </div>
 
-      <div>
-        <label>Image</label>
+    <div class="col-md-2">
         <img src="{{car.image}}" alt="N/A" />
-      </div>
+    </div>
 
-      <div>
-          <label>Model</label>
-          <a href="cars/{{car.id}}">Details</a>
-      </div>
-    </li>
-  </ul>
+    <div class="col-md-2">
+        <a href="cars/{{car.id}}">Details</a>
+    </div>
 </div>

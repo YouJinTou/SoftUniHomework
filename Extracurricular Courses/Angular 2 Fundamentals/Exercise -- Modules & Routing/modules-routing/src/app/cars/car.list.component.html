@@ -1,1 +1,51 @@
-asd
+<h1>Cars</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-2" (click)="onSortingRequired('date')">
+            <a href="javascript: void(0);">Date</a></div>
+        <div class="col-md-2" (click)="onSortingRequired('owner')">
+            <a href="javascript: void(0);">Owner</a>
+        </div>
+        <div class="col-md-2" (click)="onSortingRequired('make')">
+            <a href="javascript: void(0);">Make</a>
+        </div>
+        <div class="col-md-2">Model</div>
+        <div class="col-md-2">Image</div>
+        <div class="col-md-2">Details</div>
+    </div>
+</div>
+
+<div class="row" *ngFor="let car of cars">
+    <div class="col-md-2">
+        <span>{{car.listingDate}}</span>
+    </div>
+
+    <div class="col-md-2">
+        <span>{{car.owner.name}}</span>
+    </div>
+
+    <div class="col-md-2">
+        <span>{{car.make}}</span>
+    </div>
+
+    <div class="col-md-2">
+        <span>{{car.model}}</span>
+    </div>
+
+    <div class="col-md-2">
+        <img src="{{car.image}}" alt="N/A" />
+    </div>
+
+    <div class="col-md-2">
+        <a href="cars/{{car.id}}">Details</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <button *ngIf="showPrevPaging" (click)="onPrevClicked()">Prev</button>
+        <input type="text" value="{{skip + 1}}" />
+        <button *ngIf="showNextPaging" (click)="onNextClicked()">Next</button>
+    </div>
+</div>
