@@ -1,3 +1,4 @@
+import { Injectable } from '@angular/core';
 import { Car } from './Car';
 import { Owner } from './Owner';
 import 'rxjs/add/operator/toPromise';
@@ -119,6 +120,10 @@ export class Data {
 
         return new Promise<Car[]>((resolve, reject) => {
             setTimeout(function () {
+                if (!skip) {
+                    resolve(cars);
+                }
+
                 resolve(cars.slice(skip, skip + take));
             }, 1000);
         });

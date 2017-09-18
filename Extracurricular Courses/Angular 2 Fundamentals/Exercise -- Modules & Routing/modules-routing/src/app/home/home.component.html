@@ -1,3 +1,26 @@
-<p>
-  home works!
-</p>
+<div>
+  <ul>
+    <li *ngFor="let car of cars">
+      {{car.listingDate}}
+      <div>
+        <label>Make</label>
+        <span>{{car.make}}</span>
+      </div>
+
+      <div>
+        <label>Model</label>
+        <span>{{car.model}}</span>
+      </div>
+
+      <div>
+        <label>Image</label>
+        <img src="{{car.image}}" alt="N/A" />
+      </div>
+
+      <div>
+          <label>Model</label>
+          <a href="cars/{{car.id}}">Details</a>
+      </div>
+    </li>
+  </ul>
+</div>

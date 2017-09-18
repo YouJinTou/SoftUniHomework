@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CarListComponent } from './cars/car.list.component';
@@ -22,7 +23,7 @@ const routes: Routes = [
         OwnerListComponent,
         OwnerDetailsComponent
     ],
-    imports: [RouterModule.forRoot(routes)],
+    imports: [CommonModule, RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
 
