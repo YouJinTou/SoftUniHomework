@@ -25,29 +25,29 @@
       </div>
 
       <button (click)="onRepoContributorsRequired(repoInfo)">Contributors</button>
-    </li>
-  </ul>
 
-  <ul class="repo-ul">
-    <li *ngFor="let contributor of contributorsInfo">
-      <div>
-        <div>
-          <label>Name</label>
-          <span>{{contributor?.login}}</span>
-        </div>
+      <ul class="repo-ul">
+        <li *ngFor="let contributor of repoInfo?.contributorsInfo">
+          <div>
+            <div>
+              <label>Name</label>
+              <span>{{contributor?.login}}</span>
+            </div>
 
-        <div>
-          <div class="avatar">
-            <label>Avatar</label>
-            <img src="{{contributor?.avatar_url}}" alt="N/A" />
+            <div>
+              <div class="avatar">
+                <label>Avatar</label>
+                <img src="{{contributor?.avatar_url}}" alt="N/A" />
+              </div>
+            </div>
+
+            <div>
+              <label>Contributions</label>
+              <span>{{contributor?.contributions}}</span>
+            </div>
           </div>
-        </div>
-
-        <div>
-          <label>Contributions</label>
-          <span>{{contributor?.contributions}}</span>
-        </div>
-      </div>
+        </li>
+      </ul>
     </li>
   </ul>
 </div>

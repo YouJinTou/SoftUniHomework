@@ -13,7 +13,6 @@ import { ContributorInfo } from './contributor.info';
 export class RepositoriesComponent {
   @Input() apiUrl: string;
   repositoriesInfo: RepositoryInfo[];
-  contributorsInfo: ContributorInfo[];
 
   constructor(private service: RepositoriesService) { }
 
@@ -28,12 +27,13 @@ export class RepositoriesComponent {
       .getRepositoriesData(this.apiUrl)
       .then(info => {
         this.repositoriesInfo = info;
+        console.log()
       });
   }
 
   onRepoContributorsRequired(repo: RepositoryInfo) {
     if (!this.apiUrl) {
-      this.contributorsInfo = new Array<ContributorInfo>();
+      repo.contributorsInfo = new Array<ContributorInfo>();
 
       return;
     }
@@ -41,7 +41,7 @@ export class RepositoriesComponent {
     this.service
       .getContributorsData(this.apiUrl, repo.name)
       .then(info => {
-        this.contributorsInfo = info;
+        repo.contributorsInfo = info;
       });
   }
 }
