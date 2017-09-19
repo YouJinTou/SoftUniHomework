@@ -12,7 +12,7 @@ export class Data {
                 'Escort',
                 './../../assets/ford-escort.jpg',
                 'Cool car',
-                new Owner(1, 'Ivan', 'Ivanov'),
+                new Owner(1, 'Ivan', 'Ivanov', [], []),
                 1234,
                 'V2',
                 ['Bad car', 'Not so good'],
@@ -23,7 +23,7 @@ export class Data {
                 'Renegade',
                 './../../assets/chrysler-renegade.jpg',
                 'Bought it a year ago.',
-                new Owner(1, 'Ivan', 'Ivanov'),
+                new Owner(1, 'Ivan', 'Ivanov', [], []),
                 4912,
                 'V8',
                 ['AWESOME', 'The one and only', 'WTF...'],
@@ -34,7 +34,7 @@ export class Data {
                 'Berlingo',
                 './../../assets/citroen-berlingo.jpg',
                 'Not the best, but will work for most.',
-                new Owner(1, 'Ivan', 'Ivanov'),
+                new Owner(1, 'Ivan', 'Ivanov', [], []),
                 3341,
                 'V4',
                 ['Bad car', 'Not so good'],
@@ -45,7 +45,7 @@ export class Data {
                 'Duster',
                 './../../assets/dacia-duster.jpg',
                 'ROMANIA, baby!',
-                new Owner(2, 'John', 'Doe'),
+                new Owner(2, 'John', 'Doe', [], []),
                 8123,
                 'V6',
                 ['Bad car', 'Not so good'],
@@ -56,7 +56,7 @@ export class Data {
                 '500',
                 './../../assets/fiat-500.jpg',
                 'Okay, this Italian buddy will take you anywhere.',
-                new Owner(2, 'John', 'Doe'),
+                new Owner(2, 'John', 'Doe', [], []),
                 1234,
                 'V8',
                 ['Bad car', 'Not so good'],
@@ -67,7 +67,7 @@ export class Data {
                 'i10',
                 './../../assets/huyndai-i10.jpg',
                 'Not sure what you would pay for it, but I would cough up.',
-                new Owner(2, 'John', 'Doe'),
+                new Owner(2, 'John', 'Doe', [], []),
                 1234,
                 'V5',
                 ['Bad car', 'Not so good'],
@@ -78,7 +78,7 @@ export class Data {
                 'Carens',
                 './../../assets/kia-carens.jpg',
                 'Here comes the KIA.',
-                new Owner(3, 'Jane', 'Hopkins'),
+                new Owner(3, 'Jane', 'Hopkins', [], []),
                 8123,
                 'V2',
                 ['Bad car', 'Not so good'],
@@ -89,7 +89,7 @@ export class Data {
                 'Vito',
                 './../../assets/mercedes-vito.jpg',
                 'Germany for life.',
-                new Owner(3, 'Jane', 'Hopkins'),
+                new Owner(3, 'Jane', 'Hopkins', [], []),
                 5123,
                 'V2',
                 ['Bad car', 'Not so good'],
@@ -100,7 +100,7 @@ export class Data {
                 'Mirage',
                 './../../assets/mitsubishi-mirage.jpg',
                 'Japanese automakers are good!',
-                new Owner(3, 'Jane', 'Hopkins'),
+                new Owner(3, 'Jane', 'Hopkins', [], []),
                 3771,
                 'V2',
                 ['Bad car', 'Not so good'],
@@ -111,7 +111,7 @@ export class Data {
                 '208',
                 './../../assets/peugeot-208.jpg',
                 'The French make good cars. Buy this one.',
-                new Owner(3, 'Jane', 'Hopkins'),
+                new Owner(3, 'Jane', 'Hopkins', [], []),
                 4212,
                 'V1',
                 ['Bad car', 'Not so good'],
@@ -148,7 +148,7 @@ export class Data {
                     cars.slice(skip, skip + take);
 
                 resolve(cars);
-            }, 1000);
+            }, 0);
         });
     }
 
@@ -160,14 +160,20 @@ export class Data {
         return new Promise<Owner[]>((resolve, reject) => {
             setTimeout(function () {
                 let owners = new Array<Owner>(
-                    new Owner(1, 'Ivan Ivanov', './../../assets/ivan-ivanov.jpg'),
-                    new Owner(2, 'John Doe', './../../assets/john-doe.jpg'),
-                    new Owner(3, 'Jane Hopkins', './../../assets/jane-hopkins.jpg'),
-                    new Owner(3, 'Who Doneit', './../../assets/john-doe.jpg'),
-                    new Owner(3, 'Merry Popins', './../../assets/jane-hopkins.jpg'),
-                    new Owner(3, 'Dragan Jovtchev', './../../assets/ivan-ivanov.jpg'),
-                    new Owner(3, 'Asen Milenov', './../../assets/john-doe.jpg'),
+                    new Owner(1, 'Ivan Ivanov', './../../assets/ivan-ivanov.jpg', [1, 2 ,3], []),
+                    new Owner(2, 'John Doe', './../../assets/john-doe.jpg', [4], []),
+                    new Owner(3, 'Jane Hopkins', './../../assets/jane-hopkins.jpg', [5], []),
+                    new Owner(3, 'Who Doneit', './../../assets/john-doe.jpg', [6], []),
+                    new Owner(3, 'Merry Popins', './../../assets/jane-hopkins.jpg', [7], []),
+                    new Owner(3, 'Dragan Jovtchev', './../../assets/ivan-ivanov.jpg', [8], []),
+                    new Owner(3, 'Asen Milenov', './../../assets/john-doe.jpg', [9, 10], []),
                 );
+
+                owners.forEach(o => {
+                    o.carIds.forEach(id => {
+                        this.getCar(id).then(c => o.cars.push(c));
+                    });
+                });
 
                 switch (sortBy) {
                     case 'name':
@@ -184,7 +190,7 @@ export class Data {
                     owners.slice(skip, skip + take);
 
                 resolve(owners);
-            }, 1000);
+            }, 0);
         });
     }
 
