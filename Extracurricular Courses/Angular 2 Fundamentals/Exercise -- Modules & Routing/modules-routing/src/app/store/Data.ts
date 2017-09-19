@@ -120,6 +120,10 @@ export class Data {
 
         return new Promise<Car[]>((resolve, reject) => {
             setTimeout(function () {
+                skip = skip ? skip : 0;
+                take = take ? take : cars.length;
+                cars = cars.slice(skip, skip + take);
+
                 switch (sortBy) {
                     case 'make':
                         cars = cars.sort(
@@ -141,11 +145,7 @@ export class Data {
                         break;
                 }
 
-                skip = skip ? skip : 0;
-                take = take ? take : cars.length;
-                cars = (sortDir === 'desc') ?
-                    cars.reverse().slice(skip, skip + take) :
-                    cars.slice(skip, skip + take);
+                cars = (sortDir === 'asc') ? cars : cars.reverse();
 
                 resolve(cars);
             }, 0);
