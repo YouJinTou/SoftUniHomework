@@ -6,6 +6,7 @@ import { CarListComponent } from './cars/car.list.component';
 import { CarDetailsComponent } from './cars/car.details.component';
 import { OwnerListComponent } from './owners/owner.list.component';
 import { OwnerDetailsComponent } from './owners/owner.details.component';
+import { CommentsComponent } from './comments/comments.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
         CarListComponent,
         CarDetailsComponent,
         OwnerListComponent,
-        OwnerDetailsComponent
+        OwnerDetailsComponent,
+        CommentsComponent
     ],
     imports: [CommonModule, RouterModule.forRoot(routes)],
     exports: [RouterModule]
