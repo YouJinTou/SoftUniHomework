@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-md-12">
+        <div>
+            <img src="{{owner?.image}}" alt="N/A" />
+        </div>
+
+        <div>
+            <label>Name</label>
+            <div>{{owner?.name}}</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row" *ngFor="let car of owner?.cars">
+                    <div class="col-md-12">
+                        <div>
+                            <label>Id</label>
+                            <div>{{car?.id}}</div>
+                        </div>
+
+                        <div>
+                            <label>Date</label>
+                            <div>{{car?.listingDate}}</div>
+                        </div>
+
+                        <div>
+                            <label>Make</label>
+                            <div>{{car?.make}}</div>
+                        </div>
+
+                        <div>
+                            <label>Model</label>
+                            <div>{{car?.model}}</div>
+                        </div>
+
+                        <div>
+                            <img src="{{car?.image}}" alt="N/A" />
+                        </div>
+
+                        <div>
+                            <label>Description</label>
+                            <div>{{car?.description}}</div>
+                        </div>
+
+                        <div>
+                            <label>Owner</label>
+                            <div>{{car?.owner.name}}</div>
+                        </div>
+
+                        <div>
+                            <label>Price</label>
+                            <div>{{car?.price}}</div>
+                        </div>
+
+                        <div>
+                            <label>Engine</label>
+                            <div>{{car?.engine}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

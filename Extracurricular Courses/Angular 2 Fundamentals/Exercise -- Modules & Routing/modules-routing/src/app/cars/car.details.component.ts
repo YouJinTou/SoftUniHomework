@@ -21,7 +21,7 @@ export class CarDetailsComponent implements OnInit {
         let carId = this.route.snapshot.paramMap.get('id');
 
         this.service
-            .getCar(parseInt(carId))
+            .getCarById(parseInt(carId))
             .then(car => this.car = car);
     }
 }

@@ -56,7 +56,7 @@ export class Data {
                 '500',
                 './../../assets/fiat-500.jpg',
                 'Okay, this Italian buddy will take you anywhere.',
-                new Owner(2, 'John', 'Doe', [], []),
+                new Owner(3, 'John', 'Doe', [], []),
                 1234,
                 'V8',
                 ['Bad car', 'Not so good'],
@@ -67,7 +67,7 @@ export class Data {
                 'i10',
                 './../../assets/huyndai-i10.jpg',
                 'Not sure what you would pay for it, but I would cough up.',
-                new Owner(2, 'John', 'Doe', [], []),
+                new Owner(4, 'Who', 'Doneit', [], []),
                 1234,
                 'V5',
                 ['Bad car', 'Not so good'],
@@ -78,7 +78,7 @@ export class Data {
                 'Carens',
                 './../../assets/kia-carens.jpg',
                 'Here comes the KIA.',
-                new Owner(3, 'Jane', 'Hopkins', [], []),
+                new Owner(5, 'Merry', 'Poppins', [], []),
                 8123,
                 'V2',
                 ['Bad car', 'Not so good'],
@@ -89,7 +89,7 @@ export class Data {
                 'Vito',
                 './../../assets/mercedes-vito.jpg',
                 'Germany for life.',
-                new Owner(3, 'Jane', 'Hopkins', [], []),
+                new Owner(6, 'Dragan', 'Jovtchev', [], []),
                 5123,
                 'V2',
                 ['Bad car', 'Not so good'],
@@ -100,7 +100,7 @@ export class Data {
                 'Mirage',
                 './../../assets/mitsubishi-mirage.jpg',
                 'Japanese automakers are good!',
-                new Owner(3, 'Jane', 'Hopkins', [], []),
+                new Owner(7, 'Asen', 'Milenov', [], []),
                 3771,
                 'V2',
                 ['Bad car', 'Not so good'],
@@ -111,7 +111,7 @@ export class Data {
                 '208',
                 './../../assets/peugeot-208.jpg',
                 'The French make good cars. Buy this one.',
-                new Owner(3, 'Jane', 'Hopkins', [], []),
+                new Owner(7, 'Asen', 'Milenov', [], []),
                 4212,
                 'V1',
                 ['Bad car', 'Not so good'],
@@ -152,27 +152,33 @@ export class Data {
         });
     }
 
-    getCar(id: number): Promise<Car> {
+    getCarById(id: number): Promise<Car> {
         return this.getCars().then(res => res.find(c => c.id === id));
+    }
+
+    getCarsByOwnerId(id: number): Promise<Car[]> {
+        return this.getCars().then(res => res.filter(c => c.owner.id === id));
     }
 
     getOwners(skip?: number, take?: number, sortBy?: string, sortDir?: string): Promise<Owner[]> {
         return new Promise<Owner[]>((resolve, reject) => {
             setTimeout(function () {
                 let owners = new Array<Owner>(
-                    new Owner(1, 'Ivan Ivanov', './../../assets/ivan-ivanov.jpg', [1, 2 ,3], []),
+                    new Owner(1, 'Ivan Ivanov', './../../assets/ivan-ivanov.jpg', [1, 2, 3], []),
                     new Owner(2, 'John Doe', './../../assets/john-doe.jpg', [4], []),
                     new Owner(3, 'Jane Hopkins', './../../assets/jane-hopkins.jpg', [5], []),
-                    new Owner(3, 'Who Doneit', './../../assets/john-doe.jpg', [6], []),
-                    new Owner(3, 'Merry Popins', './../../assets/jane-hopkins.jpg', [7], []),
-                    new Owner(3, 'Dragan Jovtchev', './../../assets/ivan-ivanov.jpg', [8], []),
-                    new Owner(3, 'Asen Milenov', './../../assets/john-doe.jpg', [9, 10], []),
+                    new Owner(4, 'Who Doneit', './../../assets/john-doe.jpg', [6], []),
+                    new Owner(5, 'Merry Popins', './../../assets/jane-hopkins.jpg', [7], []),
+                    new Owner(6, 'Dragan Jovtchev', './../../assets/ivan-ivanov.jpg', [8], []),
+                    new Owner(7, 'Asen Milenov', './../../assets/john-doe.jpg', [9, 10], []),
                 );
 
                 owners.forEach(o => {
-                    o.carIds.forEach(id => {
-                        this.getCar(id).then(c => o.cars.push(c));
-                    });
+                    o.carIds.forEach(id =>
+                        () => {
+                            this.getCarById(id).then(c => o.cars.push(c));
+                        }
+                    );
                 });
 
                 switch (sortBy) {
