@@ -156,14 +156,34 @@ export class Data {
         return this.getCars().then(res => res.find(c => c.id === id));
     }
 
-    getOwners(): Promise<Owner[]> {
+    getOwners(skip?: number, take?: number, sortBy?: string, sortDir?: string): Promise<Owner[]> {
         return new Promise<Owner[]>((resolve, reject) => {
             setTimeout(function () {
-                resolve(new Array<Owner>(
+                let owners = new Array<Owner>(
                     new Owner(1, 'Ivan Ivanov', './../../assets/ivan-ivanov.jpg'),
                     new Owner(2, 'John Doe', './../../assets/john-doe.jpg'),
-                    new Owner(3, 'Jane Hopkins', './../../assets/jane-hopkins.jpg')
-                ))
+                    new Owner(3, 'Jane Hopkins', './../../assets/jane-hopkins.jpg'),
+                    new Owner(3, 'Who Doneit', './../../assets/john-doe.jpg'),
+                    new Owner(3, 'Merry Popins', './../../assets/jane-hopkins.jpg'),
+                    new Owner(3, 'Dragan Jovtchev', './../../assets/ivan-ivanov.jpg'),
+                    new Owner(3, 'Asen Milenov', './../../assets/john-doe.jpg'),
+                );
+
+                switch (sortBy) {
+                    case 'name':
+                        owners = owners.sort(
+                            (a, b) => (a.name < b.name) ? -1 : a.name > b.name ? 1 : 0);
+                    default:
+                        break;
+                }
+
+                skip = skip ? skip : 0;
+                take = take ? take : owners.length;
+                owners = (sortDir === 'desc') ?
+                    owners.reverse().slice(skip, skip + take) :
+                    owners.slice(skip, skip + take);
+
+                resolve(owners);
             }, 1000);
         });
     }

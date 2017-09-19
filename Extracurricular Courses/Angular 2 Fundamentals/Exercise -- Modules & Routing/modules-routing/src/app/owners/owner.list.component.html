@@ -1,0 +1,28 @@
+<h1>Owners</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-2"></div>
+        <div class="col-md-2" (click)="onSortingRequired('name')">
+            <a href="javascript: void(0);">Name</a>
+        </div>
+    </div>
+</div>
+
+<div class="row" *ngFor="let owner of owners">
+    <div class="col-md-2">
+        <img src="{{owner.image}}" alt="N/A" />
+    </div>
+
+    <div class="col-md-2">
+        <span>{{owner.name}}</span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <button *ngIf="showPrevPaging" (click)="onPrevClicked()">Prev</button>
+        <input type="text" value="{{skip + 1}}" />
+        <button *ngIf="showNextPaging" (click)="onNextClicked()">Next</button>
+    </div>
+</div>
