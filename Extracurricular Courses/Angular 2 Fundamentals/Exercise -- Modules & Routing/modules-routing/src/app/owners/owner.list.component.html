@@ -26,5 +26,7 @@
         <button *ngIf="showPrevPaging" (click)="onPrevClicked()">Prev</button>
         <input type="text" value="{{skip + 1}}" />
         <button *ngIf="showNextPaging" (click)="onNextClicked()">Next</button>
+
+        <a routerLink="/owners/add">Add Owner</a>        
     </div>
 </div>

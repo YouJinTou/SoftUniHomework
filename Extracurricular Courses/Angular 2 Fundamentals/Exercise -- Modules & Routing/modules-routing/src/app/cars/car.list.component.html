@@ -47,5 +47,7 @@
         <button *ngIf="showPrevPaging" (click)="onPrevClicked()">Prev</button>
         <input type="text" value="{{skip + 1}}" />
         <button *ngIf="showNextPaging" (click)="onNextClicked()">Next</button>
+
+        <a routerLink="/cars/add">Add Car</a>
     </div>
 </div>
