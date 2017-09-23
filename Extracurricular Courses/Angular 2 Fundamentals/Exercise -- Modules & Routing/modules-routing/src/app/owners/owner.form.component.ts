@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Owner } from './../store/owner';
+import { Owner } from './../store/Owner';
 
 @Component({
     selector: 'add-owner-form',

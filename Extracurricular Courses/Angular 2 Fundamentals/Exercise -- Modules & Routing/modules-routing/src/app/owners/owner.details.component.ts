@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Data } from './../store/Data';
-import { Owner } from './../store/owner';
-import { Car } from './../store/car';
+import { Owner } from './../store/Owner';
+import { Car } from './../store/Car';
 
 @Component({
     selector: 'owner-details',

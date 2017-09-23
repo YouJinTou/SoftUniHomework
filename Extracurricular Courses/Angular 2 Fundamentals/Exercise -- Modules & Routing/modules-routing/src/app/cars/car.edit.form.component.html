@@ -1,7 +1,7 @@
 <div class="container">
-    <h1>Add Car</h1>
+    <h1>Edit Car</h1>
 
-    <form (ngSubmit)="onSubmit" #addCarForm="ngForm">
+    <form (ngSubmit)="onSubmit" #editCarForm="ngForm">
         <div class="form-group">
             <label for="make">Make</label>
             <input 
@@ -75,15 +75,15 @@
 
         <div class="form-group">
             <label for="comment">Comment</label>
-            <input name="comment" type="text" class="form-control" />
+            <input name="comment" [(ngModel)]='car.comment' type="text" class="form-control" />
         </div>
 
         <button 
             type="submit" 
             (click)="onSubmit()"
-            [disabled]="!addCarForm.form.valid" 
+            [disabled]="!editCarForm.form.valid" 
             class="btn btn-success">
-            Add
+            Save
         </button>
     </form>
 </div>

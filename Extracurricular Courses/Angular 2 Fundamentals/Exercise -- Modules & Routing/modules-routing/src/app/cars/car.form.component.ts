@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Car } from './../store/car';
+import { Car } from './../store/Car';
 
 @Component({
     selector: 'add-car-form',

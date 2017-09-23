@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { Car } from './../store/Car';
 import { ActivatedRoute } from '@angular/router';
 import { Data } from './../store/Data';
-import { Car } from './../store/Car';
-
 
 @Component({
-    selector: 'car-details',
-    templateUrl: './car.details.component.html'
+    selector: 'edit-car-form',
+    templateUrl: './car.edit.form.component.html',
 })
 
-export class CarDetailsComponent implements OnInit {
-    car: Car;
+export class EditCarFormComponent implements OnInit {
+    car: Car
 
     constructor(
         private route: ActivatedRoute,
@@ -18,10 +17,14 @@ export class CarDetailsComponent implements OnInit {
     }
 
     ngOnInit() {
-        let carId = this.route.snapshot.paramMap.get('id');
+        let carId = this.route.snapshot.paramMap.get('id'); 
 
         this.service
             .getCarById(parseInt(carId))
             .then(car => this.car = car);
+    }
+
+    onSubmit() {
+        console.log(this.car);
     }
 }
