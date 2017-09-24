@@ -12,6 +12,7 @@ import { OwnerDetailsComponent } from './owners/owner.details.component';
 import { AddOwnerFormComponent } from './owners/owner.form.component';
 import { EditOwnerFormComponent } from './owners/owner.edit.form.component';
 import { CommentsComponent } from './comments/comments.component';
+import { RoundImageDirective } from './directives/round.image.directive';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -36,7 +37,8 @@ const routes: Routes = [
         OwnerDetailsComponent,
         AddOwnerFormComponent,
         EditOwnerFormComponent,
-        CommentsComponent
+        CommentsComponent,
+        RoundImageDirective
     ],
     imports: [
         CommonModule, 
