@@ -13,6 +13,7 @@ import { AddOwnerFormComponent } from './owners/owner.form.component';
 import { EditOwnerFormComponent } from './owners/owner.edit.form.component';
 import { CommentsComponent } from './comments/comments.component';
 import { RoundImageDirective } from './directives/round.image.directive';
+import { EnginePipe } from './pipes/car.engine.pipe';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -38,7 +39,8 @@ const routes: Routes = [
         AddOwnerFormComponent,
         EditOwnerFormComponent,
         CommentsComponent,
-        RoundImageDirective
+        RoundImageDirective,
+        EnginePipe
     ],
     imports: [
         CommonModule, 
