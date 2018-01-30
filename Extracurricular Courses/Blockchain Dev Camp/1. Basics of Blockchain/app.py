@@ -3,6 +3,7 @@ from block import Block
 from blockchain import Blockchain
 from uuid import uuid4
 from flask import Flask, jsonify, request
+import json
 
 SYSTEM_SENDER = '0'
 MINE_REWARD = 1
@@ -12,19 +13,19 @@ node_identifier = str(uuid4()).replace('-', '')
 blockchain = Blockchain()
 
 
-@app.route('/mine', methods=['POST'])
+@app.route('/mine', methods=['GET'])
 def mine():
     last_proof = blockchain.tail.index
-    prev_hash = blockchain.hash_block(blockchain.tail)
-    proof = blockchain.do_proof_of_work(last_proof)
+    prev_hash = Blockchain.hash_block(blockchain.tail)
+    proof = Blockchain.do_proof_of_work(last_proof)
 
-    blockchain.create_block(Block(proof, prev_hash))
     blockchain.create_transaction(Transaction(SYSTEM_SENDER, node_identifier, MINE_REWARD))
+    blockchain.create_block(Block(proof, prev_hash))
 
     response = {
         'message': 'Block created.',
         'index': blockchain.tail.index,
-        'transactions': blockchain.tail.transactions,
+        'transactions': [json.dumps(t.to_dict()) for t in blockchain.tail.transactions],
         'proof': blockchain.tail.proof,
         'prev_hash': blockchain.tail.prev_hash
     }
@@ -32,7 +33,7 @@ def mine():
 
 
 @app.route('/transactions/new', methods=['POST'])
-def create_transaction(transaction):
+def create_transaction():
     values = request.get_json()
 
     if not all(k in values for k in ['sender', 'recipient', 'amount']):
@@ -49,7 +50,7 @@ def create_transaction(transaction):
 @app.route('/chain', methods=['GET'])
 def chain():
     chain_info = {
-        'chain': blockchain.chain,
+        'chain': [json.dumps(b, default=nest_to_dict) for b in blockchain.chain],
         'length': len(blockchain.chain)
     }
     return jsonify(chain_info), 200
@@ -78,15 +79,20 @@ def resolve():
     if blockchain.resolve_conflicts():
         response = {
             'message': 'Chain replaced.',
-            'chain': blockchain.chain
+            'chain': [json.dumps(b, default=nest_to_dict) for b in blockchain.chain]
         }
     else:
         response = {
             'message': 'Chain valid.',
-            'chain': blockchain.chain
+            'chain': [json.dumps(b, default=nest_to_dict) for b in blockchain.chain]
         }
 
     return jsonify(response), 200
+
+
+def nest_to_dict(obj):
+    if hasattr(obj, 'to_dict'):
+        return obj.to_dict()
 
 
 if __name__ == '__main__':

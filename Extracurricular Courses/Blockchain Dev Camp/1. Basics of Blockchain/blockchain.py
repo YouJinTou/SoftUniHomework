@@ -2,7 +2,9 @@ from block import Block
 import json
 import hashlib
 from urllib.parse import urlparse
+import requests
 from flask import Flask, jsonify, request
+
 
 class Blockchain:
     def __init__(self):
@@ -20,20 +22,22 @@ class Blockchain:
         block.transactions = self.transactions
         block.prev_hash = block.prev_hash or self.hash_block(self.chain[-1])
 
+        self.transactions = []
+
         self.chain.append(block)
 
     def create_transaction(self, transaction):
         self.transactions.append(transaction)
 
     def register_node(self, address):
-        self.nodes.add(urlparse(address))
+        self.nodes.add(urlparse(address).netloc)
 
     def resolve_conflicts(self):
         best_chain = None
         best_length = len(self.chain)
 
         for node in self.nodes:
-            response = request.get('http://%s/chain' %node)
+            response = requests.get(f'http://{node}/chain')
 
             if response.status_code == 200:
                 length = response.json()['length']
@@ -73,14 +77,14 @@ class Blockchain:
 
     @staticmethod
     def hash_block(block):
-        block_string = json.dumps(block.__dict__, sort_keys=True).encode()
+        block_string = json.dumps(block.to_dict(), sort_keys=True).encode()
         return hashlib.sha256(block_string).hexdigest()
 
     @staticmethod
-    def do_proof_of_work(self, last_proof):
+    def do_proof_of_work(last_proof):
         proof = 0
 
-        while self.is_valid_proof(last_proof, proof) is False:
+        while Blockchain.is_valid_proof(last_proof, proof) is False:
             proof += 1
 
         return proof

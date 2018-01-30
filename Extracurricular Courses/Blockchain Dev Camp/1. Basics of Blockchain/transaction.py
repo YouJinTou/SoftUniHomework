@@ -3,3 +3,6 @@ class Transaction:
         self.sender = sender
         self.recipient = recipient
         self.amount = amount
+
+    def to_dict(self):
+        return dict(sender=self.sender, recipient=self.recipient, amount=self.amount)
