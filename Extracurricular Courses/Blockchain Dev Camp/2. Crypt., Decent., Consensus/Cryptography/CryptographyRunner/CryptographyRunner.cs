@@ -18,7 +18,7 @@ namespace CryptographyRunner
 
         private static void PrintSha256Result()
         {
-            var sha256Hasher = new Sha256Hasher();
+            var sha256Hasher = new Sha256Builder();
             var hashedString = sha256Hasher.GetSha256Hash("Hello_World");
 
             Console.WriteLine($"Hello_World SHA256 hash: {hashedString}");

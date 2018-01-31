@@ -44,7 +44,7 @@
     <Compile Include="BitcoinAddress.cs" />
     <Compile Include="BitcoinAddressGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sha25Builder6.cs" />
+    <Compile Include="Sha256Builder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

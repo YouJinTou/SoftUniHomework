@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Cryptography
 {
-    public class Sha256Hasher
+    public class Sha256Builder
     {
         public string GetSha256Hash(string toHash)
         {
