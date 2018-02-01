@@ -6,7 +6,7 @@
         Recover,
         Balance,
         History,
-        Receive,
+        Index,
         Send,
         Exit
     }

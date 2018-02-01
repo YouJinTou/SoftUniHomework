@@ -1,7 +1,4 @@
-﻿using HBitcoin.KeyManagement;
-using NBitcoin;
-using System;
-using System.IO;
+﻿using System;
 using System.Linq;
 
 namespace BitcoinWallet
@@ -33,14 +30,38 @@ namespace BitcoinWallet
 
                         break;
                     case Operation.Recover:
+                        var walletRecoverer = new WalletRecoverer();
+
+                        walletRecoverer.RecoverWallet();
+
                         break;
                     case Operation.Balance:
-                        break;
+                        {
+                            var walletBookkeeper = new WalletBookkeeper();
+
+                            walletBookkeeper.ShowBalance();
+
+                            break;
+                        }
                     case Operation.History:
-                        break;
-                    case Operation.Receive:
+                        {
+                            var walletBookkeeper = new WalletBookkeeper();
+
+                            walletBookkeeper.ShowHistory();
+
+                            break;
+                        }
+                    case Operation.Index:
+                        var walletIndex = new WalletIndex();
+
+                        walletIndex.GetWalletAddresses();
+
                         break;
                     case Operation.Send:
+                        var walletOperator = new WalletOperator();
+
+                        walletOperator.SendCoins();
+
                         break;
                     case Operation.Exit:
                         break;
@@ -52,16 +73,15 @@ namespace BitcoinWallet
 
         private static Operation GetOperation()
         {
-            Operation input;
-
             do
             {
                 Console.WriteLine($"Enter operation: {string.Join(", ", Operations)}");
 
-                Enum.TryParse(Console.ReadLine().ToLower().Trim(), true, out int input);
-            } while (!Operations.Contains(input));
-
-            return input;
+                if (Enum.TryParse(Console.ReadLine().ToLower().Trim(), true, out Operation input))
+                {
+                    return input;
+                }
+            } while (true);
         }
     }
 }
